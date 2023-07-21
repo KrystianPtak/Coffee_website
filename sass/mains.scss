@@ -1,0 +1,986 @@
+@use "colors" as *;
+@use "mixins" as *;
+@use "reset" as *;
+@use "sizes" as *;
+
+html {
+	scroll-padding-top: 70px;
+}
+
+body {
+	font-family: "Asul", sans-serif;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.6rem;
+}
+
+.container {
+	max-width: 95%;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 0.5em;
+}
+
+// NAV ////////////////////////
+.nav {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	height: 8vh;
+	width: 100%;
+	z-index: 999;
+	transition: background-color 0.3s ease;
+	&__bgc {
+		background-color: $darker;
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+
+		// /////////////
+	}
+
+	&__button {
+		padding: 0.5em;
+		color: $white;
+		font-size: 2.4rem;
+		cursor: pointer;
+	}
+
+	&__hide {
+		display: none;
+	}
+
+	&__logo {
+		display: none;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		gap: 3em;
+		position: fixed;
+		left: 0;
+		top: 8vh;
+		width: 100%;
+		height: 92vh;
+		padding: 5em 0 0 1.5em;
+		text-transform: uppercase;
+		font-family: $heading-font;
+		letter-spacing: 0.7px;
+		background-color: $white;
+		transform: translateX(-105%);
+		transition: all 0.3s ease;
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+
+	&__link {
+		color: $dark;
+		padding: 0.5em;
+	}
+
+	&__icons {
+		display: flex;
+		gap: 1em;
+		color: $white;
+		font-size: 2rem;
+	}
+}
+
+// /////////////////////search////////////////
+.search {
+	position: fixed;
+	top: 54px;
+	left: 50%;
+	width: 80%;
+	transform: translateX(-50%);
+
+	&__close {
+		position: absolute;
+		right: -30px;
+		top: 8px;
+		font-size: 3rem;
+		color: $menu;
+		cursor: pointer;
+	}
+
+	&__bgc {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(24, 24, 24, 0.788);
+		transition: 0.4s ease;
+		scale: 0;
+		opacity: 0;
+
+		&--active {
+			scale: 1;
+			opacity: 1;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		height: 50px;
+		padding: 1em 2em;
+		margin-bottom: 0.2em;
+		background-color: $white;
+		border: none;
+		transition: transform 0.4s ease;
+		text-transform: capitalize;
+		font-family: $heading-font;
+		font-size: 1.6rem;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__items {
+		background-color: rgb(253, 253, 253);
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.3em 0.8em 0.3em;
+		margin-bottom: 0.7em;
+		flex-basis: 35%;
+		border-bottom: 1px solid rgb(216, 216, 216);
+
+		font-family: $heading-font;
+	}
+
+	&__img {
+		height: 50px;
+		width: 50px;
+		object-fit: cover;
+	}
+
+	&__name {
+		color: $dark;
+	}
+	&__price {
+		color: $menu;
+	}
+
+	&__overflow {
+		overflow: hidden;
+	}
+}
+
+// ////////////////////////////////////////////////////////
+
+// HEADER //
+.header {
+	&__bgc {
+		height: 100vh;
+		background: url("../bgc/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg")
+			rgba(0, 0, 0, 0.7);
+		background-blend-mode: darken;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__body {
+		@include flexCenter(column);
+		gap: 0.7em;
+		height: 100%;
+		color: $white;
+		font-family: $heading-font;
+	}
+
+	&__text {
+		text-transform: capitalize;
+	}
+
+	&__heading {
+		text-align: center;
+		font-size: 4rem;
+	}
+
+	&__btn {
+		width: fit-content;
+		padding: 0.6em 1.2em;
+		background: transparent;
+		border: 1px solid $white;
+		color: $white;
+		transition: background-color 0.3s ease;
+	}
+}
+
+// ///////////////////about///////////////////////////////////
+
+.about {
+	@include flexCenter(column);
+	padding-bottom: 4em;
+	&__heading {
+		margin-bottom: 1em;
+		text-align: center;
+		font-family: $heading-font;
+		font-size: $small;
+	}
+	&__img {
+		object-fit: cover;
+		margin-bottom: 1em;
+	}
+	&__title {
+		margin-bottom: 0.5em;
+		font-family: $heading-font;
+		font-size: 2rem;
+	}
+	&__text {
+		margin-bottom: 1.5em;
+	}
+	&__btn {
+		padding: 1em 2.6em;
+		background-color: $menu;
+		text-transform: uppercase;
+		color: $white;
+	}
+}
+
+////////////////////////////services////////////////////////
+
+.services {
+	padding: 1em 0;
+	background-color: #f2efe6;
+
+	&__heading {
+		font-family: $heading-font;
+		text-align: center;
+		margin: 1em 0 1.5em;
+		font-size: $small;
+	}
+
+	&__box {
+		@include flexCenter(column);
+		gap: 3em;
+	}
+
+	&__body {
+		@include flexCenter(column);
+		gap: 1em;
+	}
+
+	&__img {
+		width: 60px;
+	}
+
+	&__content {
+		@include flexCenter(column);
+	}
+
+	&__title {
+		margin-bottom: 0.2em;
+	}
+
+	&__text {
+		margin-bottom: 1em;
+		text-align: center;
+		max-width: 450px;
+	}
+}
+
+// ///////////////////////////menu/////////////////////////////
+
+.menu {
+	@include flexCenter(column);
+	padding: 3em 0;
+	background-color: $darker;
+	color: $white;
+
+	&__heading {
+		margin-bottom: 0.3em;
+		font-family: $heading-font;
+		font-size: 4rem;
+		color: $menu;
+	}
+
+	&__text {
+		margin-bottom: 4em;
+		text-align: center;
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		width: 100%;
+		margin-bottom: 3em;
+	}
+
+	&__img {
+		width: 70px;
+		height: 70px;
+		object-fit: cover;
+		border-radius: 50%;
+		object-position: center;
+	}
+
+	&__content {
+		width: 100%;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0.3em;
+		font-family: $heading-font;
+		font-size: 2.2rem;
+		color: $menu;
+	}
+
+	&__span {
+		flex-grow: 1;
+		margin: 0 0.5em;
+		display: block;
+		border-bottom: 2px dotted $white;
+	}
+
+	&__paragraph {
+		font-size: 1.4rem;
+	}
+}
+
+// //////////////best seller///////////////////////////
+
+.products {
+	padding: 3em 0;
+
+	&__heading {
+		margin-bottom: 0.3em;
+		font-family: $heading-font;
+		font-size: $small;
+		text-align: center;
+
+		&--span {
+			color: $menu;
+		}
+	}
+
+	&__text {
+		margin-bottom: 3em;
+		text-align: center;
+	}
+
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2em;
+	}
+
+	&__box {
+		@include flexCenter(column);
+		font-family: $heading-font;
+		overflow: hidden;
+		margin-bottom: 3em;
+		position: relative;
+	}
+
+	&__overlay,
+	&__icon {
+		opacity: 0;
+	}
+
+	&__img {
+		margin-bottom: 1em;
+		height: 250px;
+		max-width: 250px;
+		object-fit: cover;
+		transition: transform 0.5s ease;
+	}
+
+	&__content {
+		@include flexCenter(column);
+		gap: 0.5em;
+	}
+
+	&__btn {
+		padding: 0.6em 1.4em;
+		text-transform: capitalize;
+		background-color: $menu;
+		color: $white;
+	}
+}
+
+//////////////////modal///////////////////
+
+.modal {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 90%;
+	max-height: 500px;
+	padding: 1em 1em 3em;
+	overflow-y: auto;
+	transform: translate(-50%, -50%);
+	background-color: #ebe8e6;
+
+	&__bgc {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(24, 24, 24, 0.788);
+		z-index: 999;
+	}
+
+	&__open-overflow {
+		overflow: hidden;
+	}
+
+	&::-webkit-scrollbar {
+		background-color: orange;
+		width: 6px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #333;
+	}
+
+	&__body {
+		@include flexCenter(column);
+	}
+
+	&__images {
+		display: flex;
+		flex-direction: column;
+		max-width: 350px;
+		margin-bottom: 0.5em;
+	}
+
+	&__main-img img {
+		width: 350px;
+		height: 100%;
+		margin-bottom: 0.5em;
+		object-fit: cover;
+	}
+
+	&__img {
+		display: block;
+		width: 70px;
+		height: 70px;
+		object-fit: cover;
+	}
+
+	&__small-images {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5em;
+		width: 100%;
+	}
+
+	&__content {
+		@include flexCenter(column);
+		gap: 0.5em;
+	}
+
+	&__heading {
+		font-family: $heading-font;
+	}
+
+	&__price {
+		font-family: $heading-font;
+		color: $menu;
+		font-weight: 600;
+		font-size: 1.8rem;
+		text-align: left;
+	}
+
+	&__text {
+		margin-bottom: 1em;
+	}
+
+	&__buttons {
+		@include flexCenter(column);
+		gap: 0.8em;
+		position: relative;
+	}
+
+	&__count {
+		display: flex;
+	}
+
+	&__input {
+		margin: 0;
+		padding: 0.5em;
+		border: none;
+		text-align: center;
+		width: 100px;
+	}
+
+	&__down,
+	&__up {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 25px;
+		background-color: rgb(211, 209, 209);
+		cursor: pointer;
+	}
+	&__btn-add,
+	&__close-button {
+		padding: 0.6em 1.2em;
+		background-color: $menu;
+		color: $white;
+		text-transform: uppercase;
+		width: 150px;
+	}
+	&__close-button {
+		background-color: #5f5f5e;
+	}
+}
+
+// //////////////////enjoy///////////////////////
+.enjoy {
+	@include flexCenter(column);
+	gap: 1em;
+	height: 40vh;
+	background: url("../img/enjoy.jpg") rgba(0, 0, 0, 0.6);
+	background-blend-mode: darken;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: $white;
+
+	&__heading {
+		font-family: $heading-font;
+		font-size: 2.5rem;
+	}
+
+	&__text {
+		max-width: 500px;
+		margin-bottom: 1em;
+		padding: 0 1em;
+		text-align: center;
+	}
+
+	&__btn {
+		padding: 0.7em 1.4em;
+		text-transform: uppercase;
+		background-color: $menu;
+		color: $white;
+	}
+}
+
+// //////////////////open///////////////////////
+
+.open {
+	height: 80vh;
+
+	&__img {
+		height: 50%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__body {
+		height: 50%;
+		background: url("../img/coffee-g01179eb8c_1280.jpg") rgba(0, 0, 0, 0.9);
+		background-blend-mode: darken;
+		background-size: cover;
+		background-position: center;
+		color: $white;
+	}
+
+	&__heading {
+		padding: 1.6em 0 1em;
+		font-family: $heading-font;
+		font-size: 2rem;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 400;
+	}
+
+	&__content {
+		font-size: 1.4rem;
+	}
+
+	&__days {
+		margin-bottom: 1.5em;
+	}
+
+	&__div {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__day {
+		@include flexCenter(row);
+		margin-bottom: 0.5em;
+	}
+
+	&__span {
+		display: block;
+		width: 30%;
+		height: 14px;
+		margin: 0 0.4em;
+		border-bottom: 2px dotted $white;
+	}
+
+	&__number {
+		@include flexCenter(column);
+	}
+
+	&__title {
+		text-transform: uppercase;
+		margin-bottom: 0.3em;
+	}
+}
+
+/////////////////blog
+
+.blog {
+	padding: 3em 0;
+	&__heading {
+		margin-bottom: 2em;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $heading-font;
+	}
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 3em;
+	}
+	&__box {
+		overflow: hidden;
+		max-width: 300px;
+	}
+
+	&__overflow {
+		margin-bottom: 0.5em;
+		overflow: hidden;
+	}
+
+	&__img {
+		width: 100%;
+
+		object-fit: cover;
+		transition: 0.7s;
+	}
+
+	&__icons {
+		margin-bottom: 0.5em;
+		font-size: 1.4rem;
+		color: rgb(85, 85, 85);
+		font-weight: 600;
+		display: flex;
+		gap: 0.9em;
+		color: grey;
+	}
+
+	&__span {
+		display: flex;
+		align-items: center;
+		gap: 0.3em;
+	}
+
+	&__title {
+		margin-bottom: 0.5em;
+		font-family: $heading-font;
+		font-size: 2rem;
+		color: $dark;
+	}
+
+	&__text {
+		margin-bottom: 0.5em;
+		color: rgb(85, 85, 85);
+	}
+
+	&__btn {
+		padding: 0.7em 1.4em;
+		border-radius: 5px;
+		background-color: $menu;
+	}
+
+	&__link {
+		color: $white;
+	}
+}
+
+// //////////////////newsletter///////////////////////
+.newsletter {
+	@include flexCenter(column);
+	gap: 1em;
+	padding: 2em 0;
+	font-family: $heading-font;
+	color: $white;
+	background-color: $black;
+
+	&__content {
+		@include flexCenter(column);
+		gap: 0.7em;
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__input {
+		width: 290px;
+		padding: 0.5em;
+
+		&:focus {
+			border: 1px solid $menu;
+			outline: none;
+		}
+	}
+
+	&__form {
+		@include flexCenter(column);
+		gap: 0.3em;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&__msg {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	&__btn {
+		width: fit-content;
+		padding: 0.5em 1em;
+		background: none;
+		color: $white;
+		border: 1px solid $white;
+		text-transform: uppercase;
+
+		&:focus {
+			border: 1px solid $menu;
+			outline: none;
+		}
+	}
+	&__send {
+		color: $menu;
+	}
+}
+// ////////////////////////////////
+.container2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+}
+
+.top {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.arrow {
+	height: 50px;
+	cursor: pointer;
+	color: #000;
+	background-color: red;
+}
+
+.right {
+	transform: rotate(180deg);
+}
+
+.frame {
+	width: 800px;
+	height: 500px;
+	overflow: hidden;
+}
+
+.slider {
+	display: flex;
+	transition: all 1s ease;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bottom {
+	display: flex;
+	gap: 30px;
+}
+
+.button {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+@keyframes slide {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.company {
+	display: flex;
+	justify-content: center;
+	padding: 4em 0;
+	position: relative;
+
+	&:before,
+	&:after {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		content: "";
+		z-index: 2;
+	}
+
+	&:before {
+		left: 0;
+		background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+	}
+	&:after {
+		right: 0;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+	}
+	&:hover .company__img {
+		animation-play-state: paused;
+	}
+
+	&__slide {
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		display: flex;
+	}
+	&__img {
+		animation: 6s slide infinite linear;
+		height: 150px;
+		padding: 0 40px;
+		object-fit: cover;
+	}
+}
+
+// ////////////////////////////////////////////////////////
+.testimonials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5em;
+	width: 100%;
+	height: 300px;
+
+	&__rewiev {
+		border-radius: 15px;
+		width: 500px;
+		height: 200px;
+		position: relative;
+		background-color: #ebe8e6;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__img {
+		border: 5px solid $menu;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		position: absolute;
+		left: -20px;
+		top: -20px;
+	}
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 100%;
+		width: 30%;
+	}
+}
+// ////////////////////////////
+.contact {
+	padding: 1em 0;
+	background-color: $dark;
+
+	&__body {
+		@include flexCenter(column);
+		color: $white;
+	}
+
+	&__logo {
+		@include flexCenter(row);
+		gap: 0.1em;
+		font-size: 6rem;
+		color: $white;
+		font-family: "Arizonia", cursive;
+		margin-bottom: 0.5em;
+	}
+
+	&__img {
+		width: 40px;
+	}
+
+	&__box {
+		@include flexCenter(column);
+		margin-bottom: 2em;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+	&__border {
+		width: 50px;
+		height: 50px;
+		@include flexCenter(row);
+		border: 1px solid $menu;
+	}
+
+	&__icon {
+		font-size: 2rem;
+	}
+}
+
+// /////////footer
+.footer {
+	background-color: $dark;
+	color: $white;
+	padding: 1em;
+	&__body {
+		@include flexCenter(column);
+		gap: 1em;
+	}
+	&__img {
+		width: 50px;
+		height: 25px;
+		object-fit: cover;
+	}
+
+	&__imgs {
+		display: flex;
+		gap: 0.5em;
+	}
+}
+
+@import "medium";
+@import "large";

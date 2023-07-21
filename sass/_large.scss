@@ -1,0 +1,45 @@
+@media (min-width: 1024px) {
+	.container {
+		max-width: 1200px;
+	}
+
+	.about {
+		&__img {
+			width: 50%;
+			border: 3px solid orange;
+			padding: 0.3em;
+		}
+	}
+
+.products{
+	&__img {
+
+		height: 300px;
+		max-width: 300px;
+	}
+
+	
+	&__overlay {
+		height: 300px;
+	}
+}
+
+
+.blog {
+	&__body {
+		gap: 3em;
+	}
+	&__box {
+
+		max-width: 250px;
+	}
+
+
+	&__img {
+		height: 250px;
+
+	}
+
+
+}
+}

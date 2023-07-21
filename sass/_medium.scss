@@ -1,0 +1,423 @@
+@use "colors" as *;
+@use "mixins" as *;
+@use "reset" as *;
+@use "sizes" as *;
+
+@media (min-width: 768px) {
+	.nav {
+		&__button {
+			display: none;
+		}
+
+		&__logo {
+			@include flexCenter(row);
+
+			font-size: 5rem;
+			color: $white;
+			font-family: "Arizonia", cursive;
+		}
+
+		&__img {
+			width: 45px;
+
+			color: aliceblue;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 10%;
+			padding: 0.1em;
+		}
+
+		&__links {
+			flex-direction: row;
+			gap: 0.5em;
+			position: relative;
+			left: unset;
+			top: unset;
+			width: unset;
+			height: unset;
+			padding: 0;
+			opacity: 1;
+			transform: translateX(0);
+			background-color: unset;
+		}
+
+		&__link {
+			color: $white;
+			position: relative;
+			padding: 0.3em 0.5em;
+			transition: color 0.3s ease;
+			&:hover {
+				color: $menu;
+			}
+		}
+
+		&__glass {
+			cursor: pointer;
+			transition: color 0.3s ease;
+			&:hover {
+				color: $menu;
+			}
+		}
+
+		&__shopping {
+			cursor: pointer;
+			transition: color 0.3s ease;
+			&:hover {
+				color: $menu;
+			}
+		}
+	}
+	// /////////////////////search///////////////////////////
+
+	.search {
+		max-width: 700px;
+
+		&__name {
+			transition: transform 0.3s ease;
+		}
+		&__img {
+			transition: transform 0.3s ease;
+		}
+		&__price {
+			transition: transform 0.3s ease;
+		}
+
+		&__item {
+			&:hover .search__name {
+				transform: scale(1.1);
+			}
+		}
+		&__item {
+			&:hover .search__img {
+				transform: scale(1.1);
+			}
+		}
+		&__item {
+			&:hover .search__price {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	///////////////////////////header/////////////
+	.header {
+		&__heading {
+			font-size: 5rem;
+			margin-bottom: 0.2em;
+		}
+		&__btn {
+			font-size: 1.5rem;
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.103);
+			}
+		}
+	}
+	// //////////////////about//////////////////////
+	.about {
+		flex-direction: row;
+		gap: 2em;
+		@include fromdown(70px);
+
+		&__heading {
+			padding-top: 2em;
+			margin-bottom: 1.5em;
+			font-size: $medium;
+			@include fromdown(50px);
+		}
+
+		&__btn {
+			transition: background-color 0.3s ease;
+			font-size: 1.4rem;
+			border-radius: 5px;
+
+			&:hover {
+				background-color: $hover;
+			}
+		}
+
+		&__img {
+			width: 400px;
+			height: 400px;
+		}
+
+		&__title {
+			font-size: 2.6rem;
+		}
+		&__text {
+			max-width: 400px;
+			margin-bottom: 1.5em;
+		}
+	}
+	// ////////////////services/////////////////
+	.services {
+		&__box {
+			@include flexCenter(row);
+			flex-wrap: wrap;
+			gap: 5em;
+		}
+
+		&__heading {
+			@include fromdown(50px);
+			font-size: $medium;
+		}
+
+		&__body {
+			@include fromdown(50px);
+			gap: 1em;
+			&:hover .services__img {
+				transform: rotateY(360deg);
+			}
+		}
+
+		&__img {
+			transition: 0.9s;
+		}
+		&__text {
+			width: 300px;
+		}
+	}
+
+	// ///////////menu//////////////////////
+
+	.menu {
+		&__heading,
+		&__text {
+			@include fromdown(50px);
+		}
+
+		&__body {
+			@include flexCenter(row);
+			gap: 5em;
+		}
+
+		&__title {
+			transition: color 0.3s ease;
+		}
+
+		&__box {
+			@include fromdown(70px);
+			&:hover .menu__title {
+				color: rgb(224, 224, 224);
+			}
+		}
+	}
+
+	// ////////////////best seller/////products//////////
+
+	.products {
+		&__heading,
+		&__text,
+		&__box {
+			@include fromdown(50px);
+		}
+
+		&__overlay {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 250px;
+			background-color: rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			cursor: pointer;
+
+			transition: opacity 0.5s ease;
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		&__icon {
+			opacity: 1;
+			color: $white;
+			font-size: 3.5rem;
+		}
+	}
+
+	//////////////////////enjoy////////////
+	.enjoy {
+		&__heading,
+		&__text,
+		&__btn {
+			@include fromdown(50px);
+		}
+	}
+
+	//////////////blog//////////////
+	.blog {
+		padding: 3em 0;
+
+		&__heading {
+			font-size: 3.5rem;
+		}
+		&__body {
+			gap: 5em;
+		}
+
+		&__img {
+			transition: 0.4s;
+		}
+
+		&__box {
+			transition: 0.4s;
+			&:hover .blog__img {
+				transform: scale(1.1);
+			}
+		}
+
+		&__heading,
+		&__box {
+			@include fromdown(50px);
+		}
+	}
+
+	// ///////////////////open//////////////////////
+
+	.open {
+		display: flex;
+
+		height: 40vh;
+
+		&__img {
+			@include fromdown(50px);
+			width: 50%;
+			height: 100%;
+		}
+		&__body {
+			@include fromdown(50px);
+			width: 50%;
+			height: 100%;
+		}
+
+		&__heading,
+		&__content,
+		&__number {
+			@include fromdown(50px);
+		}
+	}
+
+	// //////////modal///////////////////////////
+	.modal {
+		max-width: 800px;
+
+		&__main-img img {
+			width: 400px;
+			height: 300px;
+		}
+
+		&__images {
+			max-width: 300px;
+		}
+
+		&__body {
+			flex-direction: row;
+			gap: 3em;
+		}
+
+		&__images {
+			width: 50%;
+		}
+
+		&__content {
+			width: 50%;
+		}
+		&__small-images {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__img {
+			width: 90px;
+			height: 90px;
+		}
+		&__content {
+			gap: 1.5em;
+			align-items: start;
+		}
+		&__heading {
+			font-size: 3.2rem;
+		}
+		&__price {
+			font-size: 2.2rem;
+		}
+
+		&__buttons {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: start;
+		}
+
+		&__input {
+			margin: 0;
+			padding: 0.5em;
+			border: none;
+			text-align: center;
+			width: 50px;
+		}
+
+		&__btn-add {
+			width: 150px;
+		}
+		&__close-button {
+			width: 90px;
+		}
+	}
+	// ///////////////////////////////
+	.newsletter {
+		&__form {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: start;
+		}
+
+		&__btn {
+			font-size: 1.5rem;
+		}
+
+		&__title,
+		&__text,
+		&__form,
+		&__btn {
+			@include fromdown(50px);
+		}
+	}
+
+	// ////////////////////////
+
+	.contact {
+		&__content {
+			display: flex;
+			justify-content: center;
+			gap: 3em;
+			border-bottom: 1px solid $white;
+			width: 100%;
+			padding-bottom: 3em;
+		}
+
+		&__box {
+			flex-direction: row;
+			gap: 0.5em;
+		}
+
+		&__title {
+			text-align: left;
+		}
+
+		&__icon {
+			font-size: 2.4rem;
+		}
+	}
+	// /////////////
+	.footer {
+		&__body {
+			flex-direction: row;
+			justify-content: space-between;
+			padding-bottom: 0.5em;
+		}
+	}
+}

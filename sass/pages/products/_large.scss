@@ -1,0 +1,13 @@
+@media (min-width: 1024px) {
+	.container {
+		max-width: 1200px;
+	}
+
+	.about {
+		&__img {
+			width: 50%;
+			border: 3px solid orange;
+			padding: 0.3em;
+		}
+	}
+}
