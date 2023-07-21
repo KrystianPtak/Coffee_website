@@ -27,12 +27,6 @@
 			border-radius: 10%;
 			padding: 0.1em;
 		}
-		// 		&__img{
-		// 			width: 150px;
-		// height: 60px;
-		// object-fit: cover;
-		// 			background-color: aliceblue;
-		// 		}
 
 		&__links {
 			flex-direction: row;
@@ -53,26 +47,6 @@
 			position: relative;
 			padding: 0.3em 0.5em;
 			transition: color 0.3s ease;
-			// &::after{
-			// 	content: '';
-			// 	width: 100%;
-			// 	height: 2px;
-			// 	position: absolute;
-			// 	left: 0;
-			// 	bottom: 0;
-			// 	transform: scaleX(0);
-			// 	transition: .3s;
-			// 	// transform: translateY(-5px);
-			// 	// opacity: 0;
-
-			// }
-
-			// 			&:hover::after{
-			// 				transform: scaleX(1);
-			// // opacity: 1;
-			// 				background-color: $menu;
-			// 				// transform: translateY(0);
-			// 			}
 
 			&:hover {
 				color: $menu;
@@ -95,213 +69,41 @@
 			}
 		}
 	}
-	///////////////////////////header/////////////
-	.header {
-		&__heading {
-			font-size: 5rem;
-			margin-bottom: 0.2em;
-		}
-		&__btn {
-			font-size: 1.5rem;
-			&:hover {
-				background-color: rgba(255, 255, 255, 0.103);
-			}
-		}
-	}
-	// //////////////////about//////////////////////
-	.about {
-		flex-direction: row;
-		gap: 2em;
-		@include fromdown(70px);
 
-		&__heading {
-			margin-bottom: 1.5em;
-			font-size: $medium;
-			@include fromdown(50px);
+	////////search
+	.search {
+		max-width: 700px;
+
+		&__name {
+			transition: transform 0.3s ease;
 		}
-
-		&__btn {
-			transition: background-color 0.3s ease;
-			font-size: 1.4rem;
-			border-radius: 5px;
-
-			&:hover {
-				background-color: $hover;
-			}
-		}
-
 		&__img {
-			// width: 50%;
-			width: 400px;
-			height: 400px;
-			// width: 400px;
-			// height: 400px;
+			transition: transform 0.3s ease;
+		}
+		&__price {
+			transition: transform 0.3s ease;
 		}
 
-		&__title {
-			font-size: 2.6rem;
-		}
-		&__text {
-			max-width: 400px;
-			margin-bottom: 1.5em;
-		}
-	}
-	// ////////////////services/////////////////
-	.services {
-		&__box {
-			@include flexCenter(row);
-			flex-wrap: wrap;
-			gap: 5em;
-		}
-
-		&__heading {
-			@include fromdown(50px);
-			font-size: $medium;
-		}
-
-		&__body {
-			@include fromdown(50px);
-			gap: 1em;
-			&:hover .services__img {
-				transform: rotateY(360deg);
-			}
-		}
-
-		&__img {
-			transition: 0.9s;
-		}
-		&__text {
-			width: 300px;
-		}
-	}
-
-	// ///////////menu//////////////////////
-
-	.menu {
-		&__heading,
-		&__text {
-			@include fromdown(50px);
-		}
-
-		&__body {
-			@include flexCenter(row);
-			gap: 5em;
-		}
-
-		&__title {
-			transition: color 0.3s ease;
-		}
-
-		&__box {
-			@include fromdown(70px);
-			&:hover .menu__title {
-				color: rgb(224, 224, 224);
-			}
-		}
-	}
-
-	// ////////////////best seller/////products//////////
-	// .products {
-	// 	&__btn {
-	// 		transition: background-color 0.3s ease;
-	// 		&:hover {
-	// 			background-color: $hover;
-	// 		}
-	// 	}
-	// }
-
-	.products {
-		&__heading,
-		&__text,
-		&__box {
-			@include fromdown(50px);
-		}
-		&__overlay {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 250px;
-			background-color: rgba(0, 0, 0, 0.5);
-			opacity: 0;
-
-			transition: opacity 0.5s ease;
-			&:hover {
-				opacity: 1;
-			}
-		}
-
-		&__icon {
-			opacity: 1;
-			color: $white;
-			font-size: 3.5rem;
-			cursor: pointer;
-		}
-	}
-
-	//////////////////////enjoy////////////
-	.enjoy {
-		&__heading,
-		&__text,
-		&__btn {
-			@include fromdown(50px);
-		}
-	}
-
-	//////////////blog//////////////
-	.blog {
-		&__body {
-			gap: 5em;
-		}
-
-		&__img {
-			transition: 0.4s;
-		}
-
-		&__box {
-			transition: 0.4s;
-			&:hover .blog__img {
+		&__item {
+			&:hover .search__name {
 				transform: scale(1.1);
 			}
 		}
-
-		&__heading,
-		&__box {
-			@include fromdown(50px);
+		&__item {
+			&:hover .search__img {
+				transform: scale(1.1);
+			}
 		}
-	}
-
-	// ///////////////////open//////////////////////
-
-	.open {
-		display: flex;
-
-		height: 40vh;
-
-		&__img {
-			@include fromdown(50px);
-			width: 50%;
-			height: 100%;
-		}
-		&__body {
-			@include fromdown(50px);
-			width: 50%;
-			height: 100%;
-		}
-
-		&__heading,
-		&__content,
-		&__number {
-			@include fromdown(50px);
+		&__item {
+			&:hover .search__price {
+				transform: scale(1.1);
+			}
 		}
 	}
 
 	// //////////modal///////////////////////////
 	.modal {
-height: 70vh;
+		height: 70vh;
 
 		// &__main-img img {
 		// 	width: 400px;
@@ -310,9 +112,9 @@ height: 70vh;
 
 		&__main-img img {
 			width: 500px;
-	height: 320px;
+			height: 320px;
 			margin-bottom: 0.5em;
-	
+
 			object-fit: cover;
 		}
 
@@ -323,7 +125,6 @@ height: 70vh;
 
 		&__images {
 			width: 50%;
-	
 		}
 
 		&__content {
@@ -331,11 +132,10 @@ height: 70vh;
 		}
 
 		&__small-images {
-max-width: 500px;
+			max-width: 500px;
 		}
-		&__text{
-			text-align:left;
-			
+		&__text {
+			text-align: left;
 		}
 
 		&__content {
@@ -349,12 +149,11 @@ max-width: 500px;
 			font-size: 2.2rem;
 		}
 
-		
 		&__buttons {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: start;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: start;
 			// flex-wrap: wrap;
 		}
 
@@ -364,59 +163,49 @@ max-width: 500px;
 			border: none;
 			text-align: center;
 			width: 50px;
-	
 		}
 
 		&__btn-add {
-
 			width: 150px;
-
 		}
 		&__close-button {
-	
 			width: 90px;
 		}
-	
+
 		&__buttons {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: start;
-					// flex-wrap: wrap;
-				}
-		
-				&__input {
-					margin: 0;
-					padding: 0.5em;
-					border: none;
-					text-align: center;
-					width: 50px;
-			
-				}
-		
-				&__btn-add {
-		
-					width: 150px;
-		
-				}
-				&__close-button {
-			
-					width: 90px;
-				}
-			}
+			// flex-wrap: wrap;
+		}
 
-			.newsletter {
+		&__input {
+			margin: 0;
+			padding: 0.5em;
+			border: none;
+			text-align: center;
+			width: 50px;
+		}
 
-				&__form{
-				display: flex;
-				flex-direction: row;
-			justify-content: center;
-			align-items: start;
-				}
-
-				&__btn{
-					font-size: 1.5rem;
-				}
-					}
+		&__btn-add {
+			width: 150px;
+		}
+		&__close-button {
+			width: 90px;
+		}
 	}
 
+	.newsletter {
+		&__form {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: start;
+		}
+
+		&__btn {
+			font-size: 1.5rem;
+		}
+	}
+}

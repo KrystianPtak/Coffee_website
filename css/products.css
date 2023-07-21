@@ -458,172 +458,26 @@ ul {
   .nav__shopping:hover {
     color: #BE9C79;
   }
-  .header__heading {
-    font-size: 5rem;
-    margin-bottom: 0.2em;
+  .search {
+    max-width: 700px;
   }
-  .header__btn {
-    font-size: 1.5rem;
+  .search__name {
+    transition: transform 0.3s ease;
   }
-  .header__btn:hover {
-    background-color: rgba(255, 255, 255, 0.103);
+  .search__img {
+    transition: transform 0.3s ease;
   }
-  .about {
-    flex-direction: row;
-    gap: 2em;
-    transform: translateY(70px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
+  .search__price {
+    transition: transform 0.3s ease;
   }
-  .about__heading {
-    margin-bottom: 1.5em;
-    font-size: 4.2rem;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-  }
-  .about__btn {
-    transition: background-color 0.3s ease;
-    font-size: 1.4rem;
-    border-radius: 5px;
-  }
-  .about__btn:hover {
-    background-color: rgba(182, 140, 102, 0.9529411765);
-  }
-  .about__img {
-    width: 400px;
-    height: 400px;
-  }
-  .about__title {
-    font-size: 2.6rem;
-  }
-  .about__text {
-    max-width: 400px;
-    margin-bottom: 1.5em;
-  }
-  .services__box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5em;
-  }
-  .services__heading {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-    font-size: 4.2rem;
-  }
-  .services__body {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-    gap: 1em;
-  }
-  .services__body:hover .services__img {
-    transform: rotateY(360deg);
-  }
-  .services__img {
-    transition: 0.9s;
-  }
-  .services__text {
-    width: 300px;
-  }
-  .menu__heading, .menu__text {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-  }
-  .menu__body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5em;
-  }
-  .menu__title {
-    transition: color 0.3s ease;
-  }
-  .menu__box {
-    transform: translateY(70px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-  }
-  .menu__box:hover .menu__title {
-    color: rgb(224, 224, 224);
-  }
-  .products__heading, .products__text, .products__box {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-  }
-  .products__overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 250px;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  .products__overlay:hover {
-    opacity: 1;
-  }
-  .products__icon {
-    opacity: 1;
-    color: #ffffff;
-    font-size: 3.5rem;
-    cursor: pointer;
-  }
-  .enjoy__heading, .enjoy__text, .enjoy__btn {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-  }
-  .blog__body {
-    gap: 5em;
-  }
-  .blog__img {
-    transition: 0.4s;
-  }
-  .blog__box {
-    transition: 0.4s;
-  }
-  .blog__box:hover .blog__img {
+  .search__item:hover .search__name {
     transform: scale(1.1);
   }
-  .blog__heading, .blog__box {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
+  .search__item:hover .search__img {
+    transform: scale(1.1);
   }
-  .open {
-    display: flex;
-    height: 40vh;
-  }
-  .open__img {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-    width: 50%;
-    height: 100%;
-  }
-  .open__body {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
-    width: 50%;
-    height: 100%;
-  }
-  .open__heading, .open__content, .open__number {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: opacity 2s, transform 1.5s;
+  .search__item:hover .search__price {
+    transform: scale(1.1);
   }
   .modal {
     height: 70vh;

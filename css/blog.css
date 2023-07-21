@@ -536,6 +536,27 @@ ul {
   .nav__shopping:hover {
     color: #BE9C79;
   }
+  .search {
+    max-width: 700px;
+  }
+  .search__name {
+    transition: transform 0.3s ease;
+  }
+  .search__img {
+    transition: transform 0.3s ease;
+  }
+  .search__price {
+    transition: transform 0.3s ease;
+  }
+  .search__item:hover .search__name {
+    transform: scale(1.1);
+  }
+  .search__item:hover .search__img {
+    transform: scale(1.1);
+  }
+  .search__item:hover .search__price {
+    transform: scale(1.1);
+  }
   .blog__heading {
     max-width: 800px;
     font-size: 5rem;

@@ -1,4 +1,3 @@
-
 const navLinks = document.querySelector(".nav__links");
 const navBtn = document.querySelector(".nav__button");
 const navOpen = document.querySelector(".nav__open");
@@ -20,9 +19,9 @@ navAll.forEach((el) => {
 	});
 });
 
-const shop = document.querySelector('.nav__shopping')
+const shop = document.querySelector(".nav__shopping");
 document.addEventListener("click", (e) => {
-	if (e.target===(navGlass) || e.target===(shop)) {
+	if (e.target === navGlass || e.target === shop) {
 		navLinks.classList.remove("nav__links--active");
 		navOpen.classList.remove("nav__hide");
 		navClose.classList.add("nav__hide");
@@ -37,9 +36,6 @@ window.addEventListener("scroll", () => {
 	}
 });
 
-
-
-
 // //////////////////////////////////////////////////////////////////lista napojow//////////////
 ////////////////////////////////////////////////
 
@@ -50,15 +46,13 @@ const navGlass = document.querySelector(".nav__glass");
 const searchBgc = document.querySelector(".search__bgc");
 const searchClose = document.querySelector(".search__close");
 
-
 const openSearch = () => {
-  searchBgc.classList.add("search__bgc--active");
-  document.body.classList.add("search__overflow");
-  searchItems.style.display = "none";
-  searchInput.value = "";
-  searchInput.focus(); 
+	searchBgc.classList.add("search__bgc--active");
+	document.body.classList.add("search__overflow");
+	searchItems.style.display = "none";
+	searchInput.value = "";
+	searchInput.focus();
 };
-
 
 const closeSearch = (e) => {
 	if (
@@ -105,8 +99,7 @@ const productsOverlay = document.querySelectorAll(".products__overlay");
 const modalBgc = document.querySelectorAll(".modal__bgc");
 const closeBtn = document.querySelectorAll(".modal__close-button");
 const smallImgs = document.querySelectorAll(".modal__img");
-const productsBtn = document.querySelectorAll('.products__btn')
-
+const productsBtn = document.querySelectorAll(".products__btn");
 
 function openModal(index) {
 	modalBgc[index].style.display = "block";
@@ -124,9 +117,6 @@ productsBtn.forEach((image, index) => {
 		openModal(index);
 	});
 });
-
-
-
 
 smallImgs.forEach((smallImg) => {
 	smallImg.addEventListener("click", () => {
@@ -324,10 +314,8 @@ newsletterBtn.addEventListener("click", (e) => {
 // const companySlider = document.querySelector('.company__slider');
 // const companyImg = document.querySelectorAll('.company__img');
 
-
 // const companySlider = document.querySelector(".company__slide").cloneNode(true);
 // document.querySelector('.company').appendChild(companySlider);
-
 
 const reveal = () => {
 	const elements = document.querySelectorAll(".move, .moves");
@@ -355,11 +343,3 @@ const reveal = () => {
 };
 
 window.addEventListener("scroll", reveal);
-
-
-
-
-
-
-
-
