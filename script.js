@@ -343,3 +343,63 @@ const reveal = () => {
 };
 
 window.addEventListener("scroll", reveal);
+
+const reviews = document.querySelectorAll(".testimonials__rewiev");
+const slideWidth = reviews[0].offsetWidth;
+const containerWidth = document.querySelector(".testimonials__slides-container").offsetWidth;
+const numSlides = reviews.length;
+let currentIndex = 0;
+let isAnimating = false;
+let slideTimeout;
+let isReversing = false;
+
+reviews.forEach((review, index) => {
+  const slidePosition = -(index * slideWidth) + (containerWidth - slideWidth) / 2;
+  review.style.transition = "transform 1s ease";
+  review.style.transform = `translateX(${slidePosition}px)`;
+});
+
+function slideTo(index) {
+  if (isAnimating || index < 0 || index >= numSlides) {
+    return;
+  }
+
+  const slidePosition = -(index * slideWidth) + (containerWidth - slideWidth) / 2;
+  reviews.forEach((review) => {
+    review.style.transform = `translateX(${slidePosition}px)`;
+  });
+
+  currentIndex = index;
+  isAnimating = true;
+
+  // Clear the previous timeout to prevent overlapping timeouts
+  clearTimeout(slideTimeout);
+
+  slideTimeout = setTimeout(() => {
+    isAnimating = false;
+    if (!isReversing) {
+      slideTo((currentIndex + 1) % numSlides);
+      if (currentIndex === numSlides - 1) {
+        isReversing = true;
+      }
+    } else {
+      slideTo((currentIndex - 1 + numSlides) % numSlides);
+      if (currentIndex === 0) {
+        isReversing = false;
+      }
+    }
+  }, 1000); // Slide timeout for continuous scrolling
+}
+
+function restartSlideAnimation() {
+  reviews.forEach((review) => {
+    review.style.transition = "none";
+    review.offsetHeight;
+    review.style.transition = "transform 1s ease";
+  });
+}
+
+// Start the slideshow
+slideTimeout = setTimeout(() => {
+  slideTo((currentIndex + 1) % numSlides); // Start from the next slide
+}, 1000); // Initial timeout before starting the animation
