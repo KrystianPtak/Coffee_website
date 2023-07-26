@@ -299,7 +299,7 @@ body {
 
 		&__bgc{
 		height: 60vh;
-		background: url("/bgc/coffee-g5a9246845_1280.jpg") rgba(24, 24, 24, 0.788);
+		background: url("/blogbgc/coffee-g5a9246845_1280.jpg") rgba(24, 24, 24, 0.8);
 		background-blend-mode: darken;
 		@include flexCenter(column);
 		background-size: cover;
@@ -443,6 +443,26 @@ top: 0;
 		color: $menu;
 	}
 }
+
+.footer {
+	background-color: $dark;
+	color: $white;
+	padding: 1em;
+	&__body {
+		@include flexCenter(column);
+		gap: 1em;
+	}
+	&__img {
+		width: 50px;
+		height: 25px;
+		object-fit: cover;
+	}
+
+	&__imgs {
+		display: flex;
+		gap: 0.5em;
+	}
+} 
 
 @import "medium";
 @import "large";

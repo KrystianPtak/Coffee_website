@@ -61,7 +61,7 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   height: 8vh;
   width: 100%;
   z-index: 999;
@@ -192,6 +192,68 @@ body {
   overflow: hidden;
 }
 
+.card {
+  background-color: #c5d3df;
+  height: 100vh;
+}
+.card__heading {
+  text-align: center;
+  font-family: "Asul", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 1em;
+  padding-top: 5em;
+}
+.card__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+.card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  padding: 0 0.5em;
+  border-bottom: 1px solid rgb(156, 156, 156);
+  height: 70px;
+}
+.card__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+.card__count {
+  background-color: #fff;
+  padding: 0.3em 0.6em;
+}
+.card__input {
+  width: 30px;
+  height: 25px;
+  border: none;
+  text-align: center;
+}
+.card__img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+.card__btn-back, .card__btn-checkout {
+  padding: 1em;
+  background-color: rgb(160, 160, 160);
+}
+
 .newsletter {
   display: flex;
   flex-direction: column;
@@ -248,6 +310,29 @@ body {
 }
 .newsletter__send {
   color: #BE9C79;
+}
+
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  padding: 1em;
+}
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.footer__img {
+  width: 50px;
+  height: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer__imgs {
+  display: flex;
+  gap: 0.5em;
 }
 
 .footer {
@@ -404,6 +489,10 @@ ul {
   }
   .newsletter__btn {
     font-size: 1.5rem;
+    transition: border 0.3s ease;
+  }
+  .newsletter__btn:hover {
+    border: 1px solid #BE9C79;
   }
   .footer__body {
     flex-direction: row;

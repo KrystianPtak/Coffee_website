@@ -126,12 +126,25 @@ max-width: 800px;
 
 		&__btn {
 			font-size: 1.5rem;
+			transition:border .3s ease;
+			&:hover {
+				// color: $menu;
+				border: 1px solid $menu;
+			}
 		}
 
 	
 		}
+
 	}
 	
 
+	.footer {
+		&__body {
+			flex-direction: row;
+			justify-content: space-between;
+			padding-bottom: 0.5em;
+		}
+	}
 
 }

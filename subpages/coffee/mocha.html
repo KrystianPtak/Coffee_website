@@ -33,7 +33,201 @@
 	</head>
 	<body>
 		<!-- /////////////////////////nav///////////////// -->
-		<div id="nav-container"></div>
+		<nav class="nav">
+			<div class="nav__body container">
+				<div class="nav__button">
+					<i class="nav__open fa-solid fa-bars"></i>
+					<i class="nav__close nav__hide fa-solid fa-xmark"></i>
+				</div>
+
+				<a href="/index.html" class="nav__logo"
+					>Coffee<img src="/img/logo.png" alt="" class="nav__img"
+				/></a>
+
+				<ul class="nav__links">
+					<li><a class="nav__link" href="/index.html#">home</a></li>
+					<li><a class="nav__link" href="/index.html#about">about</a></li>
+					<li><a class="nav__link" href="/index.html#services">services</a></li>
+					<li><a class="nav__link" href="/index.html#menu">menu</a></li>
+					<li><a class="nav__link" href="/index.html#blog">blog</a></li>
+				</ul>
+
+				<div class="nav__icons">
+					<i class="nav__glass fa-solid fa-magnifying-glass"></i>
+					<a class="nav__icons" href="/subpages/cart.html"
+						><i class="nav__shopping fa-solid fa-cart-shopping"></i
+					></a>
+				</div>
+
+				<!-- //////////////////////////search/////////////// -->
+				<!-- //////////////////////////search/////////////// -->
+				<!-- //////////////////////////search/////////////// -->
+
+				<div class="search__bgc">
+					<div class="search">
+						<i class="search__close fa-solid fa-xmark"></i>
+						<input
+							type="text"
+							class="search__input"
+							placeholder="find your best coffee ☕"
+							autofocus
+						/>
+
+						<ul class="search__items">
+							<li>
+								<a
+									href="/subpages/coffee/black_coffe.html"
+									class="search__item"
+								>
+									<img
+										src="/img/coffies/black_coffee.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<p class="search__name">Black coffee</p>
+
+									<p class="search__price">$3.99</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="/subpages/coffee/caffe_late.html" class="search__item">
+									<img
+										src="/img/coffies/caffee_latte.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Caffee late</span>
+
+									<span class="search__price">$5.99</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="/subpages/coffee/americano.html" class="search__item">
+									<img
+										src="/img/coffies/american.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Americano </span>
+
+									<span class="search__price">$4.49</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="/subpages/coffee/latte_machiatto.html"
+									class="search__item"
+								>
+									<img
+										src="/img/coffies/latte_machiatto.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Latte Machiatto</span>
+
+									<span class="search__price">$6.99</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="/subpages/coffee/capuchino.html" class="search__item">
+									<img
+										src="/img/coffies/cappuccino.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Capuchino</span>
+
+									<span class="search__price">$5.49</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="/subpages/coffee/espresso.html" class="search__item">
+									<img
+										src="/img/coffies/espresso.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Espresso coffee</span>
+
+									<span class="search__price">$3.49</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="/subpages/coffee/iced_coffe.html" class="search__item">
+									<img
+										src="/img/coffies/iced_coffe.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Iced coffe #1</span>
+
+									<span class="search__price">$4.99</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="/subpages/coffee/iced_coffe_1.html"
+									class="search__item"
+								>
+									<img
+										src="/img/coffies/iced_coffe_2.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Iced coffe #2</span>
+
+									<span class="search__price">$7.99</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="/subpages/coffee/mocha.html" class="search__item">
+									<img
+										src="/img/coffies/mocha.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Mocha</span>
+
+									<span class="search__price">$5.49</span>
+								</a>
+							</li>
+
+							<li>
+								<a href="/subpages/coffee/cortado.html" class="search__item">
+									<img
+										src="/img/coffies/cortado.jpg"
+										alt=""
+										class="search__img"
+									/>
+
+									<span class="search__name">Cortado</span>
+
+									<span class="search__price">$5.99</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- ////////////////////////////////////////////////// -->
 
 		<div class="modal">
 			<div class="modal__body container">
@@ -45,20 +239,18 @@
 						<img class="modal__img" src="/img/coffies/mocha.jpg " alt="" />
 						<img
 							class="modal__img"
-							src="/landscape-ga20b37c6c_640.jpg"
+							src="/img/coffies/mocha_1.jpg"
 							alt=""
 						/>
 
-						<img class="modal__img" src="/japan-g3fb6c5799_1280.jpg" alt="" />
+						<img class="modal__img" src="/img/coffies/mocha_2.jpg" alt="" />
 					</div>
 				</div>
 				<div class="modal__content">
 					<h2 class="modal__heading">Mocha</h2>
 					<span class="modal__price">$5.49</span>
 					<p class="modal__text">
-						Experience decadence with our Mocha, an enticing fusion of velvety
-						espresso, rich chocolate, and steamed milk, promising pure bliss in
-						every sumptuous sip.
+						Immerse yourself in decadence with our Mocha, an alluring fusion of bold espresso, velvety chocolate, and perfectly steamed milk. Crafted to perfection by our passionate baristas, this indulgent delight tantalizes your taste buds with every luxurious sip. Experience the divine marriage of premium coffee and rich chocolate, harmonizing to create a sumptuous masterpiece that offers the ultimate indulgence. Perfectly balanced and irresistibly smooth, our Mocha beckons you to savor the opulence of this beloved classic, where the harmonious blend of flavors delivers pure bliss in every unforgettable moment.
 					</p>
 					<div class="modal__buttons">
 						<div class="modal__count">
@@ -97,10 +289,21 @@
 			</form>
 		</div>
 
-		<footer class="footer"><span class="footer__date"></span></footer>
+		<footer class="footer">
+			<div class="footer__body container">
+				<p>
+					All rights reserved. © Coffee<span class="footer__date">2222</span>
+				</p>
+				<div class="footer__imgs">
+					<img src="/img/visa.png" alt="" class="footer__img" />
+					<img src="/img/american.png" alt="" class="footer__img" />
+					<img src="/img/master.png" alt="" class="footer__img" />
+				</div>
+			</div>
+		</footer>
 		<!-- </div> -->
 
-		<script src="/navigation.js"></script>
+		<!-- <script src="/navigation.js"></script> -->
 		<script src="/script.js"></script>
 	</body>
 </html>

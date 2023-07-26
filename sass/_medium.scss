@@ -4,6 +4,10 @@
 @use "sizes" as *;
 
 @media (min-width: 768px) {
+	html {
+		scroll-padding-top: 70px;
+	}
+
 	.nav {
 		&__button {
 			display: none;
@@ -107,6 +111,7 @@
 		}
 		&__btn {
 			font-size: 1.5rem;
+			transition: background-color 0.3s ease;
 			&:hover {
 				background-color: rgba(255, 255, 255, 0.103);
 			}
@@ -114,9 +119,14 @@
 	}
 	// //////////////////about//////////////////////
 	.about {
-		flex-direction: row;
-		gap: 2em;
+		max-width: unset;
+
 		@include fromdown(70px);
+
+		&__body {
+			flex-direction: row;
+			gap: 2em;
+		}
 
 		&__heading {
 			padding-top: 2em;
@@ -132,6 +142,7 @@
 
 			&:hover {
 				background-color: $hover;
+				background-color: #a59e92fd;
 			}
 		}
 
@@ -235,14 +246,29 @@
 			color: $white;
 			font-size: 3.5rem;
 		}
+
+		&__btn,
+		&__btn-add {
+			transition: background-color 0.3s ease;
+			&:hover {
+				// background-color: $hover;
+				background-color: #a19292fd;
+				background-color: #a59e92fd;
+				background-color: #8b8378fd;
+			}
+		}
 	}
 
 	//////////////////////enjoy////////////
 	.enjoy {
+		height: 45vh;
 		&__heading,
 		&__text,
 		&__btn {
 			@include fromdown(50px);
+		}
+		&__heading {
+			font-size: 3rem;
 		}
 	}
 
@@ -272,6 +298,16 @@
 		&__box {
 			@include fromdown(50px);
 		}
+
+		&__btn {
+			transition: background-color 0.3s ease;
+
+			&:hover {
+				background-color: $hover;
+
+				background-color: #86807df6;
+			}
+		}
 	}
 
 	// ///////////////////open//////////////////////
@@ -279,7 +315,7 @@
 	.open {
 		display: flex;
 
-		height: 40vh;
+		height: 45vh;
 
 		&__img {
 			@include fromdown(50px);
@@ -296,6 +332,13 @@
 		&__content,
 		&__number {
 			@include fromdown(50px);
+		}
+
+		&__tel {
+			transition: color 0.3s ease;
+			&:hover {
+				color: $menu;
+			}
 		}
 	}
 
@@ -368,6 +411,7 @@
 	}
 	// ///////////////////////////////
 	.newsletter {
+		height: 35vh;
 		&__form {
 			display: flex;
 			flex-direction: row;
@@ -377,12 +421,16 @@
 
 		&__btn {
 			font-size: 1.5rem;
+			transition:border .3s ease;
+			&:hover {
+				// color: $menu;
+				border: 1px solid $menu;
+			}
 		}
 
 		&__title,
 		&__text,
-		&__form,
-		&__btn {
+		&__form {
 			@include fromdown(50px);
 		}
 	}
@@ -402,6 +450,12 @@
 		&__box {
 			flex-direction: row;
 			gap: 0.5em;
+			margin-bottom: unset;
+
+			&:hover .contact__icon {
+				color: $menu;
+				transform: scale(0.9);
+			}
 		}
 
 		&__title {
@@ -410,6 +464,7 @@
 
 		&__icon {
 			font-size: 2.4rem;
+			transition: 0.3s ease color, 0.3s ease transform;
 		}
 	}
 	// /////////////

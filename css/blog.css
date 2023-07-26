@@ -301,7 +301,7 @@ body {
 
 .blog__bgc {
   height: 60vh;
-  background: url("/bgc/coffee-g5a9246845_1280.jpg") rgba(24, 24, 24, 0.788);
+  background: url("/blogbgc/coffee-g5a9246845_1280.jpg") rgba(24, 24, 24, 0.8);
   background-blend-mode: darken;
   display: flex;
   flex-direction: column;
@@ -432,6 +432,29 @@ body {
 }
 .newsletter__send {
   color: #BE9C79;
+}
+
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  padding: 1em;
+}
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.footer__img {
+  width: 50px;
+  height: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer__imgs {
+  display: flex;
+  gap: 0.5em;
 }
 
 *,
@@ -570,6 +593,15 @@ ul {
   }
   .blog .newsletter__btn {
     font-size: 1.5rem;
+    transition: border 0.3s ease;
+  }
+  .blog .newsletter__btn:hover {
+    border: 1px solid #BE9C79;
+  }
+  .footer__body {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
   }
 }
 @media (min-width: 1024px) {

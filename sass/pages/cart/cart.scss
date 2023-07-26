@@ -24,7 +24,7 @@ body {
 .nav {
 	display: flex;
 	align-items: center;
-	position: absolute;
+	position: fixed;
 	height: 8vh;
 	width: 100%;
 	z-index: 999;
@@ -180,6 +180,81 @@ body {
 		overflow: hidden;
 	}
 }
+// //////////////
+
+.card{
+background-color: #c5d3df;
+height: 100vh;
+
+
+
+&__heading{
+	text-align: center;
+	font-family: $heading-font;
+font-size: 4rem;
+margin-bottom: 1em;
+padding-top: 5em;
+}
+
+&__items{
+	@include flexCenter(column);
+background-color: #f0f0f0;
+}
+
+&__item{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 1em;
+	width: 100%;
+padding: 0 0.5em;
+border-bottom: 1px solid rgb(156, 156, 156);
+// padding-bottom: 2em;
+height: 70px;
+}
+
+&__content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.3em;
+}
+
+&__count{
+background-color: #fff;
+padding: 0.3em .6em;
+}
+
+
+&__input{
+	width: 30px;
+	height: 25px;
+	border: none;
+text-align: center;
+}
+
+&__img{
+width: 40px;
+height: 40px;
+object-fit: cover;
+}
+
+
+&__btns{
+	display: flex;
+align-items: center;
+	justify-content: center;
+	gap: 1em;
+	margin-top: 2em;
+}
+&__btn-back,
+&__btn-checkout{
+padding: 1em;
+background-color: rgb(160, 160, 160);
+}
+
+}
+
 
 // //////////////////
 .newsletter {
@@ -236,6 +311,26 @@ body {
 
 	&__send {
 		color: $menu;
+	}
+}
+
+.footer {
+	background-color: $dark;
+	color: $white;
+	padding: 1em;
+	&__body {
+		@include flexCenter(column);
+		gap: 1em;
+	}
+	&__img {
+		width: 50px;
+		height: 25px;
+		object-fit: cover;
+	}
+
+	&__imgs {
+		display: flex;
+		gap: 0.5em;
 	}
 }
 

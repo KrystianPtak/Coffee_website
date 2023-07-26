@@ -4,7 +4,8 @@
 @use "sizes" as *;
 
 html {
-	scroll-padding-top: 70px;
+	// scroll-padding-top: 70px;
+	scroll-padding-top: 40px;
 }
 
 body {
@@ -214,17 +215,25 @@ body {
 		padding: 0.6em 1.2em;
 		background: transparent;
 		border: 1px solid $white;
-		color: $white;
-		transition: background-color 0.3s ease;
+
+	}
+
+	&__link{
+			color: $white;
 	}
 }
 
 // ///////////////////about///////////////////////////////////
 
 .about {
-	@include flexCenter(column);
+
 	padding-bottom: 4em;
+	max-width: 450px;
+&__body{
+	@include flexCenter(column);
+}
 	&__heading {
+		padding-top: 1em;
 		margin-bottom: 1em;
 		text-align: center;
 		font-family: $heading-font;
@@ -243,9 +252,9 @@ body {
 		margin-bottom: 1.5em;
 	}
 	&__btn {
-		padding: 1em 2.6em;
+		padding: .8em 1.6em;
 		background-color: $menu;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		color: $white;
 	}
 }
@@ -253,7 +262,7 @@ body {
 ////////////////////////////services////////////////////////
 
 .services {
-	padding: 1em 0;
+	padding: 1em 0 3em;
 	background-color: #f2efe6;
 
 	&__heading {
@@ -407,13 +416,22 @@ body {
 		@include flexCenter(column);
 		gap: 0.5em;
 	}
-
-	&__btn {
+&__buttons{
+	display: flex;
+	gap: 0.5em;
+}
+	&__btn,
+	&__btn-add {
 		padding: 0.6em 1.4em;
 		text-transform: capitalize;
 		background-color: $menu;
 		color: $white;
+		// border-radius: 5px;
 	}
+
+	// &__btn-add{
+	// 	background-color: rgb(151, 148, 148);
+	// }
 }
 
 //////////////////modal///////////////////
@@ -423,11 +441,13 @@ body {
 	top: 50%;
 	left: 50%;
 	width: 90%;
+
 	max-height: 500px;
 	padding: 1em 1em 3em;
 	overflow-y: auto;
 	transform: translate(-50%, -50%);
 	background-color: #ebe8e6;
+
 
 	&__bgc {
 		display: none;
@@ -464,10 +484,12 @@ body {
 	}
 
 	&__main-img img {
-		width: 350px;
-		height: 100%;
+		// width: 350px;
+		width: 100%;
 		margin-bottom: 0.5em;
 		object-fit: cover;
+
+			
 	}
 
 	&__img {
@@ -581,7 +603,7 @@ body {
 // //////////////////open///////////////////////
 
 .open {
-	height: 80vh;
+	height: 100vh;
 
 	&__img {
 		height: 50%;
@@ -591,15 +613,20 @@ body {
 
 	&__body {
 		height: 50%;
-		background: url("../img/coffee-g01179eb8c_1280.jpg") rgba(0, 0, 0, 0.9);
+		background: url("/open/nathan-dumlao-6VhPY27jdps-unsplash\ \(1\).jpg") rgba(0, 0, 0, 0.9);
 		background-blend-mode: darken;
 		background-size: cover;
 		background-position: center;
 		color: $white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
 	}
 
 	&__heading {
-		padding: 1.6em 0 1em;
+	margin-bottom: 1em;
+	padding: 0 1em;
 		font-family: $heading-font;
 		font-size: 2rem;
 		text-transform: uppercase;
@@ -635,10 +662,16 @@ body {
 
 	&__number {
 		@include flexCenter(column);
+
 	}
 
 	&__title {
 		text-transform: uppercase;
+		margin-bottom: 0.3em;
+	}
+
+	&__tel{
+		color: $white;
 		margin-bottom: 0.3em;
 	}
 }
@@ -648,10 +681,11 @@ body {
 .blog {
 	padding: 3em 0;
 	&__heading {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 		text-align: center;
 		text-transform: uppercase;
 		font-family: $heading-font;
+		font-size: $small;
 	}
 
 	&__body {
@@ -737,6 +771,7 @@ body {
 	&__input {
 		width: 290px;
 		padding: 0.5em;
+		margin-bottom: .5em;
 
 		&:focus {
 			border: 1px solid $menu;
@@ -764,10 +799,11 @@ body {
 		border: 1px solid $white;
 		text-transform: uppercase;
 
-		&:focus {
-			border: 1px solid $menu;
-			outline: none;
-		}
+	
+		// &:focus {
+		// 	border: 1px solid $menu;
+		// 	outline: none;
+		// }
 	}
 	&__send {
 		color: $menu;
@@ -1000,9 +1036,13 @@ body {
 	&__box {
 		@include flexCenter(column);
 		margin-bottom: 2em;
+		color: $white;
+
+	
 	}
 
 	&__title {
+		margin-top: 0.5em;
 		text-align: center;
 	}
 
@@ -1018,6 +1058,15 @@ body {
 
 	&__icon {
 		font-size: 2rem;
+	
+	}
+
+	&__message{
+		color: $menu;
+		margin-top: .5em;
+		display: block;
+		font-size: 1.2rem;
+		display: none;
 	}
 }
 
@@ -1032,12 +1081,13 @@ body {
 	}
 	&__img {
 		width: 50px;
-		height: 25px;
-		object-fit: cover;
+		height: 100%;
+		
 	}
 
 	&__imgs {
 		display: flex;
+		align-items: center;
 		gap: 0.5em;
 	}
 }

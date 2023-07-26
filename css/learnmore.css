@@ -61,7 +61,7 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   height: 8vh;
   width: 100%;
   z-index: 999;
@@ -116,6 +116,52 @@ body {
   gap: 1em;
   color: #ffffff;
   font-size: 2rem;
+}
+
+.about__bgc {
+  height: 50vh;
+  background: url("/img/enjoy.jpg") rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.about__heading {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-family: "Asul", sans-serif;
+  text-align: center;
+  padding: 0 1em;
+}
+.about__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+  max-width: 450px;
+}
+.about__title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.about__img {
+  margin-bottom: 0.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+  width: 100%;
 }
 
 .search {
@@ -273,6 +319,29 @@ body {
   gap: 0.5em;
 }
 
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  padding: 1em;
+}
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.footer__img {
+  width: 50px;
+  height: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer__imgs {
+  display: flex;
+  gap: 0.5em;
+}
+
 *,
 *::after,
 *::before {
@@ -396,6 +465,13 @@ ul {
   .search__item:hover .search__price {
     transform: scale(1.1);
   }
+  .about__box {
+    max-width: 600px;
+  }
+  .about__img {
+    height: 350px;
+    width: 100%;
+  }
   .newsletter__form {
     display: flex;
     flex-direction: row;
@@ -404,6 +480,10 @@ ul {
   }
   .newsletter__btn {
     font-size: 1.5rem;
+    transition: border 0.3s ease;
+  }
+  .newsletter__btn:hover {
+    border: 1px solid #BE9C79;
   }
   .footer__body {
     flex-direction: row;
