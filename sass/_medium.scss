@@ -141,8 +141,7 @@
 			border-radius: 5px;
 
 			&:hover {
-				background-color: $hover;
-				background-color: #a59e92fd;
+				background-color: $hover3;
 			}
 		}
 
@@ -251,10 +250,7 @@
 		&__btn-add {
 			transition: background-color 0.3s ease;
 			&:hover {
-				// background-color: $hover;
-				background-color: #a19292fd;
-				background-color: #a59e92fd;
-				background-color: #8b8378fd;
+				background-color: $hover3;
 			}
 		}
 	}
@@ -305,7 +301,8 @@
 			&:hover {
 				background-color: $hover;
 
-				background-color: #86807df6;
+				// background-color: #b68c66f3;
+				background-color:$hover2;
 			}
 		}
 	}
@@ -404,9 +401,17 @@
 
 		&__btn-add {
 			width: 150px;
+			transition: background-color 0.3s ease;
+			&:hover{
+				background-color: $hover3;
+			}
 		}
 		&__close-button {
 			width: 90px;
+			transition: background-color 0.3s ease;
+			&:hover{
+				background-color: $hover;
+			}
 		}
 	}
 	// ///////////////////////////////

@@ -1,3 +1,12 @@
+const showCart = document.querySelector('.nav__addCart')
+const karta = document.querySelector('.card')
+
+const otworz = () => {
+	karta.classList.toggle('card__active')
+}
+showCart.addEventListener('click', otworz)
+
+
 const navLinks = document.querySelector(".nav__links");
 const navBtn = document.querySelector(".nav__button");
 const navOpen = document.querySelector(".nav__open");
@@ -228,85 +237,85 @@ searchInput.addEventListener("input", search);
 //   }
 // });
 
-const productsOverlay = document.querySelectorAll(".products__overlay");
-const modalBgc = document.querySelectorAll(".modal__bgc");
-const closeBtn = document.querySelectorAll(".modal__close-button");
-const smallImgs = document.querySelectorAll(".modal__img");
-const productsBtn = document.querySelectorAll(".products__btn");
+// const productsOverlay = document.querySelectorAll(".products__overlay");
+// const modalBgc = document.querySelectorAll(".modal__bgc");
+// const closeBtn = document.querySelectorAll(".modal__close-button");
+// const smallImgs = document.querySelectorAll(".modal__img");
+// const productsBtn = document.querySelectorAll(".products__btn");
 
-function openModal(index) {
-	modalBgc[index].style.display = "block";
-	document.body.classList.add("modal__open-overflow");
-}
+// function openModal(index) {
+// 	modalBgc[index].style.display = "block";
+// 	document.body.classList.add("modal__open-overflow");
+// }
 
-productsOverlay.forEach((image, index) => {
-	image.addEventListener("click", () => {
-		openModal(index);
-	});
-});
+// productsOverlay.forEach((image, index) => {
+// 	image.addEventListener("click", () => {
+// 		openModal(index);
+// 	});
+// });
 
-productsBtn.forEach((image, index) => {
-	image.addEventListener("click", () => {
-		openModal(index);
-	});
-});
+// productsBtn.forEach((image, index) => {
+// 	image.addEventListener("click", () => {
+// 		openModal(index);
+// 	});
+// });
 
-smallImgs.forEach((smallImg) => {
-	smallImg.addEventListener("click", () => {
-		const modal = smallImg.closest(".modal");
-		const bigImg = modal.querySelector(".modal__main-img img");
-		const changeImage = smallImg.getAttribute("src");
-		bigImg.setAttribute("src", changeImage);
-	});
-});
+// smallImgs.forEach((smallImg) => {
+// 	smallImg.addEventListener("click", () => {
+// 		const modal = smallImg.closest(".modal");
+// 		const bigImg = modal.querySelector(".modal__main-img img");
+// 		const changeImage = smallImg.getAttribute("src");
+// 		bigImg.setAttribute("src", changeImage);
+// 	});
+// });
 
-// //////chattttttttttttttttttttttttttttttttt
-const modalDownElements = document.querySelectorAll(".modal__down");
-const modalUpElements = document.querySelectorAll(".modal__up");
-const modalInputElements = document.querySelectorAll(".modal__input");
-let count = 1;
+// // //////chattttttttttttttttttttttttttttttttt
+// const modalDownElements = document.querySelectorAll(".modal__down");
+// const modalUpElements = document.querySelectorAll(".modal__up");
+// const modalInputElements = document.querySelectorAll(".modal__input");
+// let count = 1;
 
-modalUpElements.forEach((modalUp, index) => {
-	modalUp.addEventListener("click", () => {
-		count++;
-		modalInputElements[index].value = count;
-	});
-});
+// modalUpElements.forEach((modalUp, index) => {
+// 	modalUp.addEventListener("click", () => {
+// 		count++;
+// 		modalInputElements[index].value = count;
+// 	});
+// });
 
-modalDownElements.forEach((modalDown, index) => {
-	modalDown.addEventListener("click", () => {
-		if (count > 1) {
-			count--;
-			modalInputElements[index].value = count;
-		}
-	});
-});
+// modalDownElements.forEach((modalDown, index) => {
+// 	modalDown.addEventListener("click", () => {
+// 		if (count > 1) {
+// 			count--;
+// 			modalInputElements[index].value = count;
+// 		}
+// 	});
+// });
 
-// ////close///////
-const closeModal = () => {
-	modalBgc.forEach((modal) => {
-		modal.style.display = "none";
-	});
-	document.body.classList.remove("modal__open-overflow");
-};
+// // ////close///////
+// const closeModal = () => {
+// 	modalBgc.forEach((modal) => {
+// 		modal.style.display = "none";
+// 	});
+// 	document.body.classList.remove("modal__open-overflow");
+// };
 
-closeBtn.forEach((button) => {
-	button.addEventListener("click", closeModal);
-});
+// closeBtn.forEach((button) => {
+// 	button.addEventListener("click", closeModal);
+// });
 
-modalBgc.forEach((modal) => {
-	modal.addEventListener("click", (e) => {
-		if (e.target === modal) {
-			closeModal();
-		}
-	});
-});
+// modalBgc.forEach((modal) => {
+// 	modal.addEventListener("click", (e) => {
+// 		if (e.target === modal) {
+// 			closeModal();
+// 		}
+// 	});
+// });
 
-window.addEventListener("keydown", (e) => {
-	if (e.key === "Escape") {
-		closeModal();
-	}
-});
+// window.addEventListener("keydown", (e) => {
+// 	if (e.key === "Escape") {
+// 		closeModal();
+// 	}
+// });
 
 // //////////////////////////////////////////////////////////newsletter//////////////////////
 //////////////////////////////////////////
@@ -634,3 +643,7 @@ emailLinks.forEach(link => {
 		}
 	});
 });
+
+//**********FOOTER DATE **********
+const currentYear = document.querySelector(".footer__date");
+currentYear.innerText = new Date().getFullYear();

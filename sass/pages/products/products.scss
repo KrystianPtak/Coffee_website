@@ -314,7 +314,7 @@ body {
 		background-color: rgb(211, 209, 209);
 		cursor: pointer;
 	}
-	&__btn-add
+	&__btn-menu
 	{
 		padding: 0.6em 1.2em;
 		background-color: $menu;
@@ -392,6 +392,65 @@ body {
 	}
 }
 
+.contact {
+	padding: 1em 0;
+	background-color: $dark;
+
+	&__body {
+		@include flexCenter(column);
+		color: $white;
+	}
+
+	&__logo {
+		@include flexCenter(row);
+		gap: 0.1em;
+		font-size: 6rem;
+		color: $white;
+		font-family: "Arizonia", cursive;
+		margin-bottom: 0.5em;
+	}
+
+	&__img {
+		width: 40px;
+	}
+
+	&__box {
+		@include flexCenter(column);
+		margin-bottom: 2em;
+		color: $white;
+
+	
+	}
+
+	&__title {
+		margin-top: 0.5em;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+	&__border {
+		width: 50px;
+		height: 50px;
+		@include flexCenter(row);
+		border: 1px solid $menu;
+	}
+
+	&__icon {
+		font-size: 2rem;
+	
+	}
+
+	&__message{
+		color: $menu;
+		margin-top: .5em;
+		display: block;
+		font-size: 1.2rem;
+		display: none;
+	}
+}
+
 .footer {
 	background-color: $dark;
 	color: $white;
@@ -412,6 +471,7 @@ body {
 	}
 }
 
+@import "../../nav";
 @import "medium";
 @import "large";
 

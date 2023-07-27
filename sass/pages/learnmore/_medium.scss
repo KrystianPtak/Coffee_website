@@ -130,6 +130,36 @@
 			}
 		}
 	}
+	.contact {
+		&__content {
+			display: flex;
+			justify-content: center;
+			gap: 3em;
+			border-bottom: 1px solid $white;
+			width: 100%;
+			padding-bottom: 3em;
+		}
+
+		&__box {
+			flex-direction: row;
+			gap: 0.5em;
+			margin-bottom: unset;
+
+			&:hover .contact__icon {
+				color: $menu;
+				transform: scale(0.9);
+			}
+		}
+
+		&__title {
+			text-align: left;
+		}
+
+		&__icon {
+			font-size: 2.4rem;
+			transition: 0.3s ease color, 0.3s ease transform;
+		}
+	}
 
 	.footer {
 		&__body {

@@ -118,6 +118,24 @@ body {
   gap: 1em;
   color: #ffffff;
   font-size: 2rem;
+  margin-right: 0.2em;
+}
+.nav__addCart {
+  position: relative;
+}
+.nav .quantity {
+  background: rgb(187, 45, 45);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  width: 27px;
+  height: 27px;
+  font-size: 1.4rem;
 }
 
 .search {
@@ -474,6 +492,7 @@ body {
   margin-bottom: 0.5em;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
 }
 .modal__img {
   display: block;
@@ -1000,6 +1019,77 @@ body {
   gap: 0.5em;
 }
 
+.card {
+  position: fixed;
+  right: 0;
+  top: 8vh;
+  background-color: #c5d3df;
+  height: 92vh;
+  transform: translateX(100%);
+  width: 400px;
+  transition: 0.4s;
+}
+.card__active {
+  transform: translateX(0);
+}
+.card__heading {
+  text-align: center;
+  font-family: "Asul", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 1em;
+  padding-top: 5em;
+}
+.card__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+.card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  padding: 0 0.5em;
+  border-bottom: 1px solid rgb(156, 156, 156);
+  height: 70px;
+}
+.card__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+.card__count {
+  background-color: #fff;
+  padding: 0.3em 0.6em;
+}
+.card__input {
+  width: 30px;
+  height: 25px;
+  border: none;
+  text-align: center;
+}
+.card__img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+.card__btn-back, .card__btn-checkout {
+  padding: 1em;
+  background-color: rgb(160, 160, 160);
+}
+
 *,
 *::after,
 *::before {
@@ -1161,8 +1251,7 @@ ul {
     border-radius: 5px;
   }
   .about__btn:hover {
-    background-color: rgba(182, 140, 102, 0.9529411765);
-    background-color: rgba(165, 158, 146, 0.9921568627);
+    background-color: rgba(139, 131, 120, 0.9921568627);
   }
   .about__img {
     width: 400px;
@@ -1258,8 +1347,6 @@ ul {
     transition: background-color 0.3s ease;
   }
   .products__btn:hover, .products__btn-add:hover {
-    background-color: rgba(161, 146, 146, 0.9921568627);
-    background-color: rgba(165, 158, 146, 0.9921568627);
     background-color: rgba(139, 131, 120, 0.9921568627);
   }
   .enjoy {
@@ -1301,7 +1388,7 @@ ul {
   }
   .blog__btn:hover {
     background-color: rgba(182, 140, 102, 0.9529411765);
-    background-color: rgba(134, 128, 125, 0.9647058824);
+    background-color: rgba(179, 136, 100, 0.9529411765);
   }
   .open {
     display: flex;
@@ -1385,9 +1472,17 @@ ul {
   }
   .modal__btn-add {
     width: 150px;
+    transition: background-color 0.3s ease;
+  }
+  .modal__btn-add:hover {
+    background-color: rgba(139, 131, 120, 0.9921568627);
   }
   .modal__close-button {
     width: 90px;
+    transition: background-color 0.3s ease;
+  }
+  .modal__close-button:hover {
+    background-color: rgba(182, 140, 102, 0.9529411765);
   }
   .newsletter {
     height: 35vh;
