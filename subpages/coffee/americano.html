@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,22 +9,19 @@
 			href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
 			rel="stylesheet"
 		/>
-
-		<title>Coffee House</title>
+		<title>Americano</title>
 		<script
 			src="https://kit.fontawesome.com/23064d9629.js"
 			crossorigin="anonymous"
@@ -32,43 +29,66 @@
 		<link rel="stylesheet" href="/css/products.css" />
 	</head>
 	<body>
-		<!-- /////////////////////////nav///////////////// -->
-<div class="nav"></div>
-		<!-- ////////////////////////////////////////////////// -->
+		<!-- JS -->
+		<div class="nav"></div>
+		<div class="cart__bgc">
+			<div class="cart"></div>
+		</div>
 
 		<div class="modal">
 			<div class="modal__body container">
 				<div class="modal__images">
 					<div class="modal__main-img">
-						<img class="modal__img" src="/img/coffies/american.jpg" alt="" />
+						<img
+							class="modal__img"
+							src="/img/coffies/american.jpg"
+							id="product-img"
+							alt="americano"
+						/>
 					</div>
 					<div class="modal__small-images">
-						<img class="modal__img" src="/img/coffies/american.jpg" alt="" />
-						<img class="modal__img" src="/img/bestseller/bs6_2.jpg" alt="" />
-
-						<img class="modal__img" src="/img/bestseller/bs3_1.jpg" alt="" />
+						<img
+							class="modal__img"
+							src="/img/coffies/american.jpg"
+							alt="americano"
+						/>
+						<img
+							class="modal__img"
+							src="/img/bestseller/bs6_2.jpg"
+							alt="second image of americano"
+						/>
+						<img
+							class="modal__img"
+							src="/img/bestseller/bs3_1.jpg"
+							alt="third image of americano"
+						/>
 					</div>
 				</div>
 				<div class="modal__content">
 					<h2 class="modal__heading">Americano</h2>
 					<span class="modal__price">$4.49</span>
 					<p class="modal__text">
-						Awaken your senses with the invigorating allure of our Americano, an exquisite blend of meticulously brewed espresso and precisely measured hot water. The result is a medium-bodied masterpiece that delights with its layers of complexity, a symphony of flavors that dance on your palate. Savor the essence of rich coffee beans sourced from the world's finest estates, perfectly extracted to deliver an unparalleled coffee experience. Whether it's a morning ritual or an afternoon pick-me-up, our Americano promises to tantalize your taste buds and provide the fuel to conquer your day.
+						Awaken your senses with the invigorating allure of our Americano, an
+						exquisite blend of meticulously brewed espresso and precisely
+						measured hot water. The result is a medium-bodied masterpiece that
+						delights with its layers of complexity, a symphony of flavors that
+						dance on your palate. Savor the essence of rich coffee beans sourced
+						from the world's finest estates, perfectly extracted to deliver an
+						unparalleled coffee experience. Whether it's a morning ritual or an
+						afternoon pick-me-up, our Americano promises to tantalize your taste
+						buds and provide the fuel to conquer your day.
 					</p>
-
-						<a href="/index.html#menu" class="modal__btn-menu">Go to menu</a>
-					</div>
+					<a href="/index.html#menu" class="modal__btn-menu">Go to menu</a>
 				</div>
 			</div>
 		</div>
 
-		<!-- //////////////////////////newsletter///////////// -->
-		<div class="footer__container">
-		</div>
-		<section class="card"></section>
-		<script src="/navi.js"></script>
-		<script src="/newcard.js"></script>
-		<script src="/footer.js"></script>
-		<script src="/script.js"></script>
+		<!-- JS -->
+		<div class="footer__container"></div>
+
+		<script src="/js/navi.js"></script>
+		<script src="/js/shoppingCart.js"></script>
+		<script src="/js/footer.js"></script>
+		<script src="/js/script.js"></script>
 	</body>
 </html>

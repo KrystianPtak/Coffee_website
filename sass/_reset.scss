@@ -1,9 +1,9 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html {
@@ -12,32 +12,31 @@ html {
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 img {
 	height: auto;
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
- 
+
 input,
 button,
 textarea,
 select {
-    font-family: inherit;
+	font-family: inherit;
 }
 
 button {
-  border: none;
-  cursor: pointer;
-
+	border: none;
+	cursor: pointer;
 }
 
 textarea {
-  resize: vertical;
+	resize: vertical;
 }
 
 ul {
-  list-style-type: none;
+	list-style-type: none;
 }

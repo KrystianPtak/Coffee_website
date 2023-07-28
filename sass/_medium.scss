@@ -15,20 +15,14 @@
 
 		&__logo {
 			@include flexCenter(row);
-
 			font-size: 5rem;
 			color: $white;
 			font-family: "Arizonia", cursive;
 		}
 
 		&__img {
-			width: 45px;
-
-			color: aliceblue;
-			object-fit: cover;
-			object-position: center;
-			border-radius: 10%;
 			padding: 0.1em;
+			width: 45px;
 		}
 
 		&__links {
@@ -46,82 +40,100 @@
 		}
 
 		&__link {
-			color: $white;
 			position: relative;
 			padding: 0.3em 0.5em;
+			color: $white;
 			transition: color 0.3s ease;
+
 			&:hover {
-				color: $menu;
+				color: $main;
 			}
 		}
 
-		&__glass {
-			cursor: pointer;
-			transition: color 0.3s ease;
-			&:hover {
-				color: $menu;
-			}
-		}
-
+		&__glass,
 		&__shopping {
 			cursor: pointer;
 			transition: color 0.3s ease;
+
 			&:hover {
-				color: $menu;
+				color: $main;
 			}
 		}
 	}
-	// /////////////////////search///////////////////////////
 
 	.search {
 		max-width: 700px;
 
-		&__name {
-			transition: transform 0.3s ease;
-		}
-		&__img {
-			transition: transform 0.3s ease;
-		}
+		&__name,
+		&__img,
 		&__price {
 			transition: transform 0.3s ease;
 		}
 
 		&__item {
-			&:hover .search__name {
-				transform: scale(1.1);
-			}
-		}
-		&__item {
-			&:hover .search__img {
-				transform: scale(1.1);
-			}
-		}
-		&__item {
+			&:hover .search__name,
+			&:hover .search__img,
 			&:hover .search__price {
 				transform: scale(1.1);
 			}
 		}
 	}
 
-	///////////////////////////header/////////////
-	.header {
-		&__heading {
-			font-size: 5rem;
-			margin-bottom: 0.2em;
+	.cart {
+		width: 500px;
+
+		&__bgc {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(24, 24, 24, 0.788);
+			transform: translateX(100%);
 		}
-		&__btn {
+
+		&__bgc-active {
+			z-index: 1;
+			transform: translateX(0);
+		}
+
+		&__btn-back,
+		&__btn-checkout {
+			transition: background-color 0.3s ease;
+
+			&:hover {
+				background-color: $hover;
+			}
+		}
+	}
+
+	.header {
+		&__bgc {
+			height: 100vh;
+			background: url("/img/big_bgc.jpg") rgba(0, 0, 0, 0.7);
+			background-blend-mode: darken;
+			background-size: cover;
+			background-position: center;
+		}
+
+		&__heading {
+			margin-bottom: 0.2em;
+			font-size: 5rem;
+		}
+
+		&__link {
 			font-size: 1.5rem;
 			transition: background-color 0.3s ease;
+
 			&:hover {
 				background-color: rgba(255, 255, 255, 0.103);
 			}
 		}
 	}
-	// //////////////////about//////////////////////
-	.about {
-		max-width: unset;
 
+	.about {
 		@include fromdown(70px);
+		max-width: unset;
 
 		&__body {
 			flex-direction: row;
@@ -129,19 +141,19 @@
 		}
 
 		&__heading {
+			@include fromdown(50px);
 			padding-top: 2em;
 			margin-bottom: 1.5em;
 			font-size: $medium;
-			@include fromdown(50px);
 		}
 
 		&__btn {
-			transition: background-color 0.3s ease;
 			font-size: 1.4rem;
 			border-radius: 5px;
+			transition: background-color 0.3s ease;
 
 			&:hover {
-				background-color: $hover3;
+				background-color: $hover;
 			}
 		}
 
@@ -158,7 +170,7 @@
 			margin-bottom: 1.5em;
 		}
 	}
-	// ////////////////services/////////////////
+
 	.services {
 		&__box {
 			@include flexCenter(row);
@@ -174,20 +186,19 @@
 		&__body {
 			@include fromdown(50px);
 			gap: 1em;
+
 			&:hover .services__img {
 				transform: rotateY(360deg);
 			}
 		}
 
 		&__img {
-			transition: 0.9s;
+			transition: transform 0.9s ease;
 		}
 		&__text {
 			width: 300px;
 		}
 	}
-
-	// ///////////menu//////////////////////
 
 	.menu {
 		&__heading,
@@ -206,13 +217,12 @@
 
 		&__box {
 			@include fromdown(70px);
+
 			&:hover .menu__title {
 				color: rgb(224, 224, 224);
 			}
 		}
 	}
-
-	// ////////////////best seller/////products//////////
 
 	.products {
 		&__heading,
@@ -222,9 +232,7 @@
 		}
 
 		&__overlay {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			@include flexCenter(row);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -233,8 +241,8 @@
 			background-color: rgba(0, 0, 0, 0.5);
 			opacity: 0;
 			cursor: pointer;
-
 			transition: opacity 0.5s ease;
+
 			&:hover {
 				opacity: 1;
 			}
@@ -250,41 +258,44 @@
 		&__btn-add {
 			transition: background-color 0.3s ease;
 			&:hover {
-				background-color: $hover3;
+				background-color: $hover;
 			}
 		}
 	}
 
-	//////////////////////enjoy////////////
 	.enjoy {
 		height: 45vh;
+		background: url("../img/enjoy.jpg") rgba(0, 0, 0, 0.6);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 		&__heading,
 		&__text,
 		&__btn {
 			@include fromdown(50px);
 		}
+
 		&__heading {
 			font-size: 3rem;
 		}
 	}
 
-	//////////////blog//////////////
 	.blog {
 		padding: 3em 0;
 
 		&__heading {
 			font-size: 3.5rem;
 		}
+
 		&__body {
 			gap: 5em;
 		}
 
 		&__img {
-			transition: 0.4s;
+			transition: transform 0.4s ease;
 		}
 
 		&__box {
-			transition: 0.4s;
 			&:hover .blog__img {
 				transform: scale(1.1);
 			}
@@ -300,25 +311,15 @@
 
 			&:hover {
 				background-color: $hover;
-
-				// background-color: #b68c66f3;
-				background-color:$hover2;
 			}
 		}
 	}
 
-	// ///////////////////open//////////////////////
-
 	.open {
 		display: flex;
-
 		height: 45vh;
 
-		&__img {
-			@include fromdown(50px);
-			width: 50%;
-			height: 100%;
-		}
+		&__img,
 		&__body {
 			@include fromdown(50px);
 			width: 50%;
@@ -333,13 +334,13 @@
 
 		&__tel {
 			transition: color 0.3s ease;
+
 			&:hover {
-				color: $menu;
+				color: $main;
 			}
 		}
 	}
 
-	// //////////modal///////////////////////////
 	.modal {
 		max-width: 800px;
 
@@ -357,13 +358,12 @@
 			gap: 3em;
 		}
 
-		&__images {
-			width: 50%;
-		}
-
 		&__content {
 			width: 50%;
+			gap: 1.5em;
+			align-items: start;
 		}
+
 		&__small-images {
 			display: flex;
 			justify-content: space-between;
@@ -373,63 +373,42 @@
 			width: 90px;
 			height: 90px;
 		}
-		&__content {
-			gap: 1.5em;
-			align-items: start;
-		}
+
 		&__heading {
 			font-size: 3.2rem;
 		}
+
 		&__price {
 			font-size: 2.2rem;
 		}
 
-		&__buttons {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: start;
-		}
-
-		&__input {
-			margin: 0;
-			padding: 0.5em;
-			border: none;
-			text-align: center;
-			width: 50px;
-		}
-
-		&__btn-add {
-			width: 150px;
-			transition: background-color 0.3s ease;
-			&:hover{
-				background-color: $hover3;
-			}
-		}
+		&__btn-add,
 		&__close-button {
-			width: 90px;
 			transition: background-color 0.3s ease;
-			&:hover{
+
+			&:hover {
 				background-color: $hover;
 			}
 		}
 	}
-	// ///////////////////////////////
+
 	.newsletter {
 		height: 35vh;
+
 		&__form {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: start;
+			@include flexCenter(row);
+		}
+
+		&__input {
+			margin-bottom: unset;
 		}
 
 		&__btn {
-			font-size: 1.5rem;
-			transition:border .3s ease;
+			font-size: 1.4rem;
+			transition: border 0.3s ease;
+
 			&:hover {
-				// color: $menu;
-				border: 1px solid $menu;
+				border: 1px solid black;
 			}
 		}
 
@@ -440,14 +419,11 @@
 		}
 	}
 
-	// ////////////////////////
-
 	.contact {
 		&__content {
 			display: flex;
 			justify-content: center;
 			gap: 3em;
-			border-bottom: 1px solid $white;
 			width: 100%;
 			padding-bottom: 3em;
 		}
@@ -458,7 +434,7 @@
 			margin-bottom: unset;
 
 			&:hover .contact__icon {
-				color: $menu;
+				color: $main;
 				transform: scale(0.9);
 			}
 		}
@@ -472,12 +448,20 @@
 			transition: 0.3s ease color, 0.3s ease transform;
 		}
 	}
-	// /////////////
+
 	.footer {
 		&__body {
 			flex-direction: row;
 			justify-content: space-between;
 			padding-bottom: 0.5em;
+		}
+
+		&__icon {
+			transition: color 0.3s ease;
+			&:hover {
+				color: $main;
+				cursor: pointer;
+			}
 		}
 	}
 }

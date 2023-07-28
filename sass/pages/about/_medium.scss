@@ -1,0 +1,206 @@
+@use "../../colors" as *;
+@use "../../mixins" as *;
+@use "../../reset" as *;
+@use "../../sizes" as *;
+
+@media (min-width: 768px) {
+	.nav {
+		&__button {
+			display: none;
+		}
+
+		&__logo {
+			@include flexCenter(row);
+
+			font-size: 5rem;
+			color: $white;
+			font-family: "Arizonia", cursive;
+		}
+
+		&__img {
+			width: 45px;
+
+			color: aliceblue;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 10%;
+			padding: 0.1em;
+		}
+
+		&__links {
+			flex-direction: row;
+			gap: 0.5em;
+			position: relative;
+			left: unset;
+			top: unset;
+			width: unset;
+			height: unset;
+			padding: 0;
+			opacity: 1;
+			transform: translateX(0);
+			background-color: unset;
+		}
+
+		&__link {
+			color: $white;
+			position: relative;
+			padding: 0.3em 0.5em;
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: $main;
+			}
+		}
+
+		&__glass {
+			cursor: pointer;
+			transition: color 0.3s ease;
+			&:hover {
+				color: $main;
+			}
+		}
+
+		&__shopping {
+			cursor: pointer;
+			transition: color 0.3s ease;
+			&:hover {
+				color: $main;
+			}
+		}
+	}
+	///////////////////////////search///////
+	///
+	.search {
+		max-width: 700px;
+
+		&__name {
+			transition: transform 0.3s ease;
+		}
+		&__img {
+			transition: transform 0.3s ease;
+		}
+		&__price {
+			transition: transform 0.3s ease;
+		}
+
+		&__item {
+			&:hover .search__name {
+				transform: scale(1.1);
+			}
+		}
+		&__item {
+			&:hover .search__img {
+				transform: scale(1.1);
+			}
+		}
+		&__item {
+			&:hover .search__price {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.cart {
+		width: 500px;
+
+		&__bgc {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(24, 24, 24, 0.788);
+			transform: translateX(100%);
+		}
+
+		&__bgc-active {
+			z-index: 1;
+			transform: translateX(0);
+		}
+	}
+	// ////////////////////////////
+
+	.about {
+		&__bgc {
+			background: url("/img/enjoy.jpg") rgba(0, 0, 0, 0.7);
+			background-position: center;
+		}
+
+		&__box {
+			max-width: 600px;
+		}
+
+		&__img {
+			height: 350px;
+			width: 100%;
+		}
+	}
+
+	//////////////////////
+	.newsletter {
+		height: 35vh;
+
+		&__form {
+			@include flexCenter(row);
+		}
+
+		&__input {
+			margin-bottom: unset;
+		}
+
+		&__btn {
+			font-size: 1.4rem;
+			transition: border 0.3s ease;
+
+			&:hover {
+				border: 1px solid black;
+			}
+		}
+	}
+
+	.contact {
+		&__content {
+			display: flex;
+			justify-content: center;
+			gap: 3em;
+			width: 100%;
+			padding-bottom: 3em;
+		}
+
+		&__box {
+			flex-direction: row;
+			gap: 0.5em;
+			margin-bottom: unset;
+
+			&:hover .contact__icon {
+				color: $main;
+				transform: scale(0.9);
+			}
+		}
+
+		&__title {
+			text-align: left;
+		}
+
+		&__icon {
+			font-size: 2.4rem;
+			transition: 0.3s ease color, 0.3s ease transform;
+		}
+	}
+
+	.footer {
+		&__body {
+			flex-direction: row;
+			justify-content: space-between;
+			padding-bottom: 0.5em;
+		}
+
+		&__icon {
+			transition: color 0.3s ease;
+			&:hover {
+				color: $main;
+				cursor: pointer;
+			}
+		}
+	}
+}

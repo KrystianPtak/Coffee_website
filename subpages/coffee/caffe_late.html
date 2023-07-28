@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,22 +9,19 @@
 			href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
 			rel="stylesheet"
 		/>
-
-		<title>Coffee House</title>
+		<title>Caffe late</title>
 		<script
 			src="https://kit.fontawesome.com/23064d9629.js"
 			crossorigin="anonymous"
@@ -32,9 +29,11 @@
 		<link rel="stylesheet" href="/css/products.css" />
 	</head>
 	<body>
-		<!-- /////////////////////////nav///////////////// -->
-<div class="nav"></div>
-		<!-- ////////////////////////////////////////////////// -->
+		<!-- JS -->
+		<div class="nav"></div>
+		<div class="cart__bgc">
+			<div class="cart"></div>
+		</div>
 
 		<div class="modal">
 			<div class="modal__body container">
@@ -43,45 +42,53 @@
 						<img
 							class="modal__img"
 							src="/img/coffies/caffee_latte.jpg"
-							alt=""
+							id="product-img"
+							alt="Caffee Latte"
 						/>
 					</div>
 					<div class="modal__small-images">
 						<img
 							class="modal__img"
 							src="/img/coffies/caffee_latte.jpg"
-							alt=""
+							alt="Caffee Latte"
 						/>
 						<img
 							class="modal__img"
 							src="/img/coffies/caffee_latte_1.jpg"
-							alt=""
+							alt="Second image of coffee latte"
 						/>
-
-						<img class="modal__img" src="/img/coffies/caffee_latte_2.jpg"" alt="" />
-						<!-- <img class="modal__img" src="moon-g5ad823dcc_1280.jpg" alt=""> -->
+						<img
+							class="modal__img"
+							src="/img/coffies/caffee_latte_2.jpg"
+							alt="Third image of coffee latte "
+						/>
 					</div>
 				</div>
 				<div class="modal__content">
 					<h2 class="modal__heading">Caffe late</h2>
 					<span class="modal__price">$5.99</span>
 					<p class="modal__text">
-						Elevate your coffee journey with our Caffe Latte, a delightful fusion of expertly pulled espresso and lusciously steamed milk, meticulously crafted to create a velvety canvas of taste. This harmonious symphony presents a delicate balance of bold coffee notes and creamy smoothness, allowing you to immerse yourself in a sensory masterpiece. Each sip captivates with its rich aroma, a tribute to the skilled baristas who bring this masterpiece to life. Experience the art of coffee perfection in a cup that reflects the passion and dedication we pour into every blend.
+						Elevate your coffee journey with our Caffe Latte, a delightful
+						fusion of expertly pulled espresso and lusciously steamed milk,
+						meticulously crafted to create a velvety canvas of taste. This
+						harmonious symphony presents a delicate balance of bold coffee notes
+						and creamy smoothness, allowing you to immerse yourself in a sensory
+						masterpiece. Each sip captivates with its rich aroma, a tribute to
+						the skilled baristas who bring this masterpiece to life. Experience
+						the art of coffee perfection in a cup that reflects the passion and
+						dedication we pour into every blend.
 					</p>
-
 					<a href="/index.html#menu" class="modal__btn-menu">Go to menu</a>
-					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- //////////////////////////newsletter///////////// -->
-		<div class="footer__container">
-		</div>
-		<section class="card"></section>
-		<script src="/navi.js"></script>
-		<script src="/newcard.js"></script>
-		<script src="/footer.js"></script>
-		<script src="/script.js"></script>
+		<!-- JS -->
+		<div class="footer__container"></div>
+
+		<script src="/js/navi.js"></script>
+		<script src="/js/shoppingCart.js"></script>
+		<script src="/js/footer.js"></script>
+		<script src="/js/script.js"></script>
 	</body>
 </html>

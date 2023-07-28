@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,22 +9,19 @@
 			href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
 			rel="stylesheet"
 		/>
-
-		<title>Coffee House</title>
+		<title>Cortado</title>
 		<script
 			src="https://kit.fontawesome.com/23064d9629.js"
 			crossorigin="anonymous"
@@ -32,22 +29,39 @@
 		<link rel="stylesheet" href="/css/products.css" />
 	</head>
 	<body>
-		<!-- /////////////////////////nav///////////////// -->
+		<!-- JS -->
 		<div class="nav"></div>
-		<!-- ////////////////////////////////////////////////// -->
+		<div class="cart__bgc">
+			<div class="cart"></div>
+		</div>
 
 		<div class="modal">
 			<div class="modal__body container">
 				<div class="modal__images">
 					<div class="modal__main-img">
-						<img class="modal__img" src="/img/coffies/cortado.jpg" alt="" />
+						<img
+							class="modal__img"
+							src="/img/coffies/cortado.jpg"
+							id="product-img"
+							alt="cortado"
+						/>
 					</div>
 					<div class="modal__small-images">
-						<img class="modal__img" src="/img/coffies/cortado.jpg" alt="" />
-						<img class="modal__img" src="/img/coffies/cortado_1.jpg" alt="" />
-
-						<img class="modal__img" src="/img/coffies/cortado_2.jpg" alt="" />
-						<!-- <img class="modal__img" src="moon-g5ad823dcc_1280.jpg" alt=""> -->
+						<img
+							class="modal__img"
+							src="/img/coffies/cortado.jpg"
+							alt="cortado"
+						/>
+						<img
+							class="modal__img"
+							src="/img/coffies/cortado_1.jpg"
+							alt="second image of cortado"
+						/>
+						<img
+							class="modal__img"
+							src="/img/coffies/cortado_2.jpg"
+							alt="third image of cortado"
+						/>
 					</div>
 				</div>
 				<div class="modal__content">
@@ -64,20 +78,17 @@
 						yourself in the elegant simplicity of our Cortado, a true work of
 						coffee craftsmanship that embodies the soul of coffee perfection.
 					</p>
-
 					<a href="/index.html#menu" class="modal__btn-menu">Go to menu</a>
-					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- //////////////////////////newsletter///////////// -->
-		<div class="footer__container">
-		</div>
-		<section class="card"></section>
-		<script src="/navi.js"></script>
-		<script src="/newcard.js"></script>
-		<script src="/footer.js"></script>
-		<script src="/script.js"></script>
+		<!-- JS -->
+		<div class="footer__container"></div>
+
+		<script src="/js/navi.js"></script>
+		<script src="/js/shoppingCart.js"></script>
+		<script src="/js/footer.js"></script>
+		<script src="/js/script.js"></script>
 	</body>
 </html>

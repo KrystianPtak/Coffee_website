@@ -3,7 +3,6 @@
 @use "../../reset" as *;
 @use "../../sizes" as *;
 
-
 html {
 	scroll-padding-top: 80px;
 }
@@ -21,7 +20,6 @@ body {
 	padding: 0 0.5em;
 }
 
-// NAV ////////////////////////
 .nav {
 	display: flex;
 	align-items: center;
@@ -37,8 +35,6 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
-
-		// /////////////
 	}
 
 	&__button {
@@ -73,11 +69,9 @@ body {
 		letter-spacing: 0.7px;
 		background-color: $white;
 		transform: translateX(-105%);
-		// opacity: 0;
 		transition: all 0.3s ease;
 
 		&--active {
-			// opacity: 1;
 			transform: translateX(0);
 		}
 	}
@@ -93,9 +87,25 @@ body {
 		color: $white;
 		font-size: 2rem;
 	}
+
+	&__shopping {
+		position: relative;
+	}
+
+	&__quantity {
+		@include flexCenter(row);
+		position: absolute;
+		top: -14px;
+		right: -9px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		color: $white;
+		font-size: 1.1rem;
+		background-color: rgb(172, 48, 48);
+	}
 }
 
-// /////////////////////search////////////////
 .search {
 	position: fixed;
 	top: 54px;
@@ -103,24 +113,12 @@ body {
 	width: 80%;
 	transform: translateX(-50%);
 
-	// position: relative;
-
-	// display: none;
-
-	// position: absolute;
-	// /////////////////
-	// display: none;
-	// /////klkulator top///////////
-	// height: 300px;
-
-	// z-index: -2;
-
 	&__close {
 		position: absolute;
 		right: -30px;
 		top: 8px;
 		font-size: 3rem;
-		color: $menu;
+		color: $main;
 		cursor: pointer;
 	}
 
@@ -134,12 +132,10 @@ body {
 		transition: 0.4s ease;
 		scale: 0;
 		opacity: 0;
-		// transform: translateX(100%);
 
 		&--active {
 			scale: 1;
 			opacity: 1;
-			// transform: translateX(0);
 		}
 	}
 
@@ -154,22 +150,11 @@ body {
 		text-transform: capitalize;
 		font-family: $heading-font;
 		font-size: 1.6rem;
-		// transform: translateY(-200px);
-
-		// &--active {
-		// 	transform: translateY(0);
-		// }
 
 		&:focus {
 			outline: none;
 		}
 	}
-
-	// &__list {
-
-	// 	// display: none;
-
-	// }
 
 	&__items {
 		background-color: rgb(253, 253, 253);
@@ -185,7 +170,6 @@ body {
 		border-bottom: 1px solid rgb(216, 216, 216);
 
 		font-family: $heading-font;
-		// width: 100%;
 	}
 
 	&__img {
@@ -198,7 +182,7 @@ body {
 		color: $dark;
 	}
 	&__price {
-		color: $menu;
+		color: $main;
 	}
 
 	&__overflow {
@@ -206,27 +190,99 @@ body {
 	}
 }
 
+.cart {
+	position: fixed;
+	right: 0;
+	top: 8vh;
+	height: 92vh;
+	width: 100%;
+	transform: translateX(100%);
+	font-size: 1.4rem;
+	background-color: #e6ebf0;
+	transition: transform 0.4s ease;
+
+	&__active {
+		transform: translateX(0);
+	}
+
+	&__heading {
+		margin-bottom: 1em;
+		padding-top: 5em;
+		font-family: $heading-font;
+		font-size: $small;
+		text-align: center;
+	}
+
+	&__items {
+		@include flexCenter(column);
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1em;
+		width: 100%;
+		padding: 0 0.5em;
+		height: 70px;
+		border-bottom: 1px solid rgb(156, 156, 156);
+	}
+
+	&__content {
+		@include flexCenter(row);
+		gap: 0.3em;
+	}
+
+	&__name {
+		width: 150px;
+	}
+
+	&__count {
+		display: flex;
+		gap: 0.5em;
+		padding: 0.3em 1.6em;
+		align-items: center;
+		border-radius: 10px;
+	}
+
+	&__img {
+		width: 40px;
+		height: 40px;
+		object-fit: cover;
+	}
+
+	&__minus,
+	&__plus {
+		font-size: 1.4rem;
+		cursor: pointer;
+	}
+
+	&__btns {
+		@include flexCenter(row);
+		gap: 1em;
+		margin-top: 2em;
+	}
+
+	&__btn-back,
+	&__btn-checkout,
+	&__subtotal {
+		@include button;
+		border-radius: 5px;
+		font-size: 1.4rem;
+	}
+
+	&__subtotal {
+		background-color: $hover;
+	}
+}
+
 .modal {
 	padding: 2em 0;
-	// left: 50%;
 	width: 100%;
-	// height: 100vh;
-	// padding: 1em 1em 3em;
-
-	// transform: translate(-50%, -50%);
 	background-color: #ebe8e6;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	// &__bgc {
-	// 	display: none;
-	// 	position: fixed;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	background-color: rgba(24, 24, 24, 0.788);
-	// }
 
 	&__open-overflow {
 		overflow: hidden;
@@ -241,7 +297,6 @@ body {
 		flex-direction: column;
 		max-width: 500px;
 		margin-bottom: 0.5em;
-		// overflow: hidden;
 	}
 
 	&__main-img img {
@@ -253,8 +308,6 @@ body {
 	}
 
 	&__img {
-		// width: 70px;
-		// height: 70px;
 		width: 30%;
 		object-position: center;
 		object-fit: cover;
@@ -276,7 +329,7 @@ body {
 
 	&__price {
 		font-family: $heading-font;
-		color: $menu;
+		color: $main;
 		font-weight: 600;
 		font-size: 1.8rem;
 	}
@@ -289,7 +342,6 @@ body {
 	&__buttons {
 		@include flexCenter(column);
 		gap: 0.8em;
-		// background-color: #5f5f5e;
 		position: relative;
 	}
 
@@ -305,21 +357,8 @@ body {
 		width: 100px;
 	}
 
-	&__down,
-	&__up {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 25px;
-		background-color: rgb(211, 209, 209);
-		cursor: pointer;
-	}
-	&__btn-menu
-	{
-		padding: 0.6em 1.2em;
-		background-color: $menu;
-		color: $white;
-		text-transform: uppercase;
+	&__btn-menu {
+		@include button;
 		width: 150px;
 	}
 }
@@ -331,6 +370,7 @@ body {
 	font-family: $heading-font;
 	color: $white;
 	background-color: $black;
+	border-bottom: 2px solid #373738;
 
 	&__content {
 		@include flexCenter(column);
@@ -344,17 +384,16 @@ body {
 	&__input {
 		width: 290px;
 		padding: 0.5em;
+		margin-bottom: 0.5em;
 
 		&:focus {
-			border: 1px solid $menu;
+			border: 1px solid $main;
 			outline: none;
 		}
 	}
 
 	&__form {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include flexCenter(column);
 		gap: 0.3em;
 		width: 100%;
 		overflow: hidden;
@@ -363,38 +402,25 @@ body {
 	&__msg {
 		font-size: 1.4rem;
 		text-align: center;
-		margin-top: 0.5em;
-	}
-
-	&__box {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
 	}
 
 	&__btn {
-		width: fit-content;
 		padding: 0.5em 1em;
 		background: none;
 		color: $white;
 		border: 1px solid $white;
 		text-transform: uppercase;
-
-		&:focus {
-			border: 1px solid $menu;
-			outline: none;
-		}
 	}
 
 	&__send {
-		color: $menu;
+		color: $main;
 	}
 }
 
 .contact {
 	padding: 1em 0;
-	background-color: $dark;
+	background-color: #141414;
+	border-bottom: 2px solid #373738;
 
 	&__body {
 		@include flexCenter(column);
@@ -404,10 +430,10 @@ body {
 	&__logo {
 		@include flexCenter(row);
 		gap: 0.1em;
+		margin-bottom: 0.5em;
 		font-size: 6rem;
 		color: $white;
 		font-family: "Arizonia", cursive;
-		margin-bottom: 0.5em;
 	}
 
 	&__img {
@@ -418,8 +444,6 @@ body {
 		@include flexCenter(column);
 		margin-bottom: 2em;
 		color: $white;
-
-	
 	}
 
 	&__title {
@@ -430,48 +454,45 @@ body {
 	&__text {
 		font-size: 1.4rem;
 	}
+
 	&__border {
+		@include flexCenter(row);
 		width: 50px;
 		height: 50px;
-		@include flexCenter(row);
-		border: 1px solid $menu;
+		border: 1px solid $main;
 	}
 
 	&__icon {
 		font-size: 2rem;
-	
 	}
 
-	&__message{
-		color: $menu;
-		margin-top: .5em;
-		display: block;
-		font-size: 1.2rem;
+	&__message {
 		display: none;
+		margin-top: 0.5em;
+		color: $main;
+		font-size: 1.2rem;
 	}
 }
 
 .footer {
-	background-color: $dark;
-	color: $white;
 	padding: 1em;
+	background-color: #141414;
+	color: $white;
+
 	&__body {
 		@include flexCenter(column);
 		gap: 1em;
 	}
-	&__img {
-		width: 50px;
-		height: 25px;
-		object-fit: cover;
+
+	&__icons {
+		@include flexCenter(row);
+		gap: 1em;
 	}
 
-	&__imgs {
-		display: flex;
-		gap: 0.5em;
+	&__icon {
+		font-size: 2rem;
 	}
 }
 
-@import "../../nav";
 @import "medium";
 @import "large";
-

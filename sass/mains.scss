@@ -4,7 +4,6 @@
 @use "sizes" as *;
 
 html {
-	// scroll-padding-top: 70px;
 	scroll-padding-top: 40px;
 }
 
@@ -16,12 +15,11 @@ body {
 
 .container {
 	max-width: 95%;
-	margin: 0 auto;
 	width: 100%;
+	margin: 0 auto;
 	padding: 0 0.5em;
 }
 
-// NAV ////////////////////////
 .nav {
 	display: flex;
 	align-items: center;
@@ -30,6 +28,7 @@ body {
 	width: 100%;
 	z-index: 999;
 	transition: background-color 0.3s ease;
+
 	&__bgc {
 		background-color: $darker;
 	}
@@ -39,8 +38,6 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
-
-		// /////////////
 	}
 
 	&__button {
@@ -62,7 +59,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
 		gap: 3em;
 		position: fixed;
 		left: 0;
@@ -83,55 +79,42 @@ body {
 	}
 
 	&__link {
-		color: $dark;
 		padding: 0.5em;
+		color: $dark;
 	}
 
 	&__icons {
 		display: flex;
 		gap: 1em;
+		margin-right: 0.2em;
 		color: $white;
 		font-size: 2rem;
-	margin-right: .2em;
 	}
 
-	&__addCart{
+	&__shopping {
 		position: relative;
-
 	}
-	.quantity{
-		background: rgb(187, 45, 45);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-    position: absolute;
-right: -20px;
-		top: -20px;
-width: 27px;
-height: 27px;
-font-size: 1.4rem;
 
+	&__quantity {
+		@include flexCenter(row);
+		position: absolute;
+		top: -14px;
+		right: -9px;
+		width: 20px;
+		height: 20px;
+		background-color: rgb(172, 48, 48);
+		color: $white;
+		border-radius: 50%;
+		font-size: 1.1rem;
 	}
 }
 
-// /////////////////////search////////////////
 .search {
 	position: fixed;
 	top: 54px;
 	left: 50%;
 	width: 80%;
 	transform: translateX(-50%);
-
-	&__close {
-		position: absolute;
-		right: -30px;
-		top: 8px;
-		font-size: 3rem;
-		color: $menu;
-		cursor: pointer;
-	}
 
 	&__bgc {
 		position: fixed;
@@ -148,6 +131,15 @@ font-size: 1.4rem;
 			scale: 1;
 			opacity: 1;
 		}
+	}
+
+	&__close {
+		position: absolute;
+		right: -30px;
+		top: 8px;
+		font-size: 3rem;
+		color: $main;
+		cursor: pointer;
 	}
 
 	&__input {
@@ -178,9 +170,8 @@ font-size: 1.4rem;
 		padding: 0.3em 0.8em 0.3em;
 		margin-bottom: 0.7em;
 		flex-basis: 35%;
-		border-bottom: 1px solid rgb(216, 216, 216);
-
 		font-family: $heading-font;
+		border-bottom: 1px solid rgb(216, 216, 216);
 	}
 
 	&__img {
@@ -192,8 +183,9 @@ font-size: 1.4rem;
 	&__name {
 		color: $dark;
 	}
+
 	&__price {
-		color: $menu;
+		color: $main;
 	}
 
 	&__overflow {
@@ -201,14 +193,97 @@ font-size: 1.4rem;
 	}
 }
 
-// ////////////////////////////////////////////////////////
+.cart {
+	position: fixed;
+	right: 0;
+	top: 8vh;
+	height: 92vh;
+	width: 100%;
+	transform: translateX(100%);
+	font-size: 1.4rem;
+	background-color: #e6ebf0;
+	transition: transform 0.3s ease;
+	z-index: 99;
 
-// HEADER //
+	&__active {
+		transform: translateX(0);
+	}
+
+	&__heading {
+		margin-bottom: 1em;
+		padding-top: 5em;
+		font-family: $heading-font;
+		font-size: $small;
+		text-align: center;
+	}
+
+	&__items {
+		@include flexCenter(column);
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1em;
+		width: 100%;
+		padding: 0 0.5em;
+		height: 70px;
+		border-bottom: 1px solid rgb(156, 156, 156);
+	}
+
+	&__content {
+		@include flexCenter(row);
+		gap: 0.3em;
+	}
+
+	&__name {
+		width: 150px;
+	}
+
+	&__count {
+		display: flex;
+		gap: 0.5em;
+		padding: 0.3em 1.6em;
+		align-items: center;
+		border-radius: 10px;
+	}
+
+	&__img {
+		width: 40px;
+		height: 40px;
+		object-fit: cover;
+	}
+
+	&__minus,
+	&__plus {
+		font-size: 1.4rem;
+		cursor: pointer;
+	}
+
+	&__btns {
+		@include flexCenter(row);
+		gap: 1em;
+		margin-top: 2em;
+	}
+
+	&__btn-back,
+	&__btn-checkout,
+	&__subtotal {
+		@include button;
+		border-radius: 5px;
+		font-size: 1.4rem;
+	}
+
+	&__subtotal {
+		background-color: $hover;
+	}
+}
+
 .header {
 	&__bgc {
 		height: 100vh;
-		background: url("../bgc/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg")
-			rgba(0, 0, 0, 0.7);
+		background: url("/img/small_bgc.jpg") rgba(0, 0, 0, 0.7);
 		background-blend-mode: darken;
 		background-size: cover;
 		background-position: center;
@@ -228,31 +303,21 @@ font-size: 1.4rem;
 
 	&__heading {
 		text-align: center;
-		font-size: 4rem;
+		font-size: $small;
 	}
 
-	&__btn {
-		width: fit-content;
+	&__link {
+		color: $white;
 		padding: 0.6em 1.2em;
 		background: transparent;
 		border: 1px solid $white;
-
-	}
-
-	&__link{
-			color: $white;
 	}
 }
-
-// ///////////////////about///////////////////////////////////
 
 .about {
-
 	padding-bottom: 4em;
 	max-width: 450px;
-&__body{
-	@include flexCenter(column);
-}
+
 	&__heading {
 		padding-top: 1em;
 		margin-bottom: 1em;
@@ -260,36 +325,40 @@ font-size: 1.4rem;
 		font-family: $heading-font;
 		font-size: $small;
 	}
-	&__img {
-		object-fit: cover;
-		margin-bottom: 1em;
+
+	&__body {
+		@include flexCenter(column);
 	}
+
+	&__img {
+		margin-bottom: 1em;
+		object-fit: cover;
+		padding: 0.3em;
+	}
+
 	&__title {
 		margin-bottom: 0.5em;
 		font-family: $heading-font;
 		font-size: 2rem;
 	}
+
 	&__text {
 		margin-bottom: 1.5em;
 	}
+
 	&__btn {
-		padding: .8em 1.6em;
-		background-color: $menu;
-		text-transform: capitalize;
-		color: $white;
+		@include button;
 	}
 }
-
-////////////////////////////services////////////////////////
 
 .services {
 	padding: 1em 0 3em;
 	background-color: #f2efe6;
 
 	&__heading {
+		margin: 1em 0 1.5em;
 		font-family: $heading-font;
 		text-align: center;
-		margin: 1em 0 1.5em;
 		font-size: $small;
 	}
 
@@ -317,12 +386,10 @@ font-size: 1.4rem;
 
 	&__text {
 		margin-bottom: 1em;
-		text-align: center;
 		max-width: 450px;
+		text-align: center;
 	}
 }
-
-// ///////////////////////////menu/////////////////////////////
 
 .menu {
 	@include flexCenter(column);
@@ -333,8 +400,8 @@ font-size: 1.4rem;
 	&__heading {
 		margin-bottom: 0.3em;
 		font-family: $heading-font;
-		font-size: 4rem;
-		color: $menu;
+		font-size: $small;
+		color: $main;
 	}
 
 	&__text {
@@ -368,7 +435,7 @@ font-size: 1.4rem;
 		margin-bottom: 0.3em;
 		font-family: $heading-font;
 		font-size: 2.2rem;
-		color: $menu;
+		color: $main;
 	}
 
 	&__span {
@@ -384,8 +451,6 @@ font-size: 1.4rem;
 	}
 }
 
-// //////////////best seller///////////////////////////
-
 .products {
 	padding: 3em 0;
 
@@ -396,7 +461,7 @@ font-size: 1.4rem;
 		text-align: center;
 
 		&--span {
-			color: $menu;
+			color: $main;
 		}
 	}
 
@@ -407,17 +472,17 @@ font-size: 1.4rem;
 
 	&__body {
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 2em;
 	}
 
 	&__box {
 		@include flexCenter(column);
+		position: relative;
+		margin-bottom: 3em;
 		font-family: $heading-font;
 		overflow: hidden;
-		margin-bottom: 3em;
-		position: relative;
 	}
 
 	&__overlay,
@@ -437,38 +502,28 @@ font-size: 1.4rem;
 		@include flexCenter(column);
 		gap: 0.5em;
 	}
-&__buttons{
-	display: flex;
-	gap: 0.5em;
-}
-	&__btn,
-	&__btn-add {
-		padding: 0.6em 1.4em;
-		text-transform: capitalize;
-		background-color: $menu;
-		color: $white;
-		// border-radius: 5px;
+
+	&__buttons {
+		display: flex;
+		gap: 0.5em;
 	}
 
-	// &__btn-add{
-	// 	background-color: rgb(151, 148, 148);
-	// }
+	&__btn,
+	&__btn-add {
+		@include button;
+	}
 }
-
-//////////////////modal///////////////////
 
 .modal {
 	position: relative;
 	top: 50%;
 	left: 50%;
 	width: 90%;
-
 	max-height: 500px;
 	padding: 1em 1em 3em;
 	overflow-y: auto;
 	transform: translate(-50%, -50%);
 	background-color: #ebe8e6;
-
 
 	&__bgc {
 		display: none;
@@ -486,9 +541,10 @@ font-size: 1.4rem;
 	}
 
 	&::-webkit-scrollbar {
-		background-color: orange;
 		width: 6px;
+		background-color: orange;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		background-color: #333;
 	}
@@ -505,13 +561,10 @@ font-size: 1.4rem;
 	}
 
 	&__main-img img {
-		// width: 350px;
 		width: 100%;
+		height: 100%;
 		margin-bottom: 0.5em;
 		object-fit: cover;
-		height: 100%;
-
-			
 	}
 
 	&__img {
@@ -523,8 +576,8 @@ font-size: 1.4rem;
 
 	&__small-images {
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 0.5em;
 		width: 100%;
 	}
@@ -540,7 +593,7 @@ font-size: 1.4rem;
 
 	&__price {
 		font-family: $heading-font;
-		color: $menu;
+		color: $main;
 		font-weight: 600;
 		font-size: 1.8rem;
 		text-align: left;
@@ -550,52 +603,21 @@ font-size: 1.4rem;
 		margin-bottom: 1em;
 	}
 
-	&__buttons {
-		@include flexCenter(column);
-		gap: 0.8em;
-		position: relative;
-	}
-
-	&__count {
-		display: flex;
-	}
-
-	&__input {
-		margin: 0;
-		padding: 0.5em;
-		border: none;
-		text-align: center;
-		width: 100px;
-	}
-
-	&__down,
-	&__up {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 25px;
-		background-color: rgb(211, 209, 209);
-		cursor: pointer;
-	}
 	&__btn-add,
 	&__close-button {
-		padding: 0.6em 1.2em;
-		background-color: $menu;
-		color: $white;
-		text-transform: uppercase;
-		width: 150px;
+		@include button;
 	}
+
 	&__close-button {
-		background-color: #5f5f5e;
+		margin-top: 0.5em;
 	}
 }
 
-// //////////////////enjoy///////////////////////
 .enjoy {
 	@include flexCenter(column);
 	gap: 1em;
 	height: 40vh;
-	background: url("../img/enjoy.jpg") rgba(0, 0, 0, 0.6);
+	background: url("../img/enjoy_small.jpg") rgba(0, 0, 0, 0.6);
 	background-blend-mode: darken;
 	background-size: cover;
 	background-position: center;
@@ -609,99 +631,15 @@ font-size: 1.4rem;
 
 	&__text {
 		max-width: 500px;
-		margin-bottom: 1em;
 		padding: 0 1em;
+		margin-bottom: 1em;
 		text-align: center;
 	}
-
-	&__btn {
-		padding: 0.7em 1.4em;
-		text-transform: uppercase;
-		background-color: $menu;
-		color: $white;
-	}
 }
-
-// //////////////////open///////////////////////
-
-.open {
-	height: 100vh;
-
-	&__img {
-		height: 50%;
-		width: 100%;
-		object-fit: cover;
-	}
-
-	&__body {
-		height: 50%;
-		background: url("/open/nathan-dumlao-6VhPY27jdps-unsplash\ \(1\).jpg") rgba(0, 0, 0, 0.9);
-		background-blend-mode: darken;
-		background-size: cover;
-		background-position: center;
-		color: $white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-
-	}
-
-	&__heading {
-	margin-bottom: 1em;
-	padding: 0 1em;
-		font-family: $heading-font;
-		font-size: 2rem;
-		text-transform: uppercase;
-		text-align: center;
-		font-weight: 400;
-	}
-
-	&__content {
-		font-size: 1.4rem;
-	}
-
-	&__days {
-		margin-bottom: 1.5em;
-	}
-
-	&__div {
-		display: flex;
-		justify-content: center;
-	}
-
-	&__day {
-		@include flexCenter(row);
-		margin-bottom: 0.5em;
-	}
-
-	&__span {
-		display: block;
-		width: 30%;
-		height: 14px;
-		margin: 0 0.4em;
-		border-bottom: 2px dotted $white;
-	}
-
-	&__number {
-		@include flexCenter(column);
-
-	}
-
-	&__title {
-		text-transform: uppercase;
-		margin-bottom: 0.3em;
-	}
-
-	&__tel{
-		color: $white;
-		margin-bottom: 0.3em;
-	}
-}
-
-/////////////////blog
 
 .blog {
 	padding: 3em 0;
+
 	&__heading {
 		margin-bottom: 1.5em;
 		text-align: center;
@@ -716,9 +654,10 @@ justify-content: center;
 		flex-wrap: wrap;
 		gap: 3em;
 	}
+
 	&__box {
-		overflow: hidden;
 		max-width: 300px;
+		overflow: hidden;
 	}
 
 	&__overflow {
@@ -728,18 +667,15 @@ justify-content: center;
 
 	&__img {
 		width: 100%;
-
 		object-fit: cover;
-		transition: 0.7s;
 	}
 
 	&__icons {
-		margin-bottom: 0.5em;
-		font-size: 1.4rem;
-		color: rgb(85, 85, 85);
-		font-weight: 600;
 		display: flex;
 		gap: 0.9em;
+		margin-bottom: 0.5em;
+		font-size: 1.4rem;
+		font-weight: 600;
 		color: grey;
 	}
 
@@ -762,9 +698,8 @@ justify-content: center;
 	}
 
 	&__btn {
-		padding: 0.7em 1.4em;
+		@include button;
 		border-radius: 5px;
-		background-color: $menu;
 	}
 
 	&__link {
@@ -772,7 +707,78 @@ justify-content: center;
 	}
 }
 
-// //////////////////newsletter///////////////////////
+.open {
+	height: 100vh;
+
+	&__img {
+		height: 50%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 50%;
+		background: url("/img/open_bgc.jpg") rgba(0, 0, 0, 0.9);
+		background-blend-mode: darken;
+		background-size: cover;
+		background-position: center;
+		color: $white;
+	}
+
+	&__heading {
+		margin-bottom: 1em;
+		padding: 0 1em;
+		font-family: $heading-font;
+		font-size: 2rem;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 400;
+	}
+
+	&__content {
+		font-size: 1.4rem;
+	}
+
+	&__days {
+		margin-bottom: 1.5em;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__day {
+		@include flexCenter(row);
+		margin-bottom: 0.5em;
+	}
+
+	&__span {
+		display: block;
+		width: 30%;
+		height: 14px;
+		margin: 0 0.4em;
+		border-bottom: 2px dotted $white;
+	}
+
+	&__number {
+		@include flexCenter(column);
+	}
+
+	&__title {
+		text-transform: uppercase;
+		margin-bottom: 0.3em;
+	}
+
+	&__tel {
+		color: $white;
+		margin-bottom: 0.3em;
+	}
+}
+
 .newsletter {
 	@include flexCenter(column);
 	gap: 1em;
@@ -780,6 +786,7 @@ justify-content: center;
 	font-family: $heading-font;
 	color: $white;
 	background-color: $black;
+	border-bottom: 2px solid #373738;
 
 	&__content {
 		@include flexCenter(column);
@@ -793,10 +800,10 @@ justify-content: center;
 	&__input {
 		width: 290px;
 		padding: 0.5em;
-		margin-bottom: .5em;
+		margin-bottom: 0.5em;
 
 		&:focus {
-			border: 1px solid $menu;
+			border: 1px solid $main;
 			outline: none;
 		}
 	}
@@ -814,228 +821,22 @@ justify-content: center;
 	}
 
 	&__btn {
-		width: fit-content;
 		padding: 0.5em 1em;
 		background: none;
 		color: $white;
 		border: 1px solid $white;
 		text-transform: uppercase;
-
-	
-		// &:focus {
-		// 	border: 1px solid $menu;
-		// 	outline: none;
-		// }
 	}
+
 	&__send {
-		color: $menu;
-	}
-}
-// ////////////////////////////////
-.container2 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 50px;
-}
-
-.top {
-	display: flex;
-	align-items: center;
-	gap: 50px;
-}
-
-.arrow {
-	height: 50px;
-	cursor: pointer;
-	color: #000;
-	background-color: red;
-}
-
-.right {
-	transform: rotate(180deg);
-}
-
-.frame {
-	width: 800px;
-	height: 500px;
-	overflow: hidden;
-}
-
-.slider {
-	display: flex;
-	transition: all 1s ease;
-}
-
-.image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.bottom {
-	display: flex;
-	gap: 30px;
-}
-
-.button {
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	border: 1px solid white;
-	cursor: pointer;
-}
-
-@keyframes slide {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(-100%);
+		color: $main;
 	}
 }
 
-.company {
-	display: flex;
-	justify-content: center;
-	padding: 4em 0;
-	position: relative;
-
-	&:before,
-	&:after {
-		position: absolute;
-		top: 0;
-		height: 100%;
-		content: "";
-		z-index: 2;
-	}
-
-	&:before {
-		left: 0;
-		background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-	}
-	&:after {
-		right: 0;
-		background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-	}
-	&:hover .company__img {
-		animation-play-state: paused;
-	}
-
-	&__slide {
-		width: 100%;
-		overflow: hidden;
-		white-space: nowrap;
-		display: flex;
-	}
-	&__img {
-		animation: 6s slide infinite linear;
-		height: 150px;
-		padding: 0 40px;
-		object-fit: cover;
-	}
-}
-
-// ////////////////////////////////////////////////////////
-.testimonials {
-	width: 100%;
-	background-color: #ffffff;
-	&__box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 2em;
-		height: 400px;
-		overflow: hidden;
-		position: relative;
-	}
-
-	&__slides-container{
-		display: flex;
-		gap: 150px;
-		position: relative;
-	}
-
-	@keyframes pauseAnimation {
-		0%, 100% {
-			opacity: 1;
-		}
-		50% {
-			opacity: 0;
-		}
-	}
-
-	&__rewiev {
-		border-radius: 15px;
-		width: 300px;
-		height: 300px;
-		background-color: rgba(0, 0, 0, 0.116);
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.7em;
-		flex: 0 0 300px;
-		padding: 1em;
-		animation: pauseAnimation 1s linear;
-	}
-
-	&__img {
-		border: 5px solid $menu;
-		height: 100px;
-		width: 100px;
-		border-radius: 50%;
-	}
-
-	&__text {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
-
-
-}
-// .testimonials {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	margin-top: 5em;
-// 	width: 100%;
-// 	height: 300px;
-
-// 	&__rewiev {
-// 		border-radius: 15px;
-// 		width: 500px;
-// 		height: 200px;
-// 		position: relative;
-// 		background-color: #ebe8e6;
-// 		display: flex;
-// 		justify-content: center;
-// 	}
-
-// 	&__img {
-// 		border: 5px solid $menu;
-// 		height: 100px;
-// 		width: 100px;
-// 		border-radius: 50%;
-// 		position: absolute;
-// 		left: -20px;
-// 		top: -20px;
-// 	}
-// 	&__text {
-// 		display: flex;
-// 		justify-content: center;
-// 		align-items: center;
-// 		text-align: center;
-// 		height: 100%;
-// 		width: 30%;
-// 	}
-// }
-// ////////////////////////////
 .contact {
 	padding: 1em 0;
-	background-color: $dark;
+	background-color: #141414;
+	border-bottom: 2px solid #373738;
 
 	&__body {
 		@include flexCenter(column);
@@ -1045,10 +846,10 @@ justify-content: center;
 	&__logo {
 		@include flexCenter(row);
 		gap: 0.1em;
+		margin-bottom: 0.5em;
 		font-size: 6rem;
 		color: $white;
 		font-family: "Arizonia", cursive;
-		margin-bottom: 0.5em;
 	}
 
 	&__img {
@@ -1059,8 +860,6 @@ justify-content: center;
 		@include flexCenter(column);
 		margin-bottom: 2em;
 		color: $white;
-
-	
 	}
 
 	&__title {
@@ -1071,127 +870,43 @@ justify-content: center;
 	&__text {
 		font-size: 1.4rem;
 	}
+
 	&__border {
+		@include flexCenter(row);
 		width: 50px;
 		height: 50px;
-		@include flexCenter(row);
-		border: 1px solid $menu;
+		border: 1px solid $main;
 	}
 
 	&__icon {
 		font-size: 2rem;
-	
 	}
 
-	&__message{
-		color: $menu;
-		margin-top: .5em;
-		display: block;
-		font-size: 1.2rem;
+	&__message {
 		display: none;
+		margin-top: 0.5em;
+		color: $main;
+		font-size: 1.2rem;
 	}
 }
 
-// /////////footer
 .footer {
-	background-color: $dark;
-	color: $white;
 	padding: 1em;
+	background-color: #141414;
+	color: $white;
+
 	&__body {
 		@include flexCenter(column);
 		gap: 1em;
 	}
-	&__img {
-		width: 50px;
-		height: 100%;
-		
-	}
 
-	&__imgs {
-		display: flex;
-		align-items: center;
-		gap: 0.5em;
-	}
-}
-
-.card {
-	position: fixed;
-	right: 0;
-	top: 8vh;
-	background-color: #c5d3df;
-	height: 92vh;
-	transform: translateX(100%);
-	width: 400px;
-	// overflow: hidden;
-	// display: none;
-	transition: 0.4s;
-
-	&__active {
-		transform: translateX(0);
-		// display: block;
-	}
-
-	&__heading {
-		text-align: center;
-		font-family: $heading-font;
-		font-size: 4rem;
-		margin-bottom: 1em;
-		padding-top: 5em;
-	}
-
-	&__items {
-		@include flexCenter(column);
-		background-color: #f0f0f0;
-	}
-
-	&__item {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	&__icons {
+		@include flexCenter(row);
 		gap: 1em;
-		width: 100%;
-		padding: 0 0.5em;
-		border-bottom: 1px solid rgb(156, 156, 156);
-		// padding-bottom: 2em;
-		height: 70px;
 	}
 
-	&__content {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 0.3em;
-	}
-
-	&__count {
-		background-color: #fff;
-		padding: 0.3em 0.6em;
-	}
-
-	&__input {
-		width: 30px;
-		height: 25px;
-		border: none;
-		text-align: center;
-	}
-
-	&__img {
-		width: 40px;
-		height: 40px;
-		object-fit: cover;
-	}
-
-	&__btns {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 2em;
-	}
-	&__btn-back,
-	&__btn-checkout {
-		padding: 1em;
-		background-color: rgb(160, 160, 160);
+	&__icon {
+		font-size: 2rem;
 	}
 }
 
