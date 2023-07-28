@@ -105,6 +105,13 @@
 				background-color: $hover;
 			}
 		}
+
+		&__minus,
+		&__plus,
+		&__trash {
+			font-size: 1.4rem;
+			cursor: pointer;
+		}
 	}
 
 	.header {

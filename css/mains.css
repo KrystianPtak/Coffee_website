@@ -274,10 +274,6 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cart__minus, .cart__plus {
-  font-size: 1.4rem;
-  cursor: pointer;
-}
 .cart__btns {
   display: flex;
   flex-direction: row;
@@ -1037,6 +1033,10 @@ ul {
   }
   .cart__btn-back:hover, .cart__btn-checkout:hover {
     background-color: rgba(139, 131, 120, 0.9921568627);
+  }
+  .cart__minus, .cart__plus, .cart__trash {
+    font-size: 1.4rem;
+    cursor: pointer;
   }
   .header__bgc {
     height: 100vh;

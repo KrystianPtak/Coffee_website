@@ -255,12 +255,6 @@ body {
 		object-fit: cover;
 	}
 
-	&__minus,
-	&__plus {
-		font-size: 1.4rem;
-		cursor: pointer;
-	}
-
 	&__btns {
 		@include flexCenter(row);
 		gap: 1em;

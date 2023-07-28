@@ -6,7 +6,7 @@ const createCart = () => {
   <div class="cart__btns">
     <button class="cart__btn-back">Continue Shopping</button>
     <button class="cart__btn-checkout"onclick="removeAllItemFromCart()">checkout</button> 
-		<span class="cart__subtotal"></span>
+		<span class="cart__subtotal">Total: $0</span>
   </div>
   `;
 };
@@ -67,13 +67,13 @@ const reloadCart = () => {
 		<span class="cart__price-total">$${value.totalPrice.toLocaleString()}</span>
 		<span class="cart__price-total" onclick='removeItemFromCart(${
 			value.id
-		})' ><i class="fa-solid fa-trash"></i></span>
+		})' ><i class="cart__trash fa-solid fa-trash"></i></span>
 		</li>
     `;
 		}
 	});
 
-	total.innerText = `Total: $ ${totalPrice.toLocaleString()}`;
+	total.innerText = `Total: $${totalPrice.toLocaleString()}`;
 	quantity.innerText = count;
 };
 
