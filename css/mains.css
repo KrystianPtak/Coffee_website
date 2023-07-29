@@ -293,6 +293,13 @@ body {
 .cart__subtotal {
   background-color: rgba(139, 131, 120, 0.9921568627);
 }
+.cart__success {
+  display: none;
+  margin-top: 2em;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(5, 99, 5);
+}
 
 .header__bgc {
   height: 100vh;

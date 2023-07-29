@@ -1,7 +1,6 @@
 let list = document.querySelector(".cart");
 let listCarts = [];
 
-
 const setInitialCart = () => {
 	const saveData = localStorage.getItem("my-cart");
 	try {
@@ -22,6 +21,7 @@ const createCart = () => {
     <button class="cart__btn-checkout"onclick="orderAccepted()">checkout</button> 
 		<span class="cart__subtotal">Total: $0</span>
   </div>
+	<p class="cart__success">Order accepted</p>
   `;
 };
 createCart();
@@ -29,7 +29,6 @@ createCart();
 let listCart = document.querySelector(".cart__items");
 let total = document.querySelector(".cart__subtotal");
 let quantity = document.querySelector(".nav__quantity");
-
 
 const addToCart = (key) => {
 	const product = products[key];
@@ -50,7 +49,7 @@ const addToCart = (key) => {
 			listCarts[productId].quantity * product.price;
 	}
 
-	updateCartStorage();
+	// updateCartStorage();
 	reloadCart();
 };
 
@@ -107,10 +106,14 @@ const removeItemFromCart = (productId) => {
 };
 
 const orderAccepted = () => {
+	const cartSuccess = document.querySelector(".cart__success");
 	if (listCarts.length === 0) {
 		return;
 	}
-	alert("zamowienie zlozone");
+	cartSuccess.style.display = "block";
+	setTimeout(() => {
+		cartSuccess.style.display = "none";
+	}, 2000);
 	listCarts = [];
 	updateCartStorage();
 	reloadCart();
@@ -127,7 +130,7 @@ const changeQuantity = (key, quantity) => {
 	}
 
 	listCarts[key].totalPrice = listCarts[key].quantity * product.price;
-	updateCartStorage();
+	// updateCartStorage();
 	reloadCart();
 };
 
