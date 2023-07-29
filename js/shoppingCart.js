@@ -1,11 +1,25 @@
 let list = document.querySelector(".cart");
+let listCarts = [];
+
+
+const setInitialCart = () => {
+	const saveData = localStorage.getItem("my-cart");
+	try {
+		if (saveData) {
+			listCarts = JSON.parse(saveData);
+		}
+	} catch {
+		listCarts = [];
+	}
+};
+
 const createCart = () => {
 	list.innerHTML = `
   <h2 class="cart__heading">Your Cart</h2>
   <ul class="cart__items"></ul>
   <div class="cart__btns">
     <button class="cart__btn-back">Continue Shopping</button>
-    <button class="cart__btn-checkout"onclick="removeAllItemFromCart()">checkout</button> 
+    <button class="cart__btn-checkout"onclick="orderAccepted()">checkout</button> 
 		<span class="cart__subtotal">Total: $0</span>
   </div>
   `;
@@ -15,7 +29,7 @@ createCart();
 let listCart = document.querySelector(".cart__items");
 let total = document.querySelector(".cart__subtotal");
 let quantity = document.querySelector(".nav__quantity");
-let listCarts = [];
+
 
 const addToCart = (key) => {
 	const product = products[key];
@@ -35,7 +49,15 @@ const addToCart = (key) => {
 		listCarts[productId].totalPrice =
 			listCarts[productId].quantity * product.price;
 	}
+
+	updateCartStorage();
 	reloadCart();
+};
+
+const updateCartStorage = () => {
+	listCarts = listCarts.filter(Boolean);
+	const data = JSON.stringify(listCarts);
+	localStorage.setItem("my-cart", data);
 };
 
 const reloadCart = () => {
@@ -79,15 +101,18 @@ const reloadCart = () => {
 
 const removeItemFromCart = (productId) => {
 	listCarts = listCarts.filter((item) => item.id !== productId);
+
+	updateCartStorage();
 	reloadCart();
 };
 
-const removeAllItemFromCart = () => {
-	if(listCarts.length===0){
-		return
+const orderAccepted = () => {
+	if (listCarts.length === 0) {
+		return;
 	}
 	alert("zamowienie zlozone");
 	listCarts = [];
+	updateCartStorage();
 	reloadCart();
 };
 
@@ -102,5 +127,9 @@ const changeQuantity = (key, quantity) => {
 	}
 
 	listCarts[key].totalPrice = listCarts[key].quantity * product.price;
+	updateCartStorage();
 	reloadCart();
 };
+
+setInitialCart();
+reloadCart();
