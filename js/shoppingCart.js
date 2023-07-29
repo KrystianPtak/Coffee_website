@@ -83,6 +83,9 @@ const removeItemFromCart = (productId) => {
 };
 
 const removeAllItemFromCart = () => {
+	if(listCarts.length===0){
+		return
+	}
 	alert("zamowienie zlozone");
 	listCarts = [];
 	reloadCart();
