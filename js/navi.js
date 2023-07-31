@@ -8,15 +8,15 @@ function generateNavigation() {
       <i class="nav__open fa-solid fa-bars"></i>
       <i class="nav__close nav__hide fa-solid fa-xmark"></i>
     </div>
-    <a href="/index.html#" class="nav__logo"
-      >Coffee<img src="../img/logo.png" alt="logo coffee" class="nav__img"
+    <a href="/Coffee/index.html#" class="nav__logo"
+      >Coffee<img src="/Coffee/img/logo.png" alt="logo coffee" class="nav__img"
     /></a>
     <ul class="nav__links">
-      <li><a class="nav__link" href="/index.html#">home</a></li>
-      <li><a class="nav__link" href="/index.html#about">about</a></li>
-      <li><a class="nav__link" href="/index.html#services">services</a></li>
-      <li><a class="nav__link" href="/index.html#menu">menu</a></li>
-      <li><a class="nav__link" href="/index.html#blog">blog</a></li>
+      <li><a class="nav__link" href="/Coffee/index.html#">home</a></li>
+      <li><a class="nav__link" href="/Coffee/index.html#about">about</a></li>
+      <li><a class="nav__link" href="/Coffee/index.html#services">services</a></li>
+      <li><a class="nav__link" href="/Coffee/index.html#menu">menu</a></li>
+      <li><a class="nav__link" href="/Coffee/index.html#blog">blog</a></li>
     </ul>
     <div class="nav__icons">
     <i class="nav__glass fa-solid fa-magnifying-glass"></i>
@@ -37,11 +37,11 @@ function generateNavigation() {
       <ul class="search__items">
         <li>
           <a
-            href="../subpages/coffee/black_coffe.html"
+            href="/Coffee/subpages/coffee/black_coffe.html"
             class="search__item"
           >
             <img
-              src="../img/coffies/black_coffee.jpg"
+              src="/Coffee/img/coffies/black_coffee.jpg"
               alt="black coffee"
               class="search__img"
             />
@@ -50,9 +50,9 @@ function generateNavigation() {
           </a>
         </li>
         <li>
-          <a href="../subpages/coffee/caffe_late.html" class="search__item">
+          <a href="/Coffee/subpages/coffee/caffe_late.html" class="search__item">
             <img
-              src="../img/coffies/caffee_latte.jpg"
+              src="/Coffee/img/coffies/caffee_latte.jpg"
               alt="caffe latte"
               class="search__img"
             />
@@ -61,9 +61,9 @@ function generateNavigation() {
           </a>
         </li>
         <li>
-          <a href="../subpages/coffee/americano.html" class="search__item">
+          <a href="/Coffee/subpages/coffee/americano.html" class="search__item">
             <img
-              src="../img/coffies/american.jpg"
+              src="/Coffee/img/coffies/american.jpg"
               alt="americano"
               class="search__img"
             />
@@ -74,11 +74,11 @@ function generateNavigation() {
         </li>
         <li>
           <a
-            href="../subpages/coffee/latte_machiatto.html"
+            href="/Coffee/subpages/coffee/latte_machiatto.html"
             class="search__item"
           >
             <img
-              src="../img/coffies/latte_machiatto.jpg"
+              src="/Coffee/img/coffies/latte_machiatto.jpg"
               alt="latte machiatto"
               class="search__img"
             />
@@ -87,9 +87,9 @@ function generateNavigation() {
           </a>
         </li>
         <li>
-          <a href="../subpages/coffee/capuchino.html" class="search__item">
+          <a href="/Coffee/subpages/coffee/capuchino.html" class="search__item">
             <img
-              src="../img/coffies/cappuccino.jpg"
+              src="/Coffee/img/coffies/cappuccino.jpg"
               alt="cappuccino"
               class="search__img"
             />
@@ -98,9 +98,9 @@ function generateNavigation() {
           </a>
         </li>
         <li>
-          <a href="../subpages/coffee/espresso.html" class="search__item">
+          <a href="/Coffee/subpages/coffee/espresso.html" class="search__item">
             <img
-              src="../img/coffies/espresso.jpg"
+              src="/Coffee/img/coffies/espresso.jpg"
               alt="espresso"
               class="search__img"
             />
@@ -109,9 +109,9 @@ function generateNavigation() {
           </a>
         </li>
         <li>
-          <a href="../subpages/coffee/iced_coffe.html" class="search__item">
+          <a href="/Coffee/subpages/coffee/iced_coffe.html" class="search__item">
             <img
-              src="../img/coffies/iced_coffe.jpg"
+              src="/Coffee/img/coffies/iced_coffe.jpg"
               alt="iced coffe #1"
               class="search__img"
             />
@@ -121,11 +121,11 @@ function generateNavigation() {
         </li>
         <li>
           <a
-            href="../subpages/coffee/iced_coffe_1.html"
+            href="/Coffee/subpages/coffee/iced_coffe_1.html"
             class="search__item"
           >
             <img
-              src="../img/coffies/iced_coffe_2.jpg"
+              src="/Coffee/img/coffies/iced_coffe_2.jpg"
               alt="iced coffe #2"
               class="search__img"
             />
@@ -135,9 +135,9 @@ function generateNavigation() {
           </a>
         </li>
         <li>
-          <a href="../subpages/coffee/mocha.html" class="search__item">
+          <a href="/Coffee/subpages/coffee/mocha.html" class="search__item">
             <img
-              src="../img/coffies/mocha.jpg"
+              src="/Coffee/img/coffies/mocha.jpg"
               alt="mocha"
               class="search__img"
             />
@@ -146,9 +146,9 @@ function generateNavigation() {
           </a>
         </li>
         <li>
-          <a href="../subpages/coffee/cortado.html" class="search__item">
+          <a href="/Coffee/subpages/coffee/cortado.html" class="search__item">
             <img
-              src="../img/coffies/cortado.jpg"
+              src="/Coffee/img/coffies/cortado.jpg"
               alt="cortado"
               class="search__img"
             />
