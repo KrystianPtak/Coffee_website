@@ -281,7 +281,7 @@ body {
 .blog {
 	&__bgc {
 		height: 60vh;
-		background: url("/img/blogbgc.jpg") rgba(24, 24, 24, 0.8);
+		background: url("../img/blogbgc.jpg") rgba(24, 24, 24, 0.8);
 		background-blend-mode: darken;
 		@include flexCenter(column);
 		background-size: cover;

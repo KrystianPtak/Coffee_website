@@ -285,7 +285,7 @@ body {
 .header {
 	&__bgc {
 		height: 100vh;
-		background: url("/img/small_bgc.jpg") rgba(0, 0, 0, 0.7);
+		background: url("../img/small_bgc.jpg") rgba(0, 0, 0, 0.7);
 		background-blend-mode: darken;
 		background-size: cover;
 		background-position: center;
@@ -723,7 +723,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		height: 50%;
-		background: url("/img/open_bgc.jpg") rgba(0, 0, 0, 0.9);
+		background: url("../img/open_bgc.jpg") rgba(0, 0, 0, 0.9);
 		background-blend-mode: darken;
 		background-size: cover;
 		background-position: center;

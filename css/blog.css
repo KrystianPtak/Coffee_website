@@ -298,7 +298,7 @@ body {
 
 .blog__bgc {
   height: 60vh;
-  background: url("/img/blogbgc.jpg") rgba(24, 24, 24, 0.8);
+  background: url("../img/blogbgc.jpg") rgba(24, 24, 24, 0.8);
   background-blend-mode: darken;
   display: flex;
   flex-direction: column;

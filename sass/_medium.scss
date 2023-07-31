@@ -117,7 +117,7 @@
 	.header {
 		&__bgc {
 			height: 100vh;
-			background: url("/img/big_bgc.jpg") rgba(0, 0, 0, 0.7);
+			background: url("../img/big_bgc.jpg") rgba(0, 0, 0, 0.7);
 			background-blend-mode: darken;
 			background-size: cover;
 			background-position: center;
