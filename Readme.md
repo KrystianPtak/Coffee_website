@@ -1,4 +1,4 @@
-## https://spectacular-stardust-cbfc4d.netlify.app
+## https://krystianptak.pl/Coffee/
 
 <br>
 The Coffee website project is a dynamic web page that perfectly combines a range of coffee-related features, creating an elegant and interactive experience for users.
