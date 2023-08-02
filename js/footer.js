@@ -24,7 +24,7 @@ function renderFooterContainer() {
 			<section class="contact">
 				<div class="contact__body container">
 					<a href="#" class="contact__logo"
-						>Coffee<img src="/img/logo.png" alt="logo caffe" class="contact__img"
+						>Coffee<img src="/Coffee/img/logo.png" alt="logo caffe" class="contact__img"
 					/></a>
 					<div class="contact__content">
 						<a href="https://goo.gl/maps/GdbiKmSGzSE87oyG9" target="_blank">
