@@ -1,16 +1,16 @@
 let list = document.querySelector(".cart");
 let listCarts = [];
 
-// const setInitialCart = () => {
-// 	const saveData = localStorage.getItem("my-cart");
-// 	try {
-// 		if (saveData) {
-// 			listCarts = JSON.parse(saveData);
-// 		}
-// 	} catch {
-// 		listCarts = [];
-// 	}
-// };
+const setInitialCart = () => {
+	const saveData = localStorage.getItem("my-cart");
+	try {
+		if (saveData) {
+			listCarts = JSON.parse(saveData);
+		}
+	} catch {
+		listCarts = [];
+	}
+};
 
 const createCart = () => {
 	list.innerHTML = `
@@ -53,11 +53,11 @@ const addToCart = (key) => {
 	reloadCart();
 };
 
-// const updateCartStorage = () => {
-// 	listCarts = listCarts.filter(Boolean);
-// 	const data = JSON.stringify(listCarts);
-// 	localStorage.setItem("my-cart", data);
-// };
+const updateCartStorage = () => {
+	listCarts = listCarts.filter(Boolean);
+	const data = JSON.stringify(listCarts);
+	localStorage.setItem("my-cart", data);
+};
 
 const reloadCart = () => {
 	listCart.innerHTML = "";
@@ -101,7 +101,7 @@ const reloadCart = () => {
 const removeItemFromCart = (productId) => {
 	listCarts = listCarts.filter((item) => item.id !== productId);
 
-	// updateCartStorage();
+	updateCartStorage();
 	reloadCart();
 };
 
@@ -115,7 +115,7 @@ const orderAccepted = () => {
 		cartSuccess.style.display = "none";
 	}, 2000);
 	listCarts = [];
-	// updateCartStorage();
+	updateCartStorage();
 	reloadCart();
 };
 
@@ -136,5 +136,5 @@ const changeQuantity = (id, quantity) => {
 	reloadCart();
 };
 
-// setInitialCart();
+setInitialCart();
 reloadCart();
