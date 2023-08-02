@@ -1,6 +1,10 @@
 let list = document.querySelector(".cart");
 let listCarts = [];
 
+const findProductIndex = (productId) => {
+	return listCarts.findIndex((product) => product.id === productId);
+};
+
 const setInitialCart = () => {
 	const saveData = localStorage.getItem("my-cart");
 	try {
@@ -34,19 +38,21 @@ const addToCart = (key) => {
 	const product = products[key];
 	const productId = product.id;
 
-	if (!listCarts[productId]) {
-		listCarts[productId] = {
+	const existingProductIndex = findProductIndex(productId);
+
+	if (existingProductIndex === -1) {
+		listCarts.push({
 			...product,
 			quantity: 1,
 			totalPrice: product.price,
-		};
+		});
 	} else {
-		listCarts[productId].quantity++;
-		if (listCarts[productId].quantity > product.instock) {
-			listCarts[productId].quantity = product.instock;
+		const existingProduct = listCarts[existingProductIndex];
+		existingProduct.quantity++;
+		if (existingProduct.quantity > product.instock) {
+			existingProduct.quantity = product.instock;
 		}
-		listCarts[productId].totalPrice =
-			listCarts[productId].quantity * product.price;
+		existingProduct.totalPrice = existingProduct.quantity * product.price;
 	}
 
 	updateCartStorage();
@@ -99,10 +105,12 @@ const reloadCart = () => {
 };
 
 const removeItemFromCart = (productId) => {
-	listCarts = listCarts.filter((item) => item.id !== productId);
-
-	updateCartStorage();
-	reloadCart();
+	const index = findProductIndex(productId);
+	if (index !== -1) {
+		listCarts.splice(index, 1);
+		updateCartStorage();
+		reloadCart();
+	}
 };
 
 const orderAccepted = () => {
