@@ -49,7 +49,7 @@ const addToCart = (key) => {
 			listCarts[productId].quantity * product.price;
 	}
 
-	// updateCartStorage();
+	updateCartStorage();
 	reloadCart();
 };
 
@@ -64,7 +64,7 @@ const reloadCart = () => {
 	let count = 0;
 	let totalPrice = 0;
 
-	listCarts.forEach((value, key) => {
+	listCarts.forEach((value) => {
 		const basePrice = value.price;
 		totalPrice = totalPrice + value.totalPrice;
 		count = count + value.quantity;
@@ -77,11 +77,11 @@ const reloadCart = () => {
 		</div>
 		<span class="cart__price">$${basePrice}</span>
 		<div class="cart__count">
-			<div class="cart__minus" onclick="changeQuantity(${key},${
+			<div class="cart__minus" onclick="changeQuantity(${value.id},${
 				value.quantity - 1
 			})" ><i class="fa-regular fa-square-minus"></i></div>
 		<div class='cart__input'>${value.quantity}</div>
-				<div class="cart__plus" onclick="changeQuantity(${key},${
+				<div class="cart__plus" onclick="changeQuantity(${value.id},${
 				value.quantity + 1
 			})"><i class="fa-regular fa-square-plus"></i></div>
 		</div>
@@ -119,18 +119,20 @@ const orderAccepted = () => {
 	reloadCart();
 };
 
-const changeQuantity = (key, quantity) => {
-	const product = products[key];
+const changeQuantity = (id, quantity) => {
+	const product = products.find((product) => product.id === id);
 	const maxQuantity = product.instock;
 
+	const listCartsProduct = listCarts.find((product) => product.id === id);
+
 	if (quantity >= 1 && quantity <= maxQuantity) {
-		listCarts[key].quantity = quantity;
+		listCartsProduct.quantity = quantity;
 	} else {
-		listCarts[key].quantity = quantity > maxQuantity ? maxQuantity : 1;
+		listCartsProduct.quantity = quantity > maxQuantity ? maxQuantity : 1;
 	}
 
-	listCarts[key].totalPrice = listCarts[key].quantity * product.price;
-	// updateCartStorage();
+	listCartsProduct.totalPrice = listCartsProduct.quantity * product.price;
+	updateCartStorage();
 	reloadCart();
 };
 
