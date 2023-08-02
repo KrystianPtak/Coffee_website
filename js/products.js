@@ -7,7 +7,7 @@ const products = [
 		description: "0",
 		instock: 4,
 		alt: "Golden Reserve Blend coffee",
-		imgSrc: "img/bestseller/bs1.jpg",
+		imgSrc: "/Coffee/img/bestseller/bs1.jpg",
 	},
 	{
 		id: 1,
@@ -16,7 +16,7 @@ const products = [
 		description: "1",
 		instock: 8,
 		alt: "Diamond Infused Espresso coffee",
-		imgSrc: "img/bestseller/bs2.jpg",
+		imgSrc: "/Coffee/img/bestseller/bs2.jpg",
 	},
 	{
 		id: 2,
@@ -25,7 +25,7 @@ const products = [
 		description: "2",
 		instock: 6,
 		alt: "Royal Velvet Roast coffee",
-		imgSrc: "img/bestseller/bs3.jpg",
+		imgSrc: "/Coffee/img/bestseller/bs3.jpg",
 	},
 	{
 		id: 3,
@@ -34,7 +34,7 @@ const products = [
 		description: "3",
 		instock: 10,
 		alt: "Platinum Perfection Latte coffee",
-		imgSrc: "img/bestseller/bs4.jpg",
+		imgSrc: "/Coffee/img/bestseller/bs4.jpg",
 	},
 	{
 		id: 4,
@@ -43,7 +43,7 @@ const products = [
 		description: "4",
 		instock: 12,
 		alt: "Emerald Elixir Cappuccino coffee",
-		imgSrc: "img/bestseller/bs5.jpg",
+		imgSrc: "/Coffee/img/bestseller/bs5.jpg",
 	},
 	{
 		id: 5,
@@ -52,7 +52,7 @@ const products = [
 		description: "5",
 		instock: 7,
 		alt: "Opulent Obsidian Mocha coffee",
-		imgSrc: "img/bestseller/bs6.jpg",
+		imgSrc: "/Coffee/img/bestseller/bs6.jpg",
 	},
 ];
 
