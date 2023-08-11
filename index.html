@@ -22,7 +22,10 @@
 			rel="stylesheet"
 		/>
 		<title>Coffee House</title>
-		<script src="https://kit.fontawesome.com/fdc09ecfc9.js" crossorigin="anonymous"></script>
+		<script
+			src="https://kit.fontawesome.com/fdc09ecfc9.js"
+			crossorigin="anonymous"
+		></script>
 		<link rel="stylesheet" href="css/mains.css" />
 	</head>
 	<body>
@@ -50,7 +53,7 @@
 				</div>
 
 				<div class="search__bgc">
-					<div class="search">
+					<!-- <div class="search">
 						<i class="search__close fa-solid fa-xmark"></i>
 						<input
 							type="text"
@@ -60,10 +63,7 @@
 						/>
 						<ul class="search__items">
 							<li>
-								<a
-									href="subpages/coffee/black_coffe.html"
-									class="search__item"
-								>
+								<a href="subpages/coffee/black_coffe.html" class="search__item">
 									<img
 										src="img/coffies/black_coffee.jpg"
 										alt="black coffee"
@@ -179,14 +179,46 @@
 								</a>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</nav>
 
-		<!-- JS -->
+		<!-- JS
 		<div class="cart__bgc">
 			<div class="cart"></div>
+		</div> -->
+
+		<div class="cart__bgc">
+			<div class="cart">
+				<h2 class="cart__heading">Your Cart</h2>
+				<ul class="cart__items">
+					<!-- <li class="cart__item ">
+									<div class="cart__content">
+									<img src="" alt="" class="cart__img">
+									<span class="cart__name"></span>
+								</div>
+								<span class="cart__price">1</span>
+						<div class="cart__count">
+									<div class="cart__minus"
+						 			 ><i class="fa-regular fa-square-minus"></i></div>
+									<div class='cart__input'>1</div>
+											<div class="cart__plus" 
+									><i class="fa-regular fa-square-plus"></i></div>
+						 		</div>
+					 		<span class="cart__price-total"></span>
+						 		<span class="cart__price-total" ><i class="cart__trash fa-solid fa-trash"></i></span>
+							 		</li> -->
+				</ul>
+				<div class="cart__btns">
+					<button class="cart__btn-back">Continue Shopping</button>
+					<button class="cart__btn-checkout" onclick="orderAccepted()">
+						checkout
+					</button>
+					<span class="cart__subtotal"></span>
+				</div>
+				<span class="cart__success">Order Accepted</span>
+			</div>
 		</div>
 
 		<header class="header">
@@ -287,7 +319,7 @@
 				</p>
 				<div class="menu__body container">
 					<div class="menu__wrap">
-						<a href="subpages/coffee/black_coffe.html">
+						<!-- <a href="subpages/coffee/black_coffe.html">
 							<div class="menu__box move">
 								<img
 									src="img/coffies/black_coffee.jpg"
@@ -368,10 +400,10 @@
 									</p>
 								</div>
 							</div>
-						</a>
+						</a> -->
 					</div>
 					<div class="menu__wrap">
-						<a href="subpages/coffee/espresso.html">
+						<!-- <a href="subpages/coffee/espresso.html">
 							<div class="menu__box move">
 								<img
 									src="img/coffies/espresso.jpg"
@@ -455,8 +487,8 @@
 									</p>
 								</div>
 							</div>
-						</a>
-					</div>
+						</a> -->
+					</div> 
 				</div>
 			</section>
 
@@ -711,7 +743,9 @@
 				</div>
 			</div>
 		</footer>
-
+		
+		<script src="js/search.js"></script>
+		<script src="js/menu.js"></script>
 		<script src="js/products.js"></script>
 		<script src="js/shoppingCart.js"></script>
 		<script src="js/modal.js"></script>
