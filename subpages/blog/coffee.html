@@ -32,7 +32,18 @@
 		<!-- JS -->
 		<div class="nav"></div>
 		<div class="cart__bgc">
-			<div class="cart"></div>
+			<div class="cart">
+				<h2 class="cart__heading">Your Cart</h2>
+				<ul class="cart__items"></ul>
+				<div class="cart__btns">
+					<button class="cart__btn-back">Continue Shopping</button>
+					<button class="cart__btn-checkout" onclick="orderAccepted()">
+						checkout
+					</button>
+					<span class="cart__subtotal"></span>
+				</div>
+				<span class="cart__success">Order Accepted</span>
+			</div>
 		</div>
 
 		<main>

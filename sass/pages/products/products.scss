@@ -274,6 +274,14 @@ body {
 	&__subtotal {
 		background-color: $hover;
 	}
+
+	&__success {
+		display: none;
+		margin-top: 2em;
+		text-align: center;
+		font-size: 2rem;
+		color: rgb(5, 99, 5);
+	}
 }
 
 .modal {
