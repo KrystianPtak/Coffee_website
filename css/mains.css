@@ -1030,6 +1030,7 @@ ul {
     height: 100%;
     background-color: rgba(24, 24, 24, 0.788);
     opacity: 0;
+    z-index: -1;
     transition: opacity 0.3s ease, z-index 0s 0.3s;
   }
   .cart__bgc-active {
