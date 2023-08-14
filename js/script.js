@@ -1,4 +1,3 @@
-//**********NAV**********
 const navLinks = document.querySelector(".nav__links");
 const navBtn = document.querySelector(".nav__button");
 const navOpen = document.querySelector(".nav__open");
@@ -36,7 +35,6 @@ window.addEventListener("scroll", () => {
 	}
 });
 
-//**********SEARCH **********
 const searchInput = document.querySelector(".search__input");
 const searchItem = document.querySelectorAll(".search__item");
 const searchItems = document.querySelector(".search__items");
@@ -89,7 +87,6 @@ window.addEventListener("click", closeSearch);
 window.addEventListener("keyup", closeSearch);
 searchInput.addEventListener("input", search);
 
-// //**********CHANGE IMAGE **********
 const smallImg = document.querySelectorAll(".modal__img");
 const bigImg = document.getElementById("product-img");
 
@@ -100,7 +97,6 @@ smallImg.forEach((img) => {
 	});
 });
 
-//**********SHOPPING CART**********
 const showCartBtn = document.querySelector(".nav__shopping");
 const shoppingBgc = document.querySelector(".cart__bgc");
 const shoppingCart = document.querySelector(".cart");
@@ -129,7 +125,6 @@ showCartBtn.addEventListener("click", openCart);
 document.addEventListener("click", closeCartOnEscape);
 document.addEventListener("keydown", closeCartOnEscape);
 
-//**********NEWSLETTER**********
 const newsletterInput = document.querySelector(".newsletter__input");
 const newsletterBtn = document.querySelector(".newsletter__btn");
 const newsletterMsg = document.querySelector(".newsletter__msg");
@@ -163,7 +158,6 @@ newsletterBtn.addEventListener("click", (e) => {
 	}, 3000);
 });
 
-//**********REVEAL ON SCROLL**********
 const reveal = () => {
 	const elements = document.querySelectorAll(".move, .moves");
 	const windowHeight = window.innerHeight;
@@ -191,7 +185,6 @@ const reveal = () => {
 
 window.addEventListener("scroll", reveal);
 
-//**********COPY EMAIL**********
 const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
 const contactMessage = document.querySelector(".contact__message");
 
@@ -210,6 +203,5 @@ emailLinks.forEach((link) => {
 	});
 });
 
-//**********FOOTER DATE **********
 const currentYear = document.querySelector(".footer__date");
 currentYear.innerText = new Date().getFullYear();

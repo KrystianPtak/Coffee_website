@@ -33,7 +33,7 @@ function renderFooterContainer() {
 									<i class="contact__icon fa-solid fa-location-dot"></i>
 								</div>
 								<div class="contact__reference">
-									<h5 class="contact__title">Location</h5>
+									<h4 class="contact__title">Location</h4>
 									<p class="contact__text">Los Angeles, Santa 10</p>
 								</div>
 							</div>
@@ -44,7 +44,7 @@ function renderFooterContainer() {
 									<i class="contact__icon fa-solid fa-envelope"></i>
 								</div>
 								<div class="contact__reference">
-									<h5 class="contact__title">EMAIL</h5>
+									<h4 class="contact__title">EMAIL</h4>
 									<span>coffee@gmail.com</span>
 								</div>
 							</div>
@@ -56,7 +56,7 @@ function renderFooterContainer() {
 									<i class="contact__icon fa-solid fa-phone"></i>
 								</div>
 								<div class="contact__reference">
-									<h5 class="contact__title">PHONE</h5>
+									<h4 class="contact__title">PHONE</h4>
 									<span>(+044) 857-309-378</span>
 								</div>
 							</div>
