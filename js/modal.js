@@ -43,7 +43,6 @@ function showProductModal(product) {
 	const closeModal = (e) => {
 		if (e.target === closeBtn || e.key === "Escape" || e.target === modalBgc) {
 			modalBgc.style.display = "none";
-			document.body.classList.remove("modal__open-overflow");
 		}
 	};
 

@@ -111,6 +111,7 @@ document.addEventListener("click", (e) => {
 	if (e.target === closeCart || e.target === navGlass || e.target === navOpen) {
 		shoppingCart.classList.remove("cart__active");
 		shoppingBgc.classList.remove("cart__bgc-active");
+		payment.style.display = "none";
 	}
 });
 
@@ -118,6 +119,8 @@ const closeCartOnEscape = (e) => {
 	if (e.target === shoppingBgc || e.key === "Escape") {
 		shoppingCart.classList.remove("cart__active");
 		shoppingBgc.classList.remove("cart__bgc-active");
+		payment.style.display = "none";
+		document.body.classList.remove("payment__block");
 	}
 };
 

@@ -99,6 +99,10 @@
 			opacity: 1;
 		}
 
+		&__btns {
+			flex-direction: row;
+		}
+
 		&__btn-back,
 		&__btn-checkout {
 			transition: background-color 0.3s ease;
@@ -114,6 +118,12 @@
 			font-size: 1.4rem;
 			cursor: pointer;
 		}
+	}
+
+	.payment {
+		width: 500px;
+		height: 620px;
+		margin-top: 2em;
 	}
 
 	.header {
@@ -405,11 +415,8 @@
 		height: 35vh;
 
 		&__form {
-			@include flexCenter(row);
-		}
-
-		&__input {
-			margin-bottom: unset;
+			flex-direction: row;
+			align-items: start;
 		}
 
 		&__btn {
@@ -417,7 +424,7 @@
 			transition: border 0.3s ease;
 
 			&:hover {
-				border: 1px solid black;
+				border: 1px solid $main;
 			}
 		}
 

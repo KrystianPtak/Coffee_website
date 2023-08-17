@@ -9,7 +9,7 @@ const addToCart = (id) => {
 	if (cart.some((item) => item.id === id)) {
 		changeNumberOfUnits("plus", id);
 	} else {
-		const item = products.find((product) => product.id === id);
+		const item = modal_inside.find((product) => product.id === id);
 		cart.push({
 			...item,
 			quantity: 1,
@@ -94,15 +94,101 @@ function changeNumberOfUnits(action, id) {
 	updateCart();
 }
 
-const orderAccepted = () => {
-	const cartSuccess = document.querySelector(".cart__success");
-	if (cartItems.length === 0) {
-		return;
+const paymentButton = document.querySelector(".payment__button");
+const payment = document.querySelector(".payment");
+const closeBtn = document.querySelector(".payment__close");
+const cartPaymentBtn = document.querySelector(".cart__btn-checkout");
+const cartError = document.querySelector(".cart__error");
+
+function enableInteractions() {
+	const allElements = document.querySelectorAll("*");
+	allElements.forEach((element) => {
+		element.style.pointerEvents = "auto";
+	});
+}
+
+cartPaymentBtn.addEventListener("click", () => {
+	if (cart.length === 0) {
+		cartError.style.display = "block";
+	} else {
+		payment.style.display = "block";
+		document.body.classList.add("payment__block");
+		shoppingCart.classList.remove("cart__active");
+
+		const allElements = document.querySelectorAll("*");
+		allElements.forEach((element) => {
+			element.style.pointerEvents = "none";
+		});
+
+		const paymentElements = payment.querySelectorAll("*");
+		paymentElements.forEach((element) => {
+			element.style.pointerEvents = "auto";
+		});
 	}
-	cartSuccess.style.display = "block";
+
 	setTimeout(() => {
-		cartSuccess.style.display = "none";
+		cartError.style.display = "none";
 	}, 2000);
-	cart = [];
-	updateCart();
-};
+});
+
+function closeModal() {
+	payment.style.display = "none";
+	document.body.classList.remove("payment__block");
+	shoppingCart.classList.add("cart__active");
+	enableInteractions();
+}
+
+closeBtn.addEventListener("click", () => {
+	payment.style.display = "none";
+	document.body.classList.remove("payment__block");
+	shoppingBgc.classList.remove("cart__bgc-active");
+	enableInteractions();
+});
+
+const paymentInputs = document.querySelectorAll(".payment__input");
+const paymentMessage = document.querySelector(".payment__message");
+
+function areAllInputsFilled() {
+	let allInputsFilled = true;
+
+	paymentInputs.forEach((input) => {
+		if (input.value.trim() === "") {
+			allInputsFilled = false;
+		}
+	});
+
+	return allInputsFilled;
+}
+
+const cartMain = document.querySelector(".cart");
+const cartBgc = document.querySelector(".cart__bgc");
+
+paymentButton.addEventListener("click", () => {
+	if (areAllInputsFilled()) {
+		paymentMessage.textContent = "The order has been accepted!";
+		paymentMessage.style.color = "green";
+		setTimeout(() => {
+			paymentInputs.forEach((input) => {
+				input.value = "";
+			});
+			enableInteractions();
+			paymentMessage.style.display = "none";
+			payment.style.display = "none";
+			cartMain.classList.remove("cart__active");
+			cartBgc.classList.remove("cart__bgc-active");
+			document.body.classList.remove("payment__block");
+		}, 3000);
+		cart = [];
+		updateCart();
+	} else {
+		paymentMessage.textContent = "All fields must be filled in!";
+		paymentMessage.style.color = "red";
+		setTimeout(() => {
+			paymentMessage.textContent = "";
+		}, 2000);
+	}
+});
+
+closeBtn.addEventListener("click", () => {
+	payment.style.display = "none";
+});
