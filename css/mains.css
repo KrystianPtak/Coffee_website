@@ -1118,8 +1118,7 @@ ul {
     height: 100%;
     background-color: rgba(24, 24, 24, 0.788);
     opacity: 0;
-    z-index: -1;
-    transition: opacity 0.3s ease, z-index 0s 0.3s;
+    transition: opacity 0.1s ease-in-out;
   }
   .cart__bgc-active {
     z-index: 1;
