@@ -1,4 +1,5 @@
 const searchFunction = document.querySelector(".search__bgc");
+
 const renderSearch = () => {
 	searchFunction.innerHTML += `
   <div class="search">
@@ -130,5 +131,4 @@ const renderSearch = () => {
 					</div>
           `;
 };
-
 renderSearch();

@@ -11,7 +11,6 @@
 
 		&__logo {
 			@include flexCenter(row);
-
 			font-size: 5rem;
 			color: $white;
 			font-family: "Arizonia", cursive;
@@ -19,12 +18,11 @@
 
 		&__img {
 			width: 45px;
-
-			color: aliceblue;
-			object-fit: cover;
-			object-position: center;
-			border-radius: 10%;
 			padding: 0.1em;
+			object-position: center;
+			object-fit: cover;
+			color: aliceblue;
+			border-radius: 10%;
 		}
 
 		&__links {
@@ -42,9 +40,9 @@
 		}
 
 		&__link {
-			color: $white;
 			position: relative;
 			padding: 0.3em 0.5em;
+			color: $white;
 			transition: color 0.3s ease;
 
 			&:hover {
@@ -55,6 +53,7 @@
 		&__glass {
 			cursor: pointer;
 			transition: color 0.3s ease;
+
 			&:hover {
 				color: $main;
 			}
@@ -63,37 +62,29 @@
 		&__shopping {
 			cursor: pointer;
 			transition: color 0.3s ease;
+
 			&:hover {
 				color: $main;
 			}
 		}
 	}
-	///////////////////////////search///////
-	///
+
 	.search {
 		max-width: 700px;
 
-		&__name {
-			transition: transform 0.3s ease;
+		&__close {
+			cursor: pointer;
 		}
-		&__img {
-			transition: transform 0.3s ease;
-		}
+
+		&__name,
+		&__img,
 		&__price {
 			transition: transform 0.3s ease;
 		}
 
 		&__item {
-			&:hover .search__name {
-				transform: scale(1.1);
-			}
-		}
-		&__item {
-			&:hover .search__img {
-				transform: scale(1.1);
-			}
-		}
-		&__item {
+			&:hover .search__name,
+			&:hover .search__img,
 			&:hover .search__price {
 				transform: scale(1.1);
 			}
@@ -112,15 +103,71 @@
 			background-color: rgba(24, 24, 24, 0.788);
 			opacity: 0;
 			z-index: -1;
-			transition: opacity 0.3s ease, z-index 0s 0.3s;
 		}
 
 		&__bgc-active {
 			z-index: 1;
 			opacity: 1;
 		}
+
+		&__name {
+			width: 150px;
+		}
+
+		&__btns {
+			flex-direction: row;
+		}
+
+		&__btn-back,
+		&__btn-checkout,
+		&__subtotal {
+			width: unset;
+		}
+
+		&__btn-back,
+		&__btn-checkout {
+			transition: background-color 0.3s ease;
+
+			&:hover {
+				background-color: $hover;
+			}
+		}
+
+		&__minus,
+		&__plus,
+		&__trash {
+			cursor: pointer;
+		}
 	}
-	// ////////////////////////////
+
+	.payment {
+		width: 500px;
+		height: 620px;
+		margin-top: 2em;
+
+		&__button {
+			transition: background-color 0.3s ease;
+			&:hover {
+				background-color: rgba(30, 116, 30, 0.911);
+			}
+		}
+
+		&__close {
+			@include flexCenter(row);
+			position: absolute;
+			top: 0.3em;
+			right: 0.3em;
+			font-size: 2rem;
+			padding: 0.3em;
+			color: rgb(136, 127, 127);
+			cursor: pointer;
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: #3a3939;
+			}
+		}
+	}
 
 	.about {
 		&__bgc {
@@ -138,16 +185,12 @@
 		}
 	}
 
-	//////////////////////
 	.newsletter {
 		height: 35vh;
 
 		&__form {
-			@include flexCenter(row);
-		}
-
-		&__input {
-			margin-bottom: unset;
+			flex-direction: row;
+			align-items: start;
 		}
 
 		&__btn {
@@ -155,7 +198,7 @@
 			transition: border 0.3s ease;
 
 			&:hover {
-				border: 1px solid black;
+				border: 1px solid $main;
 			}
 		}
 	}
@@ -199,6 +242,7 @@
 
 		&__icon {
 			transition: color 0.3s ease;
+
 			&:hover {
 				color: $main;
 				cursor: pointer;

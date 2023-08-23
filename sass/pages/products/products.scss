@@ -41,7 +41,6 @@ body {
 		padding: 0.5em;
 		color: $white;
 		font-size: 2.4rem;
-		cursor: pointer;
 	}
 
 	&__hide {
@@ -56,7 +55,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
 		gap: 3em;
 		position: fixed;
 		left: 0;
@@ -119,7 +117,6 @@ body {
 		top: 8px;
 		font-size: 3rem;
 		color: $main;
-		cursor: pointer;
 	}
 
 	&__bgc {
@@ -168,7 +165,6 @@ body {
 		margin-bottom: 0.7em;
 		flex-basis: 35%;
 		border-bottom: 1px solid rgb(216, 216, 216);
-
 		font-family: $heading-font;
 	}
 
@@ -181,6 +177,7 @@ body {
 	&__name {
 		color: $dark;
 	}
+
 	&__price {
 		color: $main;
 	}
@@ -196,13 +193,16 @@ body {
 	top: 8vh;
 	height: 92vh;
 	width: 100%;
+	padding: 0 0.3em;
 	transform: translateX(100%);
 	font-size: 1.4rem;
-	background-color: #e6ebf0;
-	transition: transform 0.4s ease;
+	background-color: $white;
+	transition: transform 0.5s ease;
+	z-index: 99;
 
 	&__active {
 		transform: translateX(0);
+		transition: transform 0.5s ease-out;
 	}
 
 	&__heading {
@@ -223,7 +223,6 @@ body {
 		align-items: center;
 		gap: 1em;
 		width: 100%;
-		padding: 0 0.5em;
 		height: 70px;
 		border-bottom: 1px solid rgb(156, 156, 156);
 	}
@@ -233,32 +232,33 @@ body {
 		gap: 0.3em;
 	}
 
-	&__name {
-		width: 150px;
-	}
-
-	&__count {
-		display: flex;
-		gap: 0.5em;
-		padding: 0.3em 1.6em;
-		align-items: center;
-		border-radius: 10px;
-	}
-
 	&__img {
 		width: 40px;
 		height: 40px;
 		object-fit: cover;
 	}
 
+	&__name {
+		max-width: 120px;
+		padding-right: 0.3em;
+	}
+
+	&__count {
+		display: flex;
+		gap: 0.5em;
+		align-items: center;
+		border-radius: 10px;
+	}
+
 	&__minus,
-	&__plus {
+	&__plus,
+	&__trash {
 		font-size: 1.4rem;
-		cursor: pointer;
+		padding: 0.2em;
 	}
 
 	&__btns {
-		@include flexCenter(row);
+		@include flexCenter(column);
 		gap: 1em;
 		margin-top: 2em;
 	}
@@ -269,18 +269,107 @@ body {
 		@include button;
 		border-radius: 5px;
 		font-size: 1.4rem;
+		width: 200px;
+		text-align: center;
 	}
 
 	&__subtotal {
 		background-color: $hover;
 	}
 
-	&__success {
+	&__error {
 		display: none;
-		margin-top: 2em;
+		margin-top: 1.5em;
 		text-align: center;
 		font-size: 2rem;
-		color: rgb(5, 99, 5);
+		color: rgb(37, 37, 37);
+	}
+}
+
+.payment {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	padding: 1em 2em;
+	transform: translate(-50%, -50%);
+	background-color: $white;
+	box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+	z-index: 999;
+	display: none;
+
+	&__block {
+		overflow: hidden;
+	}
+
+	&__title {
+		font-size: 2rem;
+		margin-bottom: 1em;
+		color: rgb(150, 150, 150);
+	}
+
+	&__label {
+		font-size: 1.4rem;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 0.5em;
+		margin: 1em 0;
+		border: none;
+		border-bottom: 1px solid gray;
+	}
+
+	&__input-date {
+		width: 30%;
+	}
+
+	&__input::placeholder {
+		color: rgb(163, 163, 163);
+	}
+
+	&__icons {
+		display: flex;
+	}
+
+	&__icon {
+		margin-right: 1em;
+		width: 40px;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__message {
+		padding: 1em 0;
+		text-align: center;
+		font-size: 1.4rem;
+	}
+
+	&__button {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 1.2em 0;
+		background-color: rgba(34, 121, 34, 0.877);
+		color: $white;
+		font-size: 1.4rem;
+	}
+
+	&__close {
+		@include flexCenter(row);
+		position: absolute;
+		top: 0.3em;
+		right: 0.3em;
+		font-size: 2rem;
+		padding: 0.3em;
+		color: rgb(136, 127, 127);
 	}
 }
 
@@ -347,6 +436,7 @@ body {
 		margin-bottom: 1em;
 		max-width: 400px;
 	}
+
 	&__buttons {
 		@include flexCenter(column);
 		gap: 0.8em;

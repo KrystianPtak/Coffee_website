@@ -185,7 +185,6 @@ const reveal = () => {
 		}
 	});
 };
-
 window.addEventListener("scroll", reveal);
 
 const emailLinks = document.querySelectorAll('a[href^="mailto:"]');

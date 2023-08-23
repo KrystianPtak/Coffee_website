@@ -64,6 +64,10 @@
 	.search {
 		max-width: 700px;
 
+		&__close {
+			cursor: pointer;
+		}
+
 		&__name,
 		&__img,
 		&__price {
@@ -90,7 +94,7 @@
 			height: 100%;
 			background-color: rgba(24, 24, 24, 0.788);
 			opacity: 0;
-			transition: opacity 0.1s ease-in-out;
+			z-index: -1;
 		}
 
 		&__bgc-active {
@@ -98,8 +102,18 @@
 			opacity: 1;
 		}
 
+		&__name {
+			width: 150px;
+		}
+
 		&__btns {
 			flex-direction: row;
+		}
+
+		&__btn-back,
+		&__btn-checkout,
+		&__subtotal {
+			width: unset;
 		}
 
 		&__btn-back,
@@ -114,7 +128,6 @@
 		&__minus,
 		&__plus,
 		&__trash {
-			font-size: 1.4rem;
 			cursor: pointer;
 		}
 	}
@@ -123,6 +136,29 @@
 		width: 500px;
 		height: 620px;
 		margin-top: 2em;
+
+		&__button {
+			transition: background-color 0.3s ease;
+			&:hover {
+				background-color: rgba(30, 116, 30, 0.911);
+			}
+		}
+
+		&__close {
+			@include flexCenter(row);
+			position: absolute;
+			top: 0.3em;
+			right: 0.3em;
+			font-size: 2rem;
+			padding: 0.3em;
+			color: rgb(136, 127, 127);
+			cursor: pointer;
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: #3a3939;
+			}
+		}
 	}
 
 	.header {
@@ -183,6 +219,7 @@
 		&__title {
 			font-size: 2.6rem;
 		}
+
 		&__text {
 			max-width: 400px;
 			margin-bottom: 1.5em;
@@ -213,6 +250,7 @@
 		&__img {
 			transition: transform 0.9s ease;
 		}
+
 		&__text {
 			width: 300px;
 		}
@@ -275,6 +313,7 @@
 		&__btn,
 		&__btn-add {
 			transition: background-color 0.3s ease;
+
 			&:hover {
 				background-color: $hover;
 			}
@@ -287,6 +326,7 @@
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
+
 		&__heading,
 		&__text,
 		&__btn {
@@ -473,6 +513,7 @@
 
 		&__icon {
 			transition: color 0.3s ease;
+
 			&:hover {
 				color: $main;
 				cursor: pointer;

@@ -15,14 +15,12 @@ const addToCart = (id) => {
 			quantity: 1,
 		});
 	}
-
 	updateCart();
 };
 
 function updateCart() {
 	renderCartItems();
 	renderSubtotal();
-
 	localStorage.setItem("CART", JSON.stringify(cart));
 }
 
@@ -48,7 +46,7 @@ function renderCartItems() {
 									<img src="${item.imgSrc}" alt="${item.alt}" class="cart__img">
 									<span class="cart__name">${item.name}</span>
 								</div>
-								<span class="cart__price">${item.price}</span>
+								<span class="cart__price">$${item.price}</span>
 						<div class="cart__count">
 									<div class="cart__minus" onclick="changeNumberOfUnits('minus', ${item.id})"
 						 			 ><i class="fa-regular fa-square-minus"></i></div>
@@ -69,7 +67,6 @@ function renderCartItems() {
 
 const removeItemFromCart = (id) => {
 	cart = cart.filter((item) => item.id !== id);
-
 	updateCart();
 };
 
@@ -90,7 +87,6 @@ function changeNumberOfUnits(action, id) {
 			quantity,
 		};
 	});
-
 	updateCart();
 }
 

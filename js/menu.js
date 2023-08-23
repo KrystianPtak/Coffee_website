@@ -83,6 +83,7 @@ const menuProducts2 = [
 		description: "Aromatic and invigorating coffee experience",
 	},
 ];
+
 const menuWrapElements = document.querySelectorAll(".menu__wrap");
 
 const renderMenu = (products, menuWrap) => {

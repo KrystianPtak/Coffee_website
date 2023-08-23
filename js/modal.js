@@ -55,7 +55,7 @@ const productsImg = document.querySelectorAll(".products__img");
 const productsOverlay = document.querySelectorAll(".products__overlay");
 const productsViewMore = document.querySelectorAll(".products__btn");
 
-const show = (el, index) => {
+const showModalClick = (el, index) => {
 	el.addEventListener("click", () => {
 		showProductModal(modal_inside[index]);
 	});
@@ -63,7 +63,7 @@ const show = (el, index) => {
 
 function attachClickHandlers(elements) {
 	elements.forEach((el, index) => {
-		show(el, index);
+		showModalClick(el, index);
 	});
 }
 

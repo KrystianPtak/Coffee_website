@@ -1,4 +1,3 @@
-
 const productsBody = document.querySelector(".products__body");
 
 function renderProducts() {

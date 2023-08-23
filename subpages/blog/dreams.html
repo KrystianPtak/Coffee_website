@@ -40,19 +40,57 @@
 	</head>
 	<body>
 		<div class="nav"></div>
-		<div class="cart__bgc">
+				<div class="cart__bgc">
 			<div class="cart">
 				<h2 class="cart__heading">Your Cart</h2>
 				<ul class="cart__items"></ul>
-				<div class="cart__btns">
+				<div class="cart__btns container">
 					<button class="cart__btn-back">Continue Shopping</button>
-					<button class="cart__btn-checkout" onclick="orderAccepted()">
-						checkout
-					</button>
+					<button class="cart__btn-checkout">proceed to buy</button>
 					<span class="cart__subtotal"></span>
 				</div>
-				<span class="cart__success">Order Accepted</span>
+				<p class="cart__error">Add items to proceed with your order!</p>
 			</div>
+		</div>
+
+		<div class="payment">
+			<h2 class="payment__title">Personal Information</h2>
+			<label class="payment__label">Name and Surname</label>
+			<input type="text" placeholder="Andrew Hilton" class="payment__input" />
+			<label class="payment__label">Phone Number</label>
+			<input type="text" placeholder="+1 234 5678" class="payment__input" />
+			<label class="payment__label">Address</label>
+			<input
+				type="text"
+				placeholder="Oklahoma 21, 12-355"
+				class="payment__input"
+			/>
+			<h2 class="payment__title">Card Information</h2>
+			<div class="payment__icons">
+				<img src="/Coffee/img/payment/visa (1).png" alt="" class="payment__icon" />
+				<img src="/Coffee/img/payment/master (1).png" alt="" class="payment__icon" />
+			</div>
+			<input type="password" class="payment__input" placeholder="Card Number" />
+			<div class="payment__Info">
+				<input
+					type="text"
+					placeholder="mm"
+					class="payment__input payment__input-date"
+				/>
+				<input
+					type="text"
+					placeholder="yyyy"
+					class="payment__input payment__input-date"
+				/>
+				<input
+					type="text"
+					placeholder="cvv"
+					class="payment__input payment__input-date"
+				/>
+			</div>
+			<p class="payment__message"></p>
+			<button class="payment__button">Checkout!</button>
+			<span class="payment__close"><i class="fa-solid fa-xmark"></i></span>
 		</div>
 
 		<main>
@@ -90,7 +128,7 @@
 									Unleash your inner artist and elevate your coffee experience
 									to a new level of beauty.
 								</p>
-								<div class="blog__line2">
+								<div class="blog__indentation">
 									<p class="blog__line">
 										Discover the magic that lies within each latte, where milk
 										becomes a canvas for expression. Join us in exploring the

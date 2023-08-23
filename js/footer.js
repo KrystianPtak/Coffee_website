@@ -1,4 +1,5 @@
 const createFooterContainer = document.querySelector(".footer__container");
+
 function renderFooterContainer() {
 	createFooterContainer.innerHTML = `
   <div class="newsletter">
