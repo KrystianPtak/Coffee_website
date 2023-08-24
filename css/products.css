@@ -214,7 +214,7 @@ body {
   top: 8vh;
   height: 92vh;
   width: 100%;
-  padding: 0 0.3em;
+  padding: 2em 0.3em;
   transform: translateX(100%);
   font-size: 1.4rem;
   background-color: #ffffff;
@@ -227,7 +227,6 @@ body {
 }
 .cart__heading {
   margin-bottom: 1em;
-  padding-top: 5em;
   font-family: "Asul", sans-serif;
   font-size: 3.8rem;
   text-align: center;

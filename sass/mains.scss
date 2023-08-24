@@ -197,7 +197,7 @@ body {
 	top: 8vh;
 	height: 92vh;
 	width: 100%;
-	padding: 0 0.3em;
+	padding: 2em 0.3em;
 	transform: translateX(100%);
 	font-size: 1.4rem;
 	background-color: $white;
@@ -211,7 +211,6 @@ body {
 
 	&__heading {
 		margin-bottom: 1em;
-		padding-top: 5em;
 		font-family: $heading-font;
 		font-size: $small;
 		text-align: center;
