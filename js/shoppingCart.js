@@ -33,7 +33,7 @@ function renderSubtotal() {
 		totalItems += item.quantity;
 	});
 
-	cartSubtotal.innerHTML = `$${totalPrice.toFixed(2)}`;
+	cartSubtotal.innerHTML = `Total: $${totalPrice}`
 	navQuantity.innerHTML = totalItems;
 }
 
@@ -54,9 +54,7 @@ function renderCartItems() {
 											<div class="cart__plus" onclick="changeNumberOfUnits('plus', ${item.id})"
 									><i class="fa-regular fa-square-plus"></i></div>
 						 		</div>
-					 		<span class="cart__price-total"> $${(item.price * item.quantity).toFixed(
-								2
-							)} </span>
+					 		<span class="cart__price-total"> $${item.price * item.quantity} </span>
 						 		<span class="cart__price-total" onclick='removeItemFromCart(${
 									item.id
 								})' ><i class="cart__trash fa-solid fa-trash"></i></span>

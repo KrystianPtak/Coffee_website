@@ -308,6 +308,14 @@
 			font-size: 2.4rem;
 			transition: 0.3s ease color, 0.3s ease transform;
 		}
+
+		&__message,
+		&__message-tel {
+			margin-top: 0.8em;
+			text-align: center;
+			color: $main;
+			font-size: 1.2rem;
+		}
 	}
 
 	.footer {

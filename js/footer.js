@@ -23,48 +23,52 @@ function renderFooterContainer() {
 				</form>
 			</div>
 			<section class="contact">
-				<div class="contact__body container">
-					<a href="#" class="contact__logo"
-						>Coffee<img src="/Coffee/img/logo.png" alt="logo caffe" class="contact__img"
-					/></a>
-					<div class="contact__content">
-						<a href="https://goo.gl/maps/GdbiKmSGzSE87oyG9" target="_blank">
-							<div class="contact__box">
-								<div class="contact__border">
-									<i class="contact__icon fa-solid fa-location-dot"></i>
-								</div>
-								<div class="contact__reference">
-									<h4 class="contact__title">Location</h4>
-									<p class="contact__text">Los Angeles, Santa 10</p>
-								</div>
+			<div class="contact__body container">
+				<a href="#" class="contact__logo"
+					>Coffee<img
+						src="img/logo.png"
+						alt="coffee logo"
+						class="contact__img"
+				/></a>
+				<div class="contact__content">
+					<a href="https://goo.gl/maps/GdbiKmSGzSE87oyG9" target="_blank">
+						<div class="contact__box">
+							<div class="contact__border">
+								<i class="contact__icon fa-solid fa-location-dot"></i>
 							</div>
-						</a>
-						<a class="contact__text" href="mailto:coffee@gmail.com">
-							<div class="contact__box">
-								<div class="contact__border">
-									<i class="contact__icon fa-solid fa-envelope"></i>
-								</div>
-								<div class="contact__reference">
-									<h4 class="contact__title">EMAIL</h4>
-									<span>coffee@gmail.com</span>
-								</div>
+							<div class="contact__reference">
+								<h4 class="contact__title">Location</h4>
+								<p class="contact__text">Los Angeles, Santa 10</p>
 							</div>
-							<span class="contact__message">Email has been copied</span>
-						</a>
-						<a class="contact__text" href="tel:044857309378">
-							<div class="contact__box">
-								<div class="contact__border">
-									<i class="contact__icon fa-solid fa-phone"></i>
-								</div>
-								<div class="contact__reference">
-									<h4 class="contact__title">PHONE</h4>
-									<span>(+044) 857-309-378</span>
-								</div>
+						</div>
+					</a>
+					<a class="contact__text" href="mailto:coffee@gmail.com">
+						<div class="contact__box">
+							<div class="contact__border">
+								<i class="contact__icon fa-solid fa-envelope"></i>
 							</div>
-						</a>
-					</div>
+							<div class="contact__reference">
+								<h4 class="contact__title">EMAIL</h4>
+								<span>coffee@gmail.com</span>
+							</div>
+						</div>
+						<span class="contact__message"></span>
+					</a>
+					<a class="contact__text" href="tel:044857309378">
+						<div class="contact__box">
+							<div class="contact__border">
+								<i class="contact__icon fa-solid fa-phone"></i>
+							</div>
+							<div class="contact__reference">
+								<h4 class="contact__title">PHONE</h4>
+								<span>(+044) 857-309-378</span>
+							</div>
+						</div>
+						<span class="contact__message-tel"></span>
+					</a>
 				</div>
-			</section>
+			</div>
+		</section>
       <footer class="footer">
 			<div class="footer__body container">
 				<p>All rights reserved ©Coffee <span class="footer__date"></span></p>

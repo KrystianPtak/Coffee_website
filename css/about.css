@@ -244,7 +244,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
+  gap: 0.3em;
   width: 100%;
   height: 70px;
   border-bottom: 1px solid rgb(156, 156, 156);
@@ -268,7 +268,7 @@ body {
 }
 .cart__count {
   display: flex;
-  gap: 0.5em;
+  gap: 0.1em;
   align-items: center;
   border-radius: 10px;
 }
@@ -540,12 +540,6 @@ body {
 .contact__icon {
   font-size: 2rem;
 }
-.contact__message {
-  display: none;
-  margin-top: 0.5em;
-  color: #be9c79;
-  font-size: 1.2rem;
-}
 
 .footer {
   padding: 1em;
@@ -794,6 +788,12 @@ ul {
   .contact__icon {
     font-size: 2.4rem;
     transition: 0.3s ease color, 0.3s ease transform;
+  }
+  .contact__message, .contact__message-tel {
+    margin-top: 0.8em;
+    text-align: center;
+    color: #be9c79;
+    font-size: 1.2rem;
   }
   .footer__body {
     flex-direction: row;

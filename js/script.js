@@ -187,20 +187,41 @@ const reveal = () => {
 };
 window.addEventListener("scroll", reveal);
 
-const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+const contactLinks = document.querySelectorAll(
+	'a[href^="mailto:"], a[href^="tel:"]'
+);
 const contactMessage = document.querySelector(".contact__message");
+const contactMessageTel = document.querySelector(".contact__message-tel");
 
-emailLinks.forEach((link) => {
+contactLinks.forEach((link) => {
 	link.addEventListener("click", async (event) => {
 		event.preventDefault();
-		const email = link.getAttribute("href").replace("mailto:", "");
+		const contactInfo = link.getAttribute("href").replace(/(mailto:|tel:)/, "");
 
 		try {
-			await navigator.clipboard.writeText(email);
-			contactMessage.style.display = "block";
-			setTimeout(() => {
-				contactMessage.style.display = "none";
-			}, 2000);
+			if (window.innerWidth >= 768) {
+				await navigator.clipboard.writeText(contactInfo);
+
+				if (link.getAttribute("href").startsWith("tel:")) {
+					contactMessageTel.textContent = "Phone number has been copied";
+					contactMessageTel.style.display = "block";
+					setTimeout(() => {
+						contactMessageTel.style.display = "none";
+					}, 2000);
+				} else if (link.getAttribute("href").startsWith("mailto:")) {
+					contactMessage.textContent = "Email has been copied";
+					contactMessage.style.display = "block";
+					setTimeout(() => {
+						contactMessage.style.display = "none";
+					}, 2000);
+				}
+			} else {
+				if (link.getAttribute("href").startsWith("tel:")) {
+					window.location.href = `tel:${contactInfo}`;
+				} else if (link.getAttribute("href").startsWith("mailto:")) {
+					window.location.href = `mailto:${contactInfo}`;
+				}
+			}
 		} catch (err) {}
 	});
 });

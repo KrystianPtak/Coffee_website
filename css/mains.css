@@ -245,7 +245,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
+  gap: 0.3em;
   width: 100%;
   height: 70px;
   border-bottom: 1px solid rgb(156, 156, 156);
@@ -269,7 +269,7 @@ body {
 }
 .cart__count {
   display: flex;
-  gap: 0.5em;
+  gap: 0.1em;
   align-items: center;
   border-radius: 10px;
 }
@@ -819,7 +819,7 @@ body {
   margin-bottom: 1em;
   padding: 0 1em;
   font-family: "Asul", sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
@@ -827,12 +827,10 @@ body {
 .open__content {
   font-size: 1.4rem;
 }
-.open__days {
-  margin-bottom: 1.5em;
-}
 .open__wrapper {
   display: flex;
   justify-content: center;
+  margin-bottom: 0.5em;
 }
 .open__day {
   display: flex;
@@ -847,20 +845,6 @@ body {
   height: 14px;
   margin: 0 0.4em;
   border-bottom: 2px dotted #ffffff;
-}
-.open__number {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.open__title {
-  text-transform: uppercase;
-  margin-bottom: 0.3em;
-}
-.open__tel {
-  color: #ffffff;
-  margin-bottom: 0.3em;
 }
 
 .newsletter {
@@ -970,14 +954,6 @@ body {
 }
 .contact__icon {
   font-size: 2rem;
-}
-.contact__message {
-  display: none;
-  padding-bottom: 1em;
-  margin-top: -1.5em;
-  text-align: center;
-  color: #be9c79;
-  font-size: 1.2rem;
 }
 
 .footer {
@@ -1363,16 +1339,16 @@ ul {
     width: 50%;
     height: 100%;
   }
-  .open__heading, .open__content, .open__number {
+  .open__heading {
+    font-size: 2.6rem;
+  }
+  .open__content {
+    font-size: 1.6rem;
+  }
+  .open__heading, .open__content {
     transform: translateY(50px);
     opacity: 0;
     transition: opacity 2s, transform 1.5s;
-  }
-  .open__tel {
-    transition: color 0.3s ease;
-  }
-  .open__tel:hover {
-    color: #be9c79;
   }
   .modal {
     max-width: 800px;
@@ -1455,6 +1431,12 @@ ul {
     font-size: 2.4rem;
     transition: 0.3s ease color, 0.3s ease transform;
   }
+  .contact__message, .contact__message-tel {
+    margin-top: 0.8em;
+    text-align: center;
+    color: #be9c79;
+    font-size: 1.2rem;
+  }
   .footer__body {
     flex-direction: row;
     justify-content: space-between;
@@ -1501,5 +1483,9 @@ ul {
   }
   .open {
     height: 50vh;
+  }
+  .open__heading {
+    font-size: 3rem;
+    margin-bottom: 1.2em;
   }
 }/*# sourceMappingURL=mains.css.map */

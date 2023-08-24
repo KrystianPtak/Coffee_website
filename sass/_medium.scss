@@ -384,18 +384,17 @@
 			height: 100%;
 		}
 
-		&__heading,
-		&__content,
-		&__number {
-			@include fromdown(50px);
+		&__heading {
+			font-size: 2.6rem;
 		}
 
-		&__tel {
-			transition: color 0.3s ease;
+		&__content {
+			font-size: 1.6rem;
+		}
 
-			&:hover {
-				color: $main;
-			}
+		&__heading,
+		&__content {
+			@include fromdown(50px);
 		}
 	}
 
@@ -501,6 +500,14 @@
 		&__icon {
 			font-size: 2.4rem;
 			transition: 0.3s ease color, 0.3s ease transform;
+		}
+
+		&__message,
+		&__message-tel {
+			margin-top: 0.8em;
+			text-align: center;
+			color: $main;
+			font-size: 1.2rem;
 		}
 	}
 
