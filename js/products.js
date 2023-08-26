@@ -21,8 +21,3 @@ function renderProducts() {
 	});
 }
 renderProducts();
-
-
-
-
-

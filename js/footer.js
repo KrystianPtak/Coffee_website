@@ -26,7 +26,7 @@ function renderFooterContainer() {
 			<div class="contact__body container">
 				<a href="#" class="contact__logo"
 					>Coffee<img
-						src="/Coffe/img/logo.png"
+						src="/Coffee/img/logo.png"
 						alt="coffee logo"
 						class="contact__img"
 				/></a>

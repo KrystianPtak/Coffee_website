@@ -5,7 +5,7 @@ const modal_inside = [
 		description:
 			"A true rarity, this coffee is crafted from handpicked beans, aged in golden barrels. The result is an exquisite flavor profile with notes of caramel, cocoa, and rare spices. Indulge in this opulent blend for an unparalleled coffee experience that transcends ordinary luxury.",
 		price: 150,
-    instock: 4,
+		instock: 4,
 		alt: "golden reserve blend coffee",
 		alt1: "second image of golden reserve blend coffee",
 		alt2: "third image of golden reserve blend coffee",
@@ -20,7 +20,7 @@ const modal_inside = [
 		description:
 			"A true gem among coffees, our Diamond Infused Espresso is created using a precise process where premium coffee beans are infused with the essence of pure diamonds. The result is a remarkably smooth and sparkling taste that epitomizes elegance and luxury in every sip.",
 		price: 200,
-    instock: 8,
+		instock: 8,
 		alt: "Diamond Infused Espresso coffee",
 		alt1: "second image of Diamond Infused Espresso coffee",
 		alt2: "third image of Diamond Infused Espresso coffee",
@@ -35,7 +35,7 @@ const modal_inside = [
 		description:
 			"Fit for royalty, this coffee boasts a velvety texture and arich, regal taste. Our unique roasting technique highlights deep flavors of dark chocolate, toasted nuts, and rare tropical fruits, evoking a sense of opulence and splendor with every cup.",
 		price: 180,
-    instock: 6,
+		instock: 6,
 		alt: "Royal Velvet Roast coffee",
 		alt1: "second image of Royal Velvet Roast coffee",
 		alt2: "third image of Royal Velvet Roast coffee",
@@ -50,7 +50,7 @@ const modal_inside = [
 		description:
 			"A masterpiece of coffee artistry, this latte combines our finest espresso with velvety steamed milk, enriched by rare extracts from the world's most exquisite coffee plantations. The taste is smooth, balanced, and crowned with a lustrous crema, making it an unparalleled indulgence.",
 		price: 160,
-    instock: 10,
+		instock: 10,
 		alt: "Platinum Perfection Latte coffee",
 		alt1: "second image of Platinum Perfection Latte coffee",
 		alt2: "third image of Platinum Perfection Latte coffee",
@@ -65,7 +65,7 @@ const modal_inside = [
 		description:
 			"A rare gem among cappuccinos, the Emerald Elixir is created from a blend of precious coffee beans harvested in lush emerald coffee estates. This enchanting brew delivers floral aromas, a soft, buttery body, and a medley of fruity undertones, making it an unforgettable experience.",
 		price: 170,
-    instock: 12,
+		instock: 12,
 		alt: "Emerald Elixir Cappuccino coffee",
 		alt1: "second image of Emerald Elixir Cappuccino coffee",
 		alt2: "third image of Emerald Elixir Cappuccino coffee",
@@ -80,7 +80,7 @@ const modal_inside = [
 		description:
 			"A true work of art, this mocha is a fusion of top-tier espresso, velvety chocolate, and rare ingredients sourced from volcanic regions. The result is a dark, luscious brew with deep cocoa flavors and a mesmerizing volcanic smoothness that sets it apart from all others.",
 		price: 190,
-    instock: 7,
+		instock: 7,
 		alt: "Opulent Obsidian Mocha coffee",
 		alt1: "second image of Opulent Obsidian Mocha coffee",
 		alt2: "third image of Opulent Obsidian Mocha coffee",

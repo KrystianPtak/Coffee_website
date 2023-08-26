@@ -28,10 +28,7 @@ body {
 	width: 100%;
 	z-index: 999;
 	transition: background-color 0.3s ease;
-
-	&__bgc {
-		background-color: $darker;
-	}
+	background-color: $darker;
 
 	&__body {
 		display: flex;
@@ -197,12 +194,13 @@ body {
 	top: 8vh;
 	height: 92vh;
 	width: 100%;
-	padding: 2em 0.3em;
+	padding: 2em 0.5em;
 	transform: translateX(100%);
 	font-size: 1.4rem;
 	background-color: $white;
 	transition: transform 0.5s ease;
 	z-index: 99;
+	overflow: auto;
 
 	&__active {
 		transform: translateX(0);
@@ -210,7 +208,7 @@ body {
 	}
 
 	&__heading {
-		margin-bottom: 1em;
+		margin: 1em;
 		font-family: $heading-font;
 		font-size: $small;
 		text-align: center;
@@ -224,7 +222,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: .3em;
+		gap: 0.3em;
 		width: 100%;
 		height: 70px;
 		border-bottom: 1px solid rgb(156, 156, 156);
@@ -713,7 +711,6 @@ body {
 	background-blend-mode: darken;
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 	color: $white;
 
 	&__heading {
@@ -837,7 +834,7 @@ body {
 	&__wrapper {
 		display: flex;
 		justify-content: center;
-		margin-bottom: .5em;
+		margin-bottom: 0.5em;
 	}
 
 	&__day {

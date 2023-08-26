@@ -282,7 +282,7 @@ body {
   margin-top: 2em;
 }
 .cart__btn-back, .cart__btn-checkout, .cart__subtotal {
-  padding: 0.6em 1.4em;
+  padding: 0.8em 1.8em;
   text-transform: capitalize;
   background-color: #be9c79;
   color: #ffffff;
@@ -464,7 +464,7 @@ body {
   width: 100px;
 }
 .modal__btn-menu {
-  padding: 0.6em 1.4em;
+  padding: 0.8em 1.8em;
   text-transform: capitalize;
   background-color: #be9c79;
   color: #ffffff;

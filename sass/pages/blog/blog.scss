@@ -28,10 +28,7 @@ body {
 	width: 100%;
 	z-index: 999;
 	transition: background-color 0.3s ease;
-
-	&__bgc {
-		background-color: $darker;
-	}
+	background-color: $darker;
 
 	&__body {
 		display: flex;

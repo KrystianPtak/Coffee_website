@@ -66,8 +66,6 @@ body {
   width: 100%;
   z-index: 999;
   transition: background-color 0.3s ease;
-}
-.nav__bgc {
   background-color: #101311;
 }
 .nav__body {
@@ -217,19 +215,20 @@ body {
   top: 8vh;
   height: 92vh;
   width: 100%;
-  padding: 2em 0.3em;
+  padding: 2em 0.5em;
   transform: translateX(100%);
   font-size: 1.4rem;
   background-color: #ffffff;
   transition: transform 0.5s ease;
   z-index: 99;
+  overflow: auto;
 }
 .cart__active {
   transform: translateX(0);
   transition: transform 0.5s ease-out;
 }
 .cart__heading {
-  margin-bottom: 1em;
+  margin: 1em;
   font-family: "Asul", sans-serif;
   font-size: 3.8rem;
   text-align: center;
@@ -285,7 +284,7 @@ body {
   margin-top: 2em;
 }
 .cart__btn-back, .cart__btn-checkout, .cart__subtotal {
-  padding: 0.6em 1.4em;
+  padding: 0.8em 1.8em;
   text-transform: capitalize;
   background-color: #be9c79;
   color: #ffffff;
@@ -449,7 +448,7 @@ body {
   margin-bottom: 1.5em;
 }
 .about__btn {
-  padding: 0.6em 1.4em;
+  padding: 0.8em 1.8em;
   text-transform: capitalize;
   background-color: #be9c79;
   color: #ffffff;
@@ -609,7 +608,7 @@ body {
   gap: 0.5em;
 }
 .products__btn, .products__btn-add {
-  padding: 0.6em 1.4em;
+  padding: 0.8em 1.8em;
   text-transform: capitalize;
   background-color: #be9c79;
   color: #ffffff;
@@ -697,7 +696,7 @@ body {
   margin-bottom: 1em;
 }
 .modal__btn-add, .modal__close-button {
-  padding: 0.6em 1.4em;
+  padding: 0.8em 1.8em;
   text-transform: capitalize;
   background-color: #be9c79;
   color: #ffffff;
@@ -717,7 +716,6 @@ body {
   background-blend-mode: darken;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   color: #ffffff;
 }
 .enjoy__heading {
@@ -784,7 +782,7 @@ body {
   color: rgb(85, 85, 85);
 }
 .blog__btn {
-  padding: 0.6em 1.4em;
+  padding: 0.8em 1.8em;
   text-transform: capitalize;
   background-color: #be9c79;
   color: #ffffff;
@@ -1025,8 +1023,14 @@ ul {
   html {
     scroll-padding-top: 70px;
   }
+  .nav {
+    background-color: transparent;
+  }
   .nav__button {
     display: none;
+  }
+  .nav__bgc {
+    background-color: #101311;
   }
   .nav__logo {
     display: flex;

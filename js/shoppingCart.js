@@ -33,7 +33,7 @@ function renderSubtotal() {
 		totalItems += item.quantity;
 	});
 
-	cartSubtotal.innerHTML = `Total: $${totalPrice}`
+	cartSubtotal.innerHTML = `Total: $${totalPrice}`;
 	navQuantity.innerHTML = totalItems;
 }
 

@@ -9,8 +9,14 @@
 	}
 
 	.nav {
+		background-color: transparent;
+
 		&__button {
 			display: none;
+		}
+
+		&__bgc {
+			background-color: $darker;
 		}
 
 		&__logo {
