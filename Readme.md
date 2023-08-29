@@ -34,3 +34,7 @@ The "Our Blog" section includes articles. Clicking an article leads users to a p
 
 Newsletter:
 Users can input correct email addresses to subscribe to the newsletter. Incorrect or empty addresses trigger messages that automatically disappear after 2 seconds.
+
+Contact and Map: The contact section includes the store's location. Clicking opens a map with the store's location.
+
+Email and Phone Interaction: Clicking on the email address or phone number on mobile devices opens the respective application. On desktop, copying content to the clipboard is possible.
