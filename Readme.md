@@ -1,7 +1,7 @@
 ## https://krystianptak.pl/Coffee/
 
 <br>
-## Project Description: Coffee Shop Website
+Project Description: Coffee Shop Website
 
 This project involves creating a website for a coffee shop that has been designed to be fully responsive, ensuring comfortable browsing on various devices. Here are the key features of this project:
 
