@@ -5,6 +5,8 @@ Project Description: Coffee Shop Website
 
 This project involves creating a website for a coffee shop that has been designed to be fully responsive, ensuring comfortable browsing on various devices. Here are the key features of this project:
 
+Impressive Performance and Optimal Practices: I would like to start by highlighting the outstanding success of this project. After conducting thorough tests using the Lighthouse Console tool and performing an in-depth website analysis, the results were truly impressive. All key performance indicators related to performance, accessibility, and best SEO practices are looking remarkable, nearing perfection at nearly 100%. I've attached an image showcasing these exceptional results for your reference.
+
 Navigation and Responsiveness:
 Clicking on the navigation links smoothly takes users to the relevant sections of the website, regardless of the device they're using. The mobile navigation also closes after clicking a link.
 
