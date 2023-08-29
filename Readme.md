@@ -39,6 +39,8 @@ Users can input correct email addresses to subscribe to the newsletter. Incorrec
 
 ## 12. Contact and Map
 The contact section includes the store's location. Clicking opens a map with the store's location.
+<br>
+<img src="coffe_seo">
 
 ## 13. Email and Phone Interaction
 Clicking on the email address or phone number on mobile devices opens the respective application. On desktop, copying content to the clipboard is possible.
