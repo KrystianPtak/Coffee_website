@@ -13,7 +13,7 @@ Clicking on the navigation links smoothly takes users to the relevant sections o
 ## 3. Product Search
 The navigation includes a magnifying glass icon that opens a search field. After searching for a specific coffee, users can click on its description to access detailed information. The search can be closed by clicking the close icon, clicking outside the search field, or pressing the "Escape" key. Any entered text is cleared upon closing.
 
-# "About Us" Section
+### "About Us" Section
 In the "About Us" section, there's a button that allows users to learn more about the coffee shop's history.
 
 ## Coffee Menu
