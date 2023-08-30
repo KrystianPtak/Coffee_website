@@ -44,4 +44,6 @@ The contact section includes the store's location. Clicking opens a map with the
 Clicking on the email address or phone number on mobile devices opens the respective application. On desktop, copying content to the clipboard is possible.
 
 <br>
+<center>
 <img src="lighthouse.png">
+</center>
