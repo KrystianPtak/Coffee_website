@@ -662,7 +662,7 @@ body {
 }
 .modal__img {
   display: block;
-  width: 70px;
+  width: 100%;
   height: 70px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -670,7 +670,6 @@ body {
 .modal__small-images {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 0.5em;
   width: 100%;
 }
@@ -1112,6 +1111,7 @@ ul {
   }
   .cart__btn-back, .cart__btn-checkout, .cart__subtotal {
     width: unset;
+    font-size: 1.3rem;
   }
   .cart__btn-back, .cart__btn-checkout {
     transition: background-color 0.3s ease;
@@ -1375,10 +1375,8 @@ ul {
   }
   .modal__small-images {
     display: flex;
-    justify-content: space-between;
   }
   .modal__img {
-    width: 90px;
     height: 90px;
   }
   .modal__heading {

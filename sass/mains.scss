@@ -658,7 +658,7 @@ body {
 
 	&__img {
 		display: block;
-		width: 70px;
+		width: 100%;
 		height: 70px;
 		object-fit: cover;
 	}
@@ -666,7 +666,7 @@ body {
 	&__small-images {
 		display: flex;
 		justify-content: center;
-		flex-wrap: wrap;
+		// flex-wrap: wrap;
 		gap: 0.5em;
 		width: 100%;
 	}

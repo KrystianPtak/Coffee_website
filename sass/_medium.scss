@@ -120,6 +120,7 @@
 		&__btn-checkout,
 		&__subtotal {
 			width: unset;
+			font-size: 1.3rem;
 		}
 
 		&__btn-back,
@@ -429,11 +430,9 @@
 
 		&__small-images {
 			display: flex;
-			justify-content: space-between;
 		}
 
 		&__img {
-			width: 90px;
 			height: 90px;
 		}
 
