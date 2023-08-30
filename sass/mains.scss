@@ -8,7 +8,6 @@ html {
 }
 
 body {
-	font-family: "Asul", sans-serif;
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.6rem;
 }
@@ -745,6 +744,7 @@ body {
 	}
 
 	&__box {
+		height: 100%;
 		max-width: 300px;
 		overflow: hidden;
 	}
@@ -755,6 +755,7 @@ body {
 	}
 
 	&__img {
+		height: 220px;
 		width: 100%;
 		object-fit: cover;
 	}

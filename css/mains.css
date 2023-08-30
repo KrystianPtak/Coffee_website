@@ -46,7 +46,6 @@ html {
 }
 
 body {
-  font-family: "Asul", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
 }
@@ -746,6 +745,7 @@ body {
   gap: 3em;
 }
 .blog__box {
+  height: 100%;
   max-width: 300px;
   overflow: hidden;
 }
@@ -754,6 +754,7 @@ body {
   overflow: hidden;
 }
 .blog__img {
+  height: 220px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1306,7 +1307,7 @@ ul {
     font-size: 3rem;
   }
   .blog {
-    padding: 3em 0;
+    padding: 5em 0;
   }
   .blog__heading {
     font-size: 3.5rem;
@@ -1318,7 +1319,7 @@ ul {
     transition: transform 0.4s ease;
   }
   .blog__box:hover .blog__img {
-    transform: scale(1.1);
+    transform: scale(1.07);
   }
   .blog__heading, .blog__box {
     transform: translateY(50px);
@@ -1470,13 +1471,10 @@ ul {
     height: 300px;
   }
   .blog__body {
-    gap: 3em;
+    gap: 2.5em;
   }
   .blog__box {
     max-width: 250px;
-  }
-  .blog__img {
-    height: 250px;
   }
   .enjoy {
     height: 40vh;

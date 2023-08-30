@@ -46,7 +46,6 @@ html {
 }
 
 body {
-  font-family: "Asul", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
 }
@@ -414,7 +413,7 @@ body {
      object-fit: cover;
 }
 .modal__img {
-  width: 30%;
+  width: 32%;
   -o-object-position: center;
      object-position: center;
   -o-object-fit: cover;
@@ -781,14 +780,11 @@ ul {
     color: #3a3939;
   }
   .modal {
-    height: 70vh;
+    padding: 5em 0;
   }
   .modal__main-img img {
-    width: 500px;
     height: 320px;
-    margin-bottom: 0.5em;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: 400px;
   }
   .modal__body {
     flex-direction: row;
